@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright (c) 2011-2014 The original author or authors
+  ~
+  ~  All rights reserved. This program and the accompanying materials
+  ~  are made available under the terms of the Eclipse Public License v1.0
+  ~  and Apache License v2.0 which accompanies this distribution.
+  ~
+  ~      The Eclipse Public License is available at
+  ~      http://www.eclipse.org/legal/epl-v10.html
+  ~
+  ~      The Apache License v2.0 is available at
+  ~      http://www.opensource.org/licenses/apache2.0.php
+  ~
+  ~  You may elect to redistribute this code under either of these licenses.
+  --><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>io.vertx</groupId>
+    <artifactId>vertx-parent</artifactId>
+    <version>12</version>
+  </parent>
+
+  <artifactId>vertx-stack-base</artifactId>
+  <version>3.6.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>Vert.x Stack Base</name>
+
+  <properties>
+    <stack.version>3.6.0-SNAPSHOT</stack.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>io.vertx</groupId>
+        <artifactId>vertx-dependencies</artifactId>
+        <version>${stack.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-codegen</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-docgen</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-codetrans</artifactId>
+      <optional>true</optional>
+    </dependency>
+
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-unit</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-sql-common</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-mongo-client</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-mongo-service</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-jdbc-client</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-auth-common</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-auth-jdbc</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-auth-htdigest</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-auth-htpasswd</artifactId>
+      <version>${stack.version}</version>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-auth-jwt</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-auth-mongo</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-auth-oauth2</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-auth-shiro</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-jwt</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-web-common</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-web-client</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-web</artifactId>
+      <optional>true</optional>
+    </dependency>
+
+  </dependencies>
+
+  <modules>
+    <module>vertx-stack-js</module>
+    <module>vertx-stack-groovy</module>
+    <module>vertx-stack-kotlin</module>
+  </modules>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+
+        <plugin>
+          <artifactId>maven-dependency-plugin</artifactId>
+          <version>3.0.2</version>
+          <executions>
+            <!-- Unpack sources to target/sources -->
+            <execution>
+              <id>unpack-java</id>
+              <phase>generate-sources</phase>
+              <goals>
+                <goal>unpack-dependencies</goal>
+              </goals>
+              <configuration>
+                <includeGroupIds>io.vertx</includeGroupIds>
+                <includeTypes>jar</includeTypes>
+                <excludeArtifactIds>vertx-lang-js,vertx-lang-groovy,vertx-core,vertx-codegen,vertx-docgen,vertx-codetrans,vertx-service-factory,vertx-service-proxy</excludeArtifactIds>
+                <classifier>sources</classifier>
+                <includes>io/vertx/**/*.java,examples/**/*.java</includes>
+                <excludes>**/impl/**/*.java,io/vertx/groovy/**,io/vertx/reactivex/**,io/vertx/rxjava/**,examples/RxWebClientExamples.java</excludes>
+                <outputDirectory>${project.build.directory}/sources</outputDirectory>
+              </configuration>
+            </execution>
+            <execution>
+              <id>unpack-asciidoc</id>
+              <phase>generate-sources</phase>
+              <goals>
+                <goal>unpack-dependencies</goal>
+              </goals>
+              <configuration>
+                <includeGroupIds>io.vertx</includeGroupIds>
+                <includeTypes>jar</includeTypes>
+                <excludeArtifactIds>vertx-lang-js,vertx-core,vertx-codegen,vertx-docgen,vertx-codetrans,vertx-service-factory,vertx-service-proxy</excludeArtifactIds>
+                <classifier>sources</classifier>
+                <includes>*.adoc</includes>
+                <outputDirectory>${project.build.directory}/asciidoc</outputDirectory>
+                <useSubDirectoryPerArtifact>true</useSubDirectoryPerArtifact>
+                <stripVersion>true</stripVersion>
+                <stripClassifier>true</stripClassifier>
+              </configuration>
+            </execution>
+          </executions>
+          <dependencies>
+          </dependencies>
+        </plugin>
+
+        <plugin>
+          <groupId>org.bsc.maven</groupId>
+          <artifactId>maven-processor-plugin</artifactId>
+          <version>3.1.0</version>
+          <executions>
+            <!-- Run the annotation processor on sources and generate the js API -->
+            <execution>
+              <id>generate-sources</id>
+              <goals>
+                <goal>process</goal>
+              </goals>
+              <phase>generate-sources</phase>
+              <configuration>
+                <systemProperties>
+                  <java.util.logging.SimpleFormatter.format>%4$s: %3$s - %5$s %6$s%n</java.util.logging.SimpleFormatter.format>
+                  <mvel2.disable.jit>true</mvel2.disable.jit>
+                </systemProperties>
+                <processors>
+                  <processor>io.vertx.codegen.CodeGenProcessor</processor>
+                </processors>
+                <optionMap>
+                  <codegen.output>${project.basedir}/src/main</codegen.output>
+                </optionMap>
+                <sourceDirectory>${project.build.directory}/sources</sourceDirectory>
+                <excludes>examples/**/*.java</excludes>
+              </configuration>
+            </execution>
+            <execution>
+              <id>generate-doc</id>
+              <goals>
+                <goal>process</goal>
+              </goals>
+              <phase>generate-sources</phase>
+              <configuration>
+                <systemProperties>
+                  <java.util.logging.SimpleFormatter.format>%4$s: %3$s - %5$s %6$s%n</java.util.logging.SimpleFormatter.format>
+                </systemProperties>
+                <processors>
+                  <processor>io.vertx.docgen.DocGenProcessor</processor>
+                </processors>
+                <optionMap>
+                  <docgen.source>${project.build.directory}/asciidoc</docgen.source>
+                  <docgen.output>${project.build.directory}/bilto</docgen.output>
+                  <maven.groupId>${project.groupId}</maven.groupId>
+                  <maven.artifactId>${project.artifactId}</maven.artifactId>
+                  <maven.version>${project.version}</maven.version>
+                </optionMap>
+                <sourceDirectory>${project.build.directory}/sources</sourceDirectory>
+              </configuration>
+            </execution>
+          </executions>
+          <dependencies>
+            <dependency>
+              <groupId>junit</groupId>
+              <artifactId>junit</artifactId>
+              <version>4.12</version>
+            </dependency>
+            <dependency>
+              <groupId>org.codehaus.groovy</groupId>
+              <artifactId>groovy-all</artifactId>
+              <version>2.4.7</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+</project>
