@@ -23,11 +23,12 @@
     <version>12</version>
   </parent>
 
-  <artifactId>vertx-stack-base</artifactId>
+  <artifactId>vertx-base-stack</artifactId>
   <version>3.6.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>Vert.x Stack Base</name>
+  <name>Vert.x Lang Stack</name>
+  <description>Base pom that Vert.x lang can extend to generate the Vert.x stack</description>
 
   <properties>
     <stack.version>3.6.0-SNAPSHOT</stack.version>
@@ -60,6 +61,11 @@
       <groupId>io.vertx</groupId>
       <artifactId>vertx-codetrans</artifactId>
       <optional>true</optional>
+    </dependency>
+
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-core</artifactId>
     </dependency>
 
     <dependency>
@@ -148,14 +154,163 @@
       <artifactId>vertx-web</artifactId>
       <optional>true</optional>
     </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-circuit-breaker</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-dropwizard-metrics</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-redis-client</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-stomp</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-mail-client</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-consul-client</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-service-discovery</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-service-discovery-backend-consul</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-service-discovery-backend-redis</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-service-discovery-backend-zookeeper</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-service-discovery-bridge-consul</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-service-discovery-bridge-docker</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-service-discovery-bridge-kubernetes</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-service-discovery-bridge-zookeeper</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-service-discovery-bridge-docker-links</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-config</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-config-git</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-config-hocon</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-config-kubernetes-configmap</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-config-redis</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-config-spring-config-server</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-config-zookeeper</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-config-yaml</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-config-vault</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-config-consul</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-amqp-bridge</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-kafka-client</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-mqtt</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-mysql-postgresql-client</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-rabbitmq-client</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-health-check</artifactId>
+      <optional>true</optional>
+    </dependency>
 
   </dependencies>
-
-  <modules>
-    <module>vertx-stack-js</module>
-    <module>vertx-stack-groovy</module>
-    <module>vertx-stack-kotlin</module>
-  </modules>
 
   <build>
     <pluginManagement>
@@ -165,6 +320,7 @@
           <artifactId>maven-dependency-plugin</artifactId>
           <version>3.0.2</version>
           <executions>
+
             <!-- Unpack sources to target/sources -->
             <execution>
               <id>unpack-java</id>
@@ -175,13 +331,15 @@
               <configuration>
                 <includeGroupIds>io.vertx</includeGroupIds>
                 <includeTypes>jar</includeTypes>
-                <excludeArtifactIds>vertx-lang-js,vertx-lang-groovy,vertx-core,vertx-codegen,vertx-docgen,vertx-codetrans,vertx-service-factory,vertx-service-proxy</excludeArtifactIds>
+                <excludeArtifactIds>vertx-lang-js,vertx-lang-groovy,vertx-codegen,vertx-docgen,vertx-codetrans,vertx-service-factory,vertx-service-proxy,vertx-proton</excludeArtifactIds>
                 <classifier>sources</classifier>
                 <includes>io/vertx/**/*.java,examples/**/*.java</includes>
-                <excludes>**/impl/**/*.java,io/vertx/groovy/**,io/vertx/reactivex/**,io/vertx/rxjava/**,examples/RxWebClientExamples.java</excludes>
+                <excludes>**/impl/**/*.java,io/vertx/groovy/**,io/vertx/reactivex/**,io/vertx/rxjava/**,examples/override/**</excludes>
                 <outputDirectory>${project.build.directory}/sources</outputDirectory>
               </configuration>
             </execution>
+
+            <!-- Unpack asciidoc to target/asciidoc -->
             <execution>
               <id>unpack-asciidoc</id>
               <phase>generate-sources</phase>
@@ -191,7 +349,7 @@
               <configuration>
                 <includeGroupIds>io.vertx</includeGroupIds>
                 <includeTypes>jar</includeTypes>
-                <excludeArtifactIds>vertx-lang-js,vertx-core,vertx-codegen,vertx-docgen,vertx-codetrans,vertx-service-factory,vertx-service-proxy</excludeArtifactIds>
+                <excludeArtifactIds>vertx-lang-js,vertx-codegen,vertx-docgen,vertx-codetrans,vertx-service-factory,vertx-service-proxy</excludeArtifactIds>
                 <classifier>sources</classifier>
                 <includes>*.adoc</includes>
                 <outputDirectory>${project.build.directory}/asciidoc</outputDirectory>
@@ -210,7 +368,8 @@
           <artifactId>maven-processor-plugin</artifactId>
           <version>3.1.0</version>
           <executions>
-            <!-- Run the annotation processor on sources and generate the js API -->
+
+            <!-- Run the annotation processor on sources and generate the API -->
             <execution>
               <id>generate-sources</id>
               <goals>
@@ -232,6 +391,8 @@
                 <excludes>examples/**/*.java</excludes>
               </configuration>
             </execution>
+
+            <!-- Run the annotation processor on sources and generate the docs -->
             <execution>
               <id>generate-doc</id>
               <goals>
