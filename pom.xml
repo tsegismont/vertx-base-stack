@@ -324,6 +324,63 @@
         <plugin>
           <artifactId>maven-dependency-plugin</artifactId>
           <version>3.0.2</version>
+          <configuration>
+            <includeGroupIds>io.vertx</includeGroupIds>
+            <includeArtifactIds>
+              vertx-core,
+              vertx-unit,
+              vertx-sql-common,
+              vertx-mongo-client,
+              vertx-mongo-service,
+              vertx-jdbc-client,
+              vertx-auth-common,
+              vertx-auth-jdbc,
+              vertx-auth-htdigest,
+              vertx-auth-htpasswd,
+              vertx-auth-jwt,
+              vertx-auth-mongo,
+              vertx-auth-oauth2,
+              vertx-auth-shiro,
+              vertx-jwt,
+              vertx-web-common,
+              vertx-web-client,
+              vertx-web,
+              vertx-circuit-breaker,
+              vertx-dropwizard-metrics,
+              vertx-redis-client,
+              vertx-stomp,
+              vertx-mail-client,
+              vertx-consul-client,
+              vertx-service-discovery,
+              vertx-service-discovery-backend-consul,
+              vertx-service-discovery-backend-redis,
+              vertx-service-discovery-backend-zookeeper,
+              vertx-service-discovery-bridge-consul,
+              vertx-service-discovery-bridge-docker,
+              vertx-service-discovery-bridge-kubernetes,
+              vertx-service-discovery-bridge-zookeeper,
+              vertx-service-discovery-bridge-docker-links,
+              vertx-config,
+              vertx-config-git,
+              vertx-config-hocon,
+              vertx-config-kubernetes-configmap,
+              vertx-config-redis,
+              vertx-config-spring-config-server,
+              vertx-config-zookeeper,
+              vertx-config-yaml,
+              vertx-config-vault,
+              vertx-config-consul,
+              vertx-amqp-bridge,
+              vertx-kafka-client,
+              vertx-mqtt,
+              vertx-mysql-postgresql-client,
+              vertx-rabbitmq-client,
+              vertx-health-check,
+              vertx-shell
+            </includeArtifactIds>
+            <classifier>sources</classifier>
+            <includeTypes>jar</includeTypes>
+          </configuration>
           <executions>
 
             <!-- Unpack sources to target/sources -->
@@ -334,10 +391,6 @@
                 <goal>unpack-dependencies</goal>
               </goals>
               <configuration>
-                <includeGroupIds>io.vertx</includeGroupIds>
-                <includeTypes>jar</includeTypes>
-                <excludeArtifactIds>vertx-lang-js,vertx-lang-groovy,vertx-codegen,vertx-docgen,vertx-codetrans,vertx-service-factory,vertx-service-proxy,vertx-proton</excludeArtifactIds>
-                <classifier>sources</classifier>
                 <includes>io/vertx/**/*.java,examples/**/*.java</includes>
                 <excludes>**/impl/**/*.java,io/vertx/groovy/**,io/vertx/reactivex/**,io/vertx/rxjava/**,examples/override/**</excludes>
                 <outputDirectory>${project.build.directory}/sources</outputDirectory>
@@ -352,10 +405,6 @@
                 <goal>unpack-dependencies</goal>
               </goals>
               <configuration>
-                <includeGroupIds>io.vertx</includeGroupIds>
-                <includeTypes>jar</includeTypes>
-                <excludeArtifactIds>vertx-lang-js,vertx-codegen,vertx-docgen,vertx-codetrans,vertx-service-factory,vertx-service-proxy</excludeArtifactIds>
-                <classifier>sources</classifier>
                 <includes>*.adoc</includes>
                 <outputDirectory>${project.build.directory}/asciidoc</outputDirectory>
                 <useSubDirectoryPerArtifact>true</useSubDirectoryPerArtifact>
