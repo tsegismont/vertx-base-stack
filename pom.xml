@@ -426,7 +426,6 @@
               <java.util.logging.SimpleFormatter.format>%4$s: %3$s - %5$s %6$s%n</java.util.logging.SimpleFormatter.format>
               <mvel2.disable.jit>true</mvel2.disable.jit>
             </systemProperties>
-            <sourceDirectory>${project.build.directory}/sources</sourceDirectory>
           </configuration>
           <executions>
 
@@ -438,6 +437,7 @@
               </goals>
               <phase>generate-sources</phase>
               <configuration>
+                <sourceDirectory>${project.build.directory}/sources</sourceDirectory>
                 <processors>
                   <processor>io.vertx.codegen.CodeGenProcessor</processor>
                 </processors>
@@ -456,6 +456,7 @@
               </goals>
               <phase>generate-sources</phase>
               <configuration>
+                <sourceDirectory>${project.build.directory}/sources</sourceDirectory>
                 <processors>
                   <processor>io.vertx.docgen.DocGenProcessor</processor>
                 </processors>
