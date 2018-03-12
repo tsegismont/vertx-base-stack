@@ -450,7 +450,9 @@
                 <optionMap>
                   <codegen.output>${project.basedir}/src/main</codegen.output>
                 </optionMap>
-                <excludes>examples/**/*.java</excludes>
+                <excludes>
+                  <exclude>examples/**/*.java</exclude>
+                </excludes>
               </configuration>
             </execution>
 
