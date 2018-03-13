@@ -399,7 +399,7 @@
               <configuration>
                 <includes>io/vertx/**/*.java,examples/**/*.java</includes>
                 <excludes>**/impl/**/*.java,io/vertx/groovy/**,io/vertx/reactivex/**,io/vertx/rxjava/**,examples/override/**</excludes>
-                <outputDirectory>${project.build.directory}/java-sources</outputDirectory>
+                <outputDirectory>${project.build.directory}/sources/java</outputDirectory>
               </configuration>
             </execution>
 
@@ -412,7 +412,7 @@
               </goals>
               <configuration>
                 <includes>*.adoc</includes>
-                <outputDirectory>${project.build.directory}/asciidoc-sources</outputDirectory>
+                <outputDirectory>${project.build.directory}/sources/asciidoc</outputDirectory>
                 <useSubDirectoryPerArtifact>true</useSubDirectoryPerArtifact>
                 <stripVersion>true</stripVersion>
                 <stripClassifier>true</stripClassifier>
@@ -435,8 +435,8 @@
               <phase>generate-sources</phase>
               <configuration>
                 <target name="Remove the -source-jar prefix in unpackage asciidoc">
-                  <move todir="${project.build.directory}/asciidoc-sources">
-                    <fileset dir="${project.build.directory}/asciidoc-sources">
+                  <move todir="${project.build.directory}/sources/asciidoc">
+                    <fileset dir="${project.build.directory}/sources/asciidoc">
                       <include name="**/*"/>
                     </fileset>
                     <mapper type="regexp" from="^(.*)-sources-jar(.*)$" to="\1\2"/>
@@ -454,7 +454,7 @@
               <phase>generate-sources</phase>
               <configuration>
                 <target name="Copy asciidoc override">
-                  <copy todir="${project.build.directory}/asciidoc-sources">
+                  <copy todir="${project.build.directory}/sources/asciidoc">
                     <fileset dir="${project.basedir}/src/main/docoverride">
                       <include name="**/*"/>
                     </fileset>
@@ -488,7 +488,7 @@
               </goals>
               <phase>generate-sources</phase>
               <configuration>
-                <sourceDirectory>${project.build.directory}/java-sources</sourceDirectory>
+                <sourceDirectory>${project.build.directory}/sources/java</sourceDirectory>
                 <processors>
                   <processor>io.vertx.codegen.CodeGenProcessor</processor>
                 </processors>
@@ -509,12 +509,12 @@
               </goals>
               <phase>generate-sources</phase>
               <configuration>
-                <sourceDirectory>${project.build.directory}/java-sources</sourceDirectory>
+                <sourceDirectory>${project.build.directory}/sources/java</sourceDirectory>
                 <processors>
                   <processor>io.vertx.docgen.DocGenProcessor</processor>
                 </processors>
                 <optionMap>
-                  <docgen.source>${project.build.directory}/asciidoc-sources</docgen.source>
+                  <docgen.source>${project.build.directory}/sources/asciidoc</docgen.source>
                   <docgen.output>${project.build.directory}/asciidoc</docgen.output>
                   <maven.groupId>${project.groupId}</maven.groupId>
                   <maven.artifactId>${project.artifactId}</maven.artifactId>
@@ -564,13 +564,6 @@
 
         <plugin>
           <artifactId>maven-assembly-plugin</artifactId>
-          <dependencies>
-            <dependency>
-              <groupId>io.vertx</groupId>
-              <artifactId>vertx-ext-resources</artifactId>
-              <version>30</version>
-            </dependency>
-          </dependencies>
           <executions>
 
             <!-- Package docs -->
@@ -582,46 +575,50 @@
               </goals>
               <configuration>
                 <attach>true</attach>
-                <descriptorRefs>
-                  <descriptorRef>docs</descriptorRef>
-                </descriptorRefs>
+                <formats>
+                  <format>zip</format>
+                </formats>
+                <descriptors>
+                  <descriptor>${project.basedir}/src/main/assembly/docs.xml</descriptor>
+                </descriptors>
+              </configuration>
+            </execution>
+
+            <!-- Assemble docs so they can be rendered to HTML for previewing with the asciidoctor plugin -->
+            <execution>
+              <id>assemble-docs</id>
+              <phase>package</phase>
+              <goals>
+                <goal>single</goal>
+              </goals>
+              <configuration>
+                <formats>
+                  <format>dir</format>
+                </formats>
+                <finalName>docs</finalName>
+                <appendAssemblyId>false</appendAssemblyId>
+                <descriptors>
+                  <descriptor>${project.basedir}/src/main/assembly/docs.xml</descriptor>
+                </descriptors>
               </configuration>
             </execution>
           </executions>
         </plugin>
 
+        <!-- Run it to preview docs : mvn asciidoctor:process-asciidoc -->
+        <plugin>
+          <groupId>org.asciidoctor</groupId>
+          <artifactId>asciidoctor-maven-plugin</artifactId>
+          <configuration>
+            <attributes>
+              <toc>left</toc>
+            </attributes>
+            <sourceDirectory>${project.build.directory}/docs</sourceDirectory>
+            <outputDirectory>${project.build.directory}/html</outputDirectory>
+          </configuration>
+        </plugin>
       </plugins>
     </pluginManagement>
   </build>
-
-  <profiles>
-    <profile>
-      <id>docs</id>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.asciidoctor</groupId>
-            <artifactId>asciidoctor-maven-plugin</artifactId>
-            <executions>
-              <execution>
-                <id>process-asciidoc</id>
-                <goals>
-                  <goal>process-asciidoc</goal>
-                </goals>
-                <phase>process-resources</phase>
-                <configuration>
-                  <attributes>
-                    <toc>left</toc>
-                  </attributes>
-                  <sourceDirectory>${project.build.directory}/asciidoc</sourceDirectory>
-                  <outputDirectory>${project.build.directory}/html</outputDirectory>
-                </configuration>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-  </profiles>
 
 </project>
