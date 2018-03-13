@@ -32,6 +32,7 @@
 
   <properties>
     <stack.version>3.6.0-SNAPSHOT</stack.version>
+    <asciidoc.path></asciidoc.path>
   </properties>
 
   <dependencyManagement>
@@ -439,7 +440,7 @@
                     <fileset dir="${project.build.directory}/sources/asciidoc">
                       <include name="**/*"/>
                     </fileset>
-                    <mapper type="regexp" from="^(.*)-sources-jar(.*)$" to="\1\2"/>
+                    <mapper type="regexp" from="^(.*)-sources-jar(.*)$" to="\1${asciidoc.path}\2"/>
                   </move>
                 </target>
               </configuration>
