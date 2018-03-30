@@ -355,6 +355,11 @@
       <artifactId>vertx-shell</artifactId>
       <optional>true</optional>
     </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-micrometer-metrics</artifactId>
+      <optional>true</optional>
+    </dependency>
 
   </dependencies>
 
