@@ -583,6 +583,12 @@
               <groupId>com.netflix.hystrix</groupId>
               <artifactId>hystrix-core</artifactId>
               <version>1.5.2</version>
+              <exclusions>
+                <exclusion>
+                  <groupId>io.reactivex</groupId>
+                  <artifactId>rxjava</artifactId>
+                </exclusion>
+              </exclusions>
             </dependency>
             <dependency>
               <groupId>log4j</groupId>
