@@ -20,12 +20,12 @@
     <version>12</version>
   </parent>
 
-  <artifactId>vertx-base-stack</artifactId>
+  <artifactId>vertx-stack-generation</artifactId>
   <version>3.6.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>Vert.x Lang Stack</name>
-  <description>Base pom that Vert.x lang can extend to generate the Vert.x stack</description>
+  <name>Vert.x stack generation</name>
+  <description>This project generates the Vert.x stack of polyglot components</description>
 
   <properties>
     <stack.version>3.6.0-SNAPSHOT</stack.version>
@@ -43,6 +43,15 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+
+  <modules>
+    <module>vertx-lang-js</module>
+    <module>vertx-lang-groovy</module>
+    <module>vertx-lang-kotlin</module>
+    <module>vertx-lang-ruby</module>
+    <module>vertx-rx-java</module>
+    <module>vertx-rx-java2</module>
+  </modules>
 
   <dependencies>
     <dependency>
