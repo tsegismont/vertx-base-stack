@@ -427,7 +427,8 @@
               vertx-mysql-postgresql-client,
               vertx-rabbitmq-client,
               vertx-health-check,
-              vertx-shell
+              vertx-shell,
+              vertx-micrometer-metrics
             </includeArtifactIds>
             <classifier>sources</classifier>
             <includeTypes>jar</includeTypes>
@@ -609,6 +610,32 @@
               <groupId>org.slf4j</groupId>
               <artifactId>slf4j-api</artifactId>
               <version>1.7.21</version>
+            </dependency>
+
+            <!-- Transitive dependencies declared as optional in other modules, and needed for instance in docgen -->
+            <dependency>
+              <groupId>io.micrometer</groupId>
+              <artifactId>micrometer-registry-prometheus</artifactId>
+              <version>1.0.0</version>
+              <optional>true</optional>
+            </dependency>
+            <dependency>
+              <groupId>io.micrometer</groupId>
+              <artifactId>micrometer-registry-influx</artifactId>
+              <version>1.0.0</version>
+              <optional>true</optional>
+            </dependency>
+            <dependency>
+              <groupId>io.micrometer</groupId>
+              <artifactId>micrometer-registry-jmx</artifactId>
+              <version>1.0.0</version>
+              <optional>true</optional>
+            </dependency>
+            <dependency>
+              <groupId>io.micrometer</groupId>
+              <artifactId>micrometer-registry-graphite</artifactId>
+              <version>1.0.0</version>
+              <optional>true</optional>
             </dependency>
           </dependencies>
         </plugin>
