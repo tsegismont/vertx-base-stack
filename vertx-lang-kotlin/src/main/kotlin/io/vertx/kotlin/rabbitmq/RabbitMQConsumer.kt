@@ -14,9 +14,9 @@ import io.vertx.rabbitmq.RabbitMQMessage
  * NOTE: This function has been automatically generated from the [io.vertx.rabbitmq.RabbitMQConsumer original] using Vert.x codegen.
  */
 suspend fun RabbitMQConsumer.exceptionHandlerAwait() : Throwable {
-    return awaitEvent{
-        this.exceptionHandler(it)
-    }
+  return awaitEvent{
+    this.exceptionHandler(it)
+  }
 }
 
 /**
@@ -28,9 +28,9 @@ suspend fun RabbitMQConsumer.exceptionHandlerAwait() : Throwable {
  * NOTE: This function has been automatically generated from the [io.vertx.rabbitmq.RabbitMQConsumer original] using Vert.x codegen.
  */
 suspend fun RabbitMQConsumer.handlerAwait() : RabbitMQMessage {
-    return awaitEvent{
-        this.handler(it)
-    }
+  return awaitEvent{
+    this.handler(it)
+  }
 }
 
 /**
@@ -42,8 +42,8 @@ suspend fun RabbitMQConsumer.handlerAwait() : RabbitMQMessage {
  * NOTE: This function has been automatically generated from the [io.vertx.rabbitmq.RabbitMQConsumer original] using Vert.x codegen.
  */
 suspend fun RabbitMQConsumer.endHandlerAwait() : Unit {
-    return awaitEvent{
-        this.endHandler({ v -> it.handle(null) })}
+  return awaitEvent{
+    this.endHandler({ v -> it.handle(null) })}
 }
 
 /**
@@ -57,7 +57,7 @@ suspend fun RabbitMQConsumer.endHandlerAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.rabbitmq.RabbitMQConsumer original] using Vert.x codegen.
  */
 suspend fun RabbitMQConsumer.cancelAwait() : Unit {
-    return awaitResult{
-        this.cancel({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.cancel({ ar -> it.handle(ar.mapEmpty()) })}
 }
 

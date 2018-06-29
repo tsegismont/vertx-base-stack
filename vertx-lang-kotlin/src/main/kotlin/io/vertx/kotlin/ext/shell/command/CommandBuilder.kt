@@ -14,9 +14,9 @@ import io.vertx.kotlin.coroutines.awaitEvent
  * NOTE: This function has been automatically generated from the [io.vertx.ext.shell.command.CommandBuilder original] using Vert.x codegen.
  */
 suspend fun CommandBuilder.processHandlerAwait() : CommandProcess {
-    return awaitEvent{
-        this.processHandler(it)
-    }
+  return awaitEvent{
+    this.processHandler(it)
+  }
 }
 
 /**
@@ -29,8 +29,8 @@ suspend fun CommandBuilder.processHandlerAwait() : CommandProcess {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.shell.command.CommandBuilder original] using Vert.x codegen.
  */
 suspend fun CommandBuilder.completionHandlerAwait() : Completion {
-    return awaitEvent{
-        this.completionHandler(it)
-    }
+  return awaitEvent{
+    this.completionHandler(it)
+  }
 }
 

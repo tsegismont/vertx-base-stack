@@ -12,9 +12,9 @@ import io.vertx.kotlin.coroutines.awaitEvent
  * NOTE: This function has been automatically generated from the [io.vertx.ext.shell.system.Process original] using Vert.x codegen.
  */
 suspend fun Process.terminatedHandlerAwait() : Int {
-    return awaitEvent{
-        this.terminatedHandler(it)
-    }
+  return awaitEvent{
+    this.terminatedHandler(it)
+  }
 }
 
 /**
@@ -26,8 +26,8 @@ suspend fun Process.terminatedHandlerAwait() : Int {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.shell.system.Process original] using Vert.x codegen.
  */
 suspend fun Process.resumeAwait() : Unit {
-    return awaitEvent{
-        this.resume({ v -> it.handle(null) })}
+  return awaitEvent{
+    this.resume({ v -> it.handle(null) })}
 }
 
 /**
@@ -40,8 +40,8 @@ suspend fun Process.resumeAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.shell.system.Process original] using Vert.x codegen.
  */
 suspend fun Process.resumeAwait(foreground : Boolean) : Unit {
-    return awaitEvent{
-        this.resume(foreground, { v -> it.handle(null) })}
+  return awaitEvent{
+    this.resume(foreground, { v -> it.handle(null) })}
 }
 
 /**
@@ -53,8 +53,8 @@ suspend fun Process.resumeAwait(foreground : Boolean) : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.shell.system.Process original] using Vert.x codegen.
  */
 suspend fun Process.suspendAwait() : Unit {
-    return awaitEvent{
-        this.suspend({ v -> it.handle(null) })}
+  return awaitEvent{
+    this.suspend({ v -> it.handle(null) })}
 }
 
 /**
@@ -66,8 +66,8 @@ suspend fun Process.suspendAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.shell.system.Process original] using Vert.x codegen.
  */
 suspend fun Process.terminateAwait() : Unit {
-    return awaitEvent{
-        this.terminate({ v -> it.handle(null) })}
+  return awaitEvent{
+    this.terminate({ v -> it.handle(null) })}
 }
 
 /**
@@ -79,8 +79,8 @@ suspend fun Process.terminateAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.shell.system.Process original] using Vert.x codegen.
  */
 suspend fun Process.toBackgroundAwait() : Unit {
-    return awaitEvent{
-        this.toBackground({ v -> it.handle(null) })}
+  return awaitEvent{
+    this.toBackground({ v -> it.handle(null) })}
 }
 
 /**
@@ -92,7 +92,7 @@ suspend fun Process.toBackgroundAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.shell.system.Process original] using Vert.x codegen.
  */
 suspend fun Process.toForegroundAwait() : Unit {
-    return awaitEvent{
-        this.toForeground({ v -> it.handle(null) })}
+  return awaitEvent{
+    this.toForeground({ v -> it.handle(null) })}
 }
 

@@ -23,9 +23,9 @@ import io.vertx.kotlin.coroutines.awaitEvent
  * NOTE: This function has been automatically generated from the [io.vertx.ext.healthchecks.HealthCheckHandler original] using Vert.x codegen.
  */
 suspend fun HealthCheckHandler.registerAwait(name : String) : Future<Status> {
-    return awaitEvent{
-        this.register(name, it)
-    }
+  return awaitEvent{
+    this.register(name, it)
+  }
 }
 
 /**
@@ -45,8 +45,8 @@ suspend fun HealthCheckHandler.registerAwait(name : String) : Future<Status> {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.healthchecks.HealthCheckHandler original] using Vert.x codegen.
  */
 suspend fun HealthCheckHandler.registerAwait(name : String, timeout : Long) : Future<Status> {
-    return awaitEvent{
-        this.register(name, timeout, it)
-    }
+  return awaitEvent{
+    this.register(name, timeout, it)
+  }
 }
 

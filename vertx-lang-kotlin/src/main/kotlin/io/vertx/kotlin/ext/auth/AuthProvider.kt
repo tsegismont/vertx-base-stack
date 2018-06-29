@@ -29,8 +29,8 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.ext.auth.AuthProvider original] using Vert.x codegen.
  */
 suspend fun AuthProvider.authenticateAwait(authInfo : JsonObject) : User {
-    return awaitResult{
-        this.authenticate(authInfo, it)
-    }
+  return awaitResult{
+    this.authenticate(authInfo, it)
+  }
 }
 

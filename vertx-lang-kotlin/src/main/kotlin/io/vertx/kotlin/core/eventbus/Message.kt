@@ -15,9 +15,9 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.core.eventbus.Message original] using Vert.x codegen.
  */
 suspend fun <R,T> Message<T>.replyAwait(message : Any) : Message<R> {
-    return awaitResult{
-        this.reply(message, it)
-    }
+  return awaitResult{
+    this.reply(message, it)
+  }
 }
 
 /**
@@ -32,8 +32,8 @@ suspend fun <R,T> Message<T>.replyAwait(message : Any) : Message<R> {
  * NOTE: This function has been automatically generated from the [io.vertx.core.eventbus.Message original] using Vert.x codegen.
  */
 suspend fun <R,T> Message<T>.replyAwait(message : Any, options : DeliveryOptions) : Message<R> {
-    return awaitResult{
-        this.reply(message, options, it)
-    }
+  return awaitResult{
+    this.reply(message, options, it)
+  }
 }
 

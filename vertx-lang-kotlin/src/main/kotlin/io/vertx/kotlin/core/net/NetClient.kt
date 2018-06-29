@@ -19,9 +19,9 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.core.net.NetClient original] using Vert.x codegen.
  */
 suspend fun NetClient.connectAwait(port : Int, host : String) : NetSocket {
-    return awaitResult{
-        this.connect(port, host, it)
-    }
+  return awaitResult{
+    this.connect(port, host, it)
+  }
 }
 
 /**
@@ -39,9 +39,9 @@ suspend fun NetClient.connectAwait(port : Int, host : String) : NetSocket {
  * NOTE: This function has been automatically generated from the [io.vertx.core.net.NetClient original] using Vert.x codegen.
  */
 suspend fun NetClient.connectAwait(port : Int, host : String, serverName : String) : NetSocket {
-    return awaitResult{
-        this.connect(port, host, serverName, it)
-    }
+  return awaitResult{
+    this.connect(port, host, serverName, it)
+  }
 }
 
 /**
@@ -56,9 +56,9 @@ suspend fun NetClient.connectAwait(port : Int, host : String, serverName : Strin
  * NOTE: This function has been automatically generated from the [io.vertx.core.net.NetClient original] using Vert.x codegen.
  */
 suspend fun NetClient.connectAwait(remoteAddress : SocketAddress) : NetSocket {
-    return awaitResult{
-        this.connect(remoteAddress, it)
-    }
+  return awaitResult{
+    this.connect(remoteAddress, it)
+  }
 }
 
 /**
@@ -74,8 +74,8 @@ suspend fun NetClient.connectAwait(remoteAddress : SocketAddress) : NetSocket {
  * NOTE: This function has been automatically generated from the [io.vertx.core.net.NetClient original] using Vert.x codegen.
  */
 suspend fun NetClient.connectAwait(remoteAddress : SocketAddress, serverName : String) : NetSocket {
-    return awaitResult{
-        this.connect(remoteAddress, serverName, it)
-    }
+  return awaitResult{
+    this.connect(remoteAddress, serverName, it)
+  }
 }
 

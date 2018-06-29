@@ -20,9 +20,9 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLConnection original] using Vert.x codegen.
  */
 suspend fun SQLConnection.querySingleAwait(sql : String) : JsonArray {
-    return awaitResult{
-        this.querySingle(sql, it)
-    }
+  return awaitResult{
+    this.querySingle(sql, it)
+  }
 }
 
 /**
@@ -38,9 +38,9 @@ suspend fun SQLConnection.querySingleAwait(sql : String) : JsonArray {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLConnection original] using Vert.x codegen.
  */
 suspend fun SQLConnection.querySingleWithParamsAwait(sql : String, arguments : JsonArray) : JsonArray {
-    return awaitResult{
-        this.querySingleWithParams(sql, arguments, it)
-    }
+  return awaitResult{
+    this.querySingleWithParams(sql, arguments, it)
+  }
 }
 
 /**
@@ -53,8 +53,8 @@ suspend fun SQLConnection.querySingleWithParamsAwait(sql : String, arguments : J
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLConnection original] using Vert.x codegen.
  */
 suspend fun SQLConnection.setAutoCommitAwait(autoCommit : Boolean) : Unit {
-    return awaitResult{
-        this.setAutoCommit(autoCommit, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.setAutoCommit(autoCommit, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -67,8 +67,8 @@ suspend fun SQLConnection.setAutoCommitAwait(autoCommit : Boolean) : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLConnection original] using Vert.x codegen.
  */
 suspend fun SQLConnection.executeAwait(sql : String) : Unit {
-    return awaitResult{
-        this.execute(sql, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.execute(sql, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -81,9 +81,9 @@ suspend fun SQLConnection.executeAwait(sql : String) : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLConnection original] using Vert.x codegen.
  */
 suspend fun SQLConnection.queryAwait(sql : String) : ResultSet {
-    return awaitResult{
-        this.query(sql, it)
-    }
+  return awaitResult{
+    this.query(sql, it)
+  }
 }
 
 /**
@@ -96,9 +96,9 @@ suspend fun SQLConnection.queryAwait(sql : String) : ResultSet {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLConnection original] using Vert.x codegen.
  */
 suspend fun SQLConnection.queryStreamAwait(sql : String) : SQLRowStream {
-    return awaitResult{
-        this.queryStream(sql, it)
-    }
+  return awaitResult{
+    this.queryStream(sql, it)
+  }
 }
 
 /**
@@ -112,9 +112,9 @@ suspend fun SQLConnection.queryStreamAwait(sql : String) : SQLRowStream {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLConnection original] using Vert.x codegen.
  */
 suspend fun SQLConnection.queryWithParamsAwait(sql : String, params : JsonArray) : ResultSet {
-    return awaitResult{
-        this.queryWithParams(sql, params, it)
-    }
+  return awaitResult{
+    this.queryWithParams(sql, params, it)
+  }
 }
 
 /**
@@ -128,9 +128,9 @@ suspend fun SQLConnection.queryWithParamsAwait(sql : String, params : JsonArray)
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLConnection original] using Vert.x codegen.
  */
 suspend fun SQLConnection.queryStreamWithParamsAwait(sql : String, params : JsonArray) : SQLRowStream {
-    return awaitResult{
-        this.queryStreamWithParams(sql, params, it)
-    }
+  return awaitResult{
+    this.queryStreamWithParams(sql, params, it)
+  }
 }
 
 /**
@@ -144,9 +144,9 @@ suspend fun SQLConnection.queryStreamWithParamsAwait(sql : String, params : Json
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLConnection original] using Vert.x codegen.
  */
 suspend fun SQLConnection.updateAwait(sql : String) : UpdateResult {
-    return awaitResult{
-        this.update(sql, it)
-    }
+  return awaitResult{
+    this.update(sql, it)
+  }
 }
 
 /**
@@ -161,9 +161,9 @@ suspend fun SQLConnection.updateAwait(sql : String) : UpdateResult {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLConnection original] using Vert.x codegen.
  */
 suspend fun SQLConnection.updateWithParamsAwait(sql : String, params : JsonArray) : UpdateResult {
-    return awaitResult{
-        this.updateWithParams(sql, params, it)
-    }
+  return awaitResult{
+    this.updateWithParams(sql, params, it)
+  }
 }
 
 /**
@@ -176,9 +176,9 @@ suspend fun SQLConnection.updateWithParamsAwait(sql : String, params : JsonArray
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLConnection original] using Vert.x codegen.
  */
 suspend fun SQLConnection.callAwait(sql : String) : ResultSet {
-    return awaitResult{
-        this.call(sql, it)
-    }
+  return awaitResult{
+    this.call(sql, it)
+  }
 }
 
 /**
@@ -201,9 +201,9 @@ suspend fun SQLConnection.callAwait(sql : String) : ResultSet {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLConnection original] using Vert.x codegen.
  */
 suspend fun SQLConnection.callWithParamsAwait(sql : String, params : JsonArray, outputs : JsonArray) : ResultSet {
-    return awaitResult{
-        this.callWithParams(sql, params, outputs, it)
-    }
+  return awaitResult{
+    this.callWithParams(sql, params, outputs, it)
+  }
 }
 
 /**
@@ -215,8 +215,8 @@ suspend fun SQLConnection.callWithParamsAwait(sql : String, params : JsonArray, 
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLConnection original] using Vert.x codegen.
  */
 suspend fun SQLConnection.closeAwait() : Unit {
-    return awaitResult{
-        this.close({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.close({ ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -228,8 +228,8 @@ suspend fun SQLConnection.closeAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLConnection original] using Vert.x codegen.
  */
 suspend fun SQLConnection.commitAwait() : Unit {
-    return awaitResult{
-        this.commit({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.commit({ ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -241,8 +241,8 @@ suspend fun SQLConnection.commitAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLConnection original] using Vert.x codegen.
  */
 suspend fun SQLConnection.rollbackAwait() : Unit {
-    return awaitResult{
-        this.rollback({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.rollback({ ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -255,9 +255,9 @@ suspend fun SQLConnection.rollbackAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLConnection original] using Vert.x codegen.
  */
 suspend fun SQLConnection.batchAwait(sqlStatements : List<String>) : List<Int> {
-    return awaitResult{
-        this.batch(sqlStatements, it)
-    }
+  return awaitResult{
+    this.batch(sqlStatements, it)
+  }
 }
 
 /**
@@ -272,9 +272,9 @@ suspend fun SQLConnection.batchAwait(sqlStatements : List<String>) : List<Int> {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLConnection original] using Vert.x codegen.
  */
 suspend fun SQLConnection.batchWithParamsAwait(sqlStatement : String, args : List<JsonArray>) : List<Int> {
-    return awaitResult{
-        this.batchWithParams(sqlStatement, args, it)
-    }
+  return awaitResult{
+    this.batchWithParams(sqlStatement, args, it)
+  }
 }
 
 /**
@@ -291,9 +291,9 @@ suspend fun SQLConnection.batchWithParamsAwait(sqlStatement : String, args : Lis
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLConnection original] using Vert.x codegen.
  */
 suspend fun SQLConnection.batchCallableWithParamsAwait(sqlStatement : String, inArgs : List<JsonArray>, outArgs : List<JsonArray>) : List<Int> {
-    return awaitResult{
-        this.batchCallableWithParams(sqlStatement, inArgs, outArgs, it)
-    }
+  return awaitResult{
+    this.batchCallableWithParams(sqlStatement, inArgs, outArgs, it)
+  }
 }
 
 /**
@@ -308,8 +308,8 @@ suspend fun SQLConnection.batchCallableWithParamsAwait(sqlStatement : String, in
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLConnection original] using Vert.x codegen.
  */
 suspend fun SQLConnection.setTransactionIsolationAwait(isolation : TransactionIsolation) : Unit {
-    return awaitResult{
-        this.setTransactionIsolation(isolation, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.setTransactionIsolation(isolation, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -321,8 +321,8 @@ suspend fun SQLConnection.setTransactionIsolationAwait(isolation : TransactionIs
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLConnection original] using Vert.x codegen.
  */
 suspend fun SQLConnection.getTransactionIsolationAwait() : TransactionIsolation {
-    return awaitResult{
-        this.getTransactionIsolation(it)
-    }
+  return awaitResult{
+    this.getTransactionIsolation(it)
+  }
 }
 

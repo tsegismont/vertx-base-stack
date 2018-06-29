@@ -17,9 +17,9 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompServerHandler original] using Vert.x codegen.
  */
 suspend fun StompServerHandler.receivedFrameHandlerAwait() : ServerFrame {
-    return awaitEvent{
-        this.receivedFrameHandler(it)
-    }
+  return awaitEvent{
+    this.receivedFrameHandler(it)
+  }
 }
 
 /**
@@ -31,9 +31,9 @@ suspend fun StompServerHandler.receivedFrameHandlerAwait() : ServerFrame {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompServerHandler original] using Vert.x codegen.
  */
 suspend fun StompServerHandler.connectHandlerAwait() : ServerFrame {
-    return awaitEvent{
-        this.connectHandler(it)
-    }
+  return awaitEvent{
+    this.connectHandler(it)
+  }
 }
 
 /**
@@ -45,9 +45,9 @@ suspend fun StompServerHandler.connectHandlerAwait() : ServerFrame {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompServerHandler original] using Vert.x codegen.
  */
 suspend fun StompServerHandler.stompHandlerAwait() : ServerFrame {
-    return awaitEvent{
-        this.stompHandler(it)
-    }
+  return awaitEvent{
+    this.stompHandler(it)
+  }
 }
 
 /**
@@ -59,9 +59,9 @@ suspend fun StompServerHandler.stompHandlerAwait() : ServerFrame {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompServerHandler original] using Vert.x codegen.
  */
 suspend fun StompServerHandler.subscribeHandlerAwait() : ServerFrame {
-    return awaitEvent{
-        this.subscribeHandler(it)
-    }
+  return awaitEvent{
+    this.subscribeHandler(it)
+  }
 }
 
 /**
@@ -73,9 +73,9 @@ suspend fun StompServerHandler.subscribeHandlerAwait() : ServerFrame {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompServerHandler original] using Vert.x codegen.
  */
 suspend fun StompServerHandler.unsubscribeHandlerAwait() : ServerFrame {
-    return awaitEvent{
-        this.unsubscribeHandler(it)
-    }
+  return awaitEvent{
+    this.unsubscribeHandler(it)
+  }
 }
 
 /**
@@ -87,9 +87,9 @@ suspend fun StompServerHandler.unsubscribeHandlerAwait() : ServerFrame {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompServerHandler original] using Vert.x codegen.
  */
 suspend fun StompServerHandler.sendHandlerAwait() : ServerFrame {
-    return awaitEvent{
-        this.sendHandler(it)
-    }
+  return awaitEvent{
+    this.sendHandler(it)
+  }
 }
 
 /**
@@ -101,9 +101,9 @@ suspend fun StompServerHandler.sendHandlerAwait() : ServerFrame {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompServerHandler original] using Vert.x codegen.
  */
 suspend fun StompServerHandler.closeHandlerAwait() : StompServerConnection {
-    return awaitEvent{
-        this.closeHandler(it)
-    }
+  return awaitEvent{
+    this.closeHandler(it)
+  }
 }
 
 /**
@@ -115,9 +115,9 @@ suspend fun StompServerHandler.closeHandlerAwait() : StompServerConnection {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompServerHandler original] using Vert.x codegen.
  */
 suspend fun StompServerHandler.commitHandlerAwait() : ServerFrame {
-    return awaitEvent{
-        this.commitHandler(it)
-    }
+  return awaitEvent{
+    this.commitHandler(it)
+  }
 }
 
 /**
@@ -129,9 +129,9 @@ suspend fun StompServerHandler.commitHandlerAwait() : ServerFrame {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompServerHandler original] using Vert.x codegen.
  */
 suspend fun StompServerHandler.abortHandlerAwait() : ServerFrame {
-    return awaitEvent{
-        this.abortHandler(it)
-    }
+  return awaitEvent{
+    this.abortHandler(it)
+  }
 }
 
 /**
@@ -143,9 +143,9 @@ suspend fun StompServerHandler.abortHandlerAwait() : ServerFrame {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompServerHandler original] using Vert.x codegen.
  */
 suspend fun StompServerHandler.beginHandlerAwait() : ServerFrame {
-    return awaitEvent{
-        this.beginHandler(it)
-    }
+  return awaitEvent{
+    this.beginHandler(it)
+  }
 }
 
 /**
@@ -157,9 +157,9 @@ suspend fun StompServerHandler.beginHandlerAwait() : ServerFrame {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompServerHandler original] using Vert.x codegen.
  */
 suspend fun StompServerHandler.disconnectHandlerAwait() : ServerFrame {
-    return awaitEvent{
-        this.disconnectHandler(it)
-    }
+  return awaitEvent{
+    this.disconnectHandler(it)
+  }
 }
 
 /**
@@ -171,9 +171,9 @@ suspend fun StompServerHandler.disconnectHandlerAwait() : ServerFrame {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompServerHandler original] using Vert.x codegen.
  */
 suspend fun StompServerHandler.ackHandlerAwait() : ServerFrame {
-    return awaitEvent{
-        this.ackHandler(it)
-    }
+  return awaitEvent{
+    this.ackHandler(it)
+  }
 }
 
 /**
@@ -185,9 +185,9 @@ suspend fun StompServerHandler.ackHandlerAwait() : ServerFrame {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompServerHandler original] using Vert.x codegen.
  */
 suspend fun StompServerHandler.nackHandlerAwait() : ServerFrame {
-    return awaitEvent{
-        this.nackHandler(it)
-    }
+  return awaitEvent{
+    this.nackHandler(it)
+  }
 }
 
 /**
@@ -203,9 +203,9 @@ suspend fun StompServerHandler.nackHandlerAwait() : ServerFrame {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompServerHandler original] using Vert.x codegen.
  */
 suspend fun StompServerHandler.onAuthenticationRequestAwait(connection : StompServerConnection, login : String, passcode : String) : Boolean {
-    return awaitResult{
-        this.onAuthenticationRequest(connection, login, passcode, it)
-    }
+  return awaitResult{
+    this.onAuthenticationRequest(connection, login, passcode, it)
+  }
 }
 
 /**
@@ -217,9 +217,9 @@ suspend fun StompServerHandler.onAuthenticationRequestAwait(connection : StompSe
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompServerHandler original] using Vert.x codegen.
  */
 suspend fun StompServerHandler.onAckHandlerAwait() : Acknowledgement {
-    return awaitEvent{
-        this.onAckHandler(it)
-    }
+  return awaitEvent{
+    this.onAckHandler(it)
+  }
 }
 
 /**
@@ -231,9 +231,9 @@ suspend fun StompServerHandler.onAckHandlerAwait() : Acknowledgement {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompServerHandler original] using Vert.x codegen.
  */
 suspend fun StompServerHandler.onNackHandlerAwait() : Acknowledgement {
-    return awaitEvent{
-        this.onNackHandler(it)
-    }
+  return awaitEvent{
+    this.onNackHandler(it)
+  }
 }
 
 /**
@@ -249,8 +249,8 @@ suspend fun StompServerHandler.onNackHandlerAwait() : Acknowledgement {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompServerHandler original] using Vert.x codegen.
  */
 suspend fun StompServerHandler.pingHandlerAwait() : StompServerConnection {
-    return awaitEvent{
-        this.pingHandler(it)
-    }
+  return awaitEvent{
+    this.pingHandler(it)
+  }
 }
 

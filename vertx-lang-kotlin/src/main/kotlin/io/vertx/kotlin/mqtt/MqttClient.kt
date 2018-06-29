@@ -20,9 +20,9 @@ import io.vertx.mqtt.messages.MqttSubAckMessage
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttClient original] using Vert.x codegen.
  */
 suspend fun MqttClient.connectAwait(port : Int, host : String) : MqttConnAckMessage {
-    return awaitResult{
-        this.connect(port, host, it)
-    }
+  return awaitResult{
+    this.connect(port, host, it)
+  }
 }
 
 /**
@@ -37,9 +37,9 @@ suspend fun MqttClient.connectAwait(port : Int, host : String) : MqttConnAckMess
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttClient original] using Vert.x codegen.
  */
 suspend fun MqttClient.connectAwait(port : Int, host : String, serverName : String) : MqttConnAckMessage {
-    return awaitResult{
-        this.connect(port, host, serverName, it)
-    }
+  return awaitResult{
+    this.connect(port, host, serverName, it)
+  }
 }
 
 /**
@@ -51,8 +51,8 @@ suspend fun MqttClient.connectAwait(port : Int, host : String, serverName : Stri
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttClient original] using Vert.x codegen.
  */
 suspend fun MqttClient.disconnectAwait() : Unit {
-    return awaitResult{
-        this.disconnect({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.disconnect({ ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -69,9 +69,9 @@ suspend fun MqttClient.disconnectAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttClient original] using Vert.x codegen.
  */
 suspend fun MqttClient.publishAwait(topic : String, payload : Buffer, qosLevel : MqttQoS, isDup : Boolean, isRetain : Boolean) : Int {
-    return awaitResult{
-        this.publish(topic, payload, qosLevel, isDup, isRetain, it)
-    }
+  return awaitResult{
+    this.publish(topic, payload, qosLevel, isDup, isRetain, it)
+  }
 }
 
 /**
@@ -83,9 +83,9 @@ suspend fun MqttClient.publishAwait(topic : String, payload : Buffer, qosLevel :
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttClient original] using Vert.x codegen.
  */
 suspend fun MqttClient.publishCompletionHandlerAwait() : Int {
-    return awaitEvent{
-        this.publishCompletionHandler(it)
-    }
+  return awaitEvent{
+    this.publishCompletionHandler(it)
+  }
 }
 
 /**
@@ -97,9 +97,9 @@ suspend fun MqttClient.publishCompletionHandlerAwait() : Int {
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttClient original] using Vert.x codegen.
  */
 suspend fun MqttClient.publishHandlerAwait() : MqttPublishMessage {
-    return awaitEvent{
-        this.publishHandler(it)
-    }
+  return awaitEvent{
+    this.publishHandler(it)
+  }
 }
 
 /**
@@ -111,9 +111,9 @@ suspend fun MqttClient.publishHandlerAwait() : MqttPublishMessage {
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttClient original] using Vert.x codegen.
  */
 suspend fun MqttClient.subscribeCompletionHandlerAwait() : MqttSubAckMessage {
-    return awaitEvent{
-        this.subscribeCompletionHandler(it)
-    }
+  return awaitEvent{
+    this.subscribeCompletionHandler(it)
+  }
 }
 
 /**
@@ -127,9 +127,9 @@ suspend fun MqttClient.subscribeCompletionHandlerAwait() : MqttSubAckMessage {
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttClient original] using Vert.x codegen.
  */
 suspend fun MqttClient.subscribeAwait(topic : String, qos : Int) : Int {
-    return awaitResult{
-        this.subscribe(topic, qos, it)
-    }
+  return awaitResult{
+    this.subscribe(topic, qos, it)
+  }
 }
 
 /**
@@ -142,9 +142,9 @@ suspend fun MqttClient.subscribeAwait(topic : String, qos : Int) : Int {
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttClient original] using Vert.x codegen.
  */
 suspend fun MqttClient.subscribeAwait(topics : Map<String,Int>) : Int {
-    return awaitResult{
-        this.subscribe(topics, it)
-    }
+  return awaitResult{
+    this.subscribe(topics, it)
+  }
 }
 
 /**
@@ -156,9 +156,9 @@ suspend fun MqttClient.subscribeAwait(topics : Map<String,Int>) : Int {
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttClient original] using Vert.x codegen.
  */
 suspend fun MqttClient.unsubscribeCompletionHandlerAwait() : Int {
-    return awaitEvent{
-        this.unsubscribeCompletionHandler(it)
-    }
+  return awaitEvent{
+    this.unsubscribeCompletionHandler(it)
+  }
 }
 
 /**
@@ -171,9 +171,9 @@ suspend fun MqttClient.unsubscribeCompletionHandlerAwait() : Int {
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttClient original] using Vert.x codegen.
  */
 suspend fun MqttClient.unsubscribeAwait(topic : String) : Int {
-    return awaitResult{
-        this.unsubscribe(topic, it)
-    }
+  return awaitResult{
+    this.unsubscribe(topic, it)
+  }
 }
 
 /**
@@ -185,8 +185,8 @@ suspend fun MqttClient.unsubscribeAwait(topic : String) : Int {
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttClient original] using Vert.x codegen.
  */
 suspend fun MqttClient.pingResponseHandlerAwait() : Unit {
-    return awaitEvent{
-        this.pingResponseHandler({ v -> it.handle(null) })}
+  return awaitEvent{
+    this.pingResponseHandler({ v -> it.handle(null) })}
 }
 
 /**
@@ -201,9 +201,9 @@ suspend fun MqttClient.pingResponseHandlerAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttClient original] using Vert.x codegen.
  */
 suspend fun MqttClient.exceptionHandlerAwait() : Throwable {
-    return awaitEvent{
-        this.exceptionHandler(it)
-    }
+  return awaitEvent{
+    this.exceptionHandler(it)
+  }
 }
 
 /**
@@ -215,7 +215,7 @@ suspend fun MqttClient.exceptionHandlerAwait() : Throwable {
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttClient original] using Vert.x codegen.
  */
 suspend fun MqttClient.closeHandlerAwait() : Unit {
-    return awaitEvent{
-        this.closeHandler({ v -> it.handle(null) })}
+  return awaitEvent{
+    this.closeHandler({ v -> it.handle(null) })}
 }
 

@@ -20,9 +20,9 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLClient original] using Vert.x codegen.
  */
 suspend fun SQLClient.querySingleAwait(sql : String) : JsonArray {
-    return awaitResult{
-        this.querySingle(sql, it)
-    }
+  return awaitResult{
+    this.querySingle(sql, it)
+  }
 }
 
 /**
@@ -38,9 +38,9 @@ suspend fun SQLClient.querySingleAwait(sql : String) : JsonArray {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLClient original] using Vert.x codegen.
  */
 suspend fun SQLClient.querySingleWithParamsAwait(sql : String, arguments : JsonArray) : JsonArray {
-    return awaitResult{
-        this.querySingleWithParams(sql, arguments, it)
-    }
+  return awaitResult{
+    this.querySingleWithParams(sql, arguments, it)
+  }
 }
 
 /**
@@ -53,9 +53,9 @@ suspend fun SQLClient.querySingleWithParamsAwait(sql : String, arguments : JsonA
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLClient original] using Vert.x codegen.
  */
 suspend fun SQLClient.getConnectionAwait() : SQLConnection {
-    return awaitResult{
-        this.getConnection(it)
-    }
+  return awaitResult{
+    this.getConnection(it)
+  }
 }
 
 /**
@@ -68,8 +68,8 @@ suspend fun SQLClient.getConnectionAwait() : SQLConnection {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLClient original] using Vert.x codegen.
  */
 suspend fun SQLClient.closeAwait() : Unit {
-    return awaitResult{
-        this.close({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.close({ ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -83,9 +83,9 @@ suspend fun SQLClient.closeAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLClient original] using Vert.x codegen.
  */
 suspend fun SQLClient.queryAwait(sql : String) : ResultSet {
-    return awaitResult{
-        this.query(sql, it)
-    }
+  return awaitResult{
+    this.query(sql, it)
+  }
 }
 
 /**
@@ -98,9 +98,9 @@ suspend fun SQLClient.queryAwait(sql : String) : ResultSet {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLClient original] using Vert.x codegen.
  */
 suspend fun SQLClient.queryStreamAwait(sql : String) : SQLRowStream {
-    return awaitResult{
-        this.queryStream(sql, it)
-    }
+  return awaitResult{
+    this.queryStream(sql, it)
+  }
 }
 
 /**
@@ -114,9 +114,9 @@ suspend fun SQLClient.queryStreamAwait(sql : String) : SQLRowStream {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLClient original] using Vert.x codegen.
  */
 suspend fun SQLClient.queryStreamWithParamsAwait(sql : String, params : JsonArray) : SQLRowStream {
-    return awaitResult{
-        this.queryStreamWithParams(sql, params, it)
-    }
+  return awaitResult{
+    this.queryStreamWithParams(sql, params, it)
+  }
 }
 
 /**
@@ -131,9 +131,9 @@ suspend fun SQLClient.queryStreamWithParamsAwait(sql : String, params : JsonArra
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLClient original] using Vert.x codegen.
  */
 suspend fun SQLClient.queryWithParamsAwait(sql : String, arguments : JsonArray) : ResultSet {
-    return awaitResult{
-        this.queryWithParams(sql, arguments, it)
-    }
+  return awaitResult{
+    this.queryWithParams(sql, arguments, it)
+  }
 }
 
 /**
@@ -147,9 +147,9 @@ suspend fun SQLClient.queryWithParamsAwait(sql : String, arguments : JsonArray) 
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLClient original] using Vert.x codegen.
  */
 suspend fun SQLClient.updateAwait(sql : String) : UpdateResult {
-    return awaitResult{
-        this.update(sql, it)
-    }
+  return awaitResult{
+    this.update(sql, it)
+  }
 }
 
 /**
@@ -164,9 +164,9 @@ suspend fun SQLClient.updateAwait(sql : String) : UpdateResult {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLClient original] using Vert.x codegen.
  */
 suspend fun SQLClient.updateWithParamsAwait(sql : String, params : JsonArray) : UpdateResult {
-    return awaitResult{
-        this.updateWithParams(sql, params, it)
-    }
+  return awaitResult{
+    this.updateWithParams(sql, params, it)
+  }
 }
 
 /**
@@ -179,9 +179,9 @@ suspend fun SQLClient.updateWithParamsAwait(sql : String, params : JsonArray) : 
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLClient original] using Vert.x codegen.
  */
 suspend fun SQLClient.callAwait(sql : String) : ResultSet {
-    return awaitResult{
-        this.call(sql, it)
-    }
+  return awaitResult{
+    this.call(sql, it)
+  }
 }
 
 /**
@@ -204,8 +204,8 @@ suspend fun SQLClient.callAwait(sql : String) : ResultSet {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLClient original] using Vert.x codegen.
  */
 suspend fun SQLClient.callWithParamsAwait(sql : String, params : JsonArray, outputs : JsonArray) : ResultSet {
-    return awaitResult{
-        this.callWithParams(sql, params, outputs, it)
-    }
+  return awaitResult{
+    this.callWithParams(sql, params, outputs, it)
+  }
 }
 

@@ -12,8 +12,8 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.ext.shell.ShellServer original] using Vert.x codegen.
  */
 suspend fun ShellServer.listenAwait() : Unit {
-    return awaitResult{
-        this.listen({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.listen({ ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -25,7 +25,7 @@ suspend fun ShellServer.listenAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.shell.ShellServer original] using Vert.x codegen.
  */
 suspend fun ShellServer.closeAwait() : Unit {
-    return awaitResult{
-        this.close({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.close({ ar -> it.handle(ar.mapEmpty()) })}
 }
 

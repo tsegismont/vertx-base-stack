@@ -12,7 +12,7 @@ import io.vertx.servicediscovery.spi.ServiceExporter
  * NOTE: This function has been automatically generated from the [io.vertx.servicediscovery.spi.ServiceExporter original] using Vert.x codegen.
  */
 suspend fun ServiceExporter.closeAwait() : Unit {
-    return awaitEvent{
-        this.close({ v -> it.handle(null) })}
+  return awaitEvent{
+    this.close({ v -> it.handle(null) })}
 }
 

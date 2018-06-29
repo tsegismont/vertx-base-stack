@@ -18,9 +18,9 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompClient original] using Vert.x codegen.
  */
 suspend fun StompClient.connectAwait(port : Int, host : String) : StompClientConnection {
-    return awaitResult{
-        this.connect(port, host, it)
-    }
+  return awaitResult{
+    this.connect(port, host, it)
+  }
 }
 
 /**
@@ -33,9 +33,9 @@ suspend fun StompClient.connectAwait(port : Int, host : String) : StompClientCon
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompClient original] using Vert.x codegen.
  */
 suspend fun StompClient.connectAwait(net : NetClient) : StompClientConnection {
-    return awaitResult{
-        this.connect(net, it)
-    }
+  return awaitResult{
+    this.connect(net, it)
+  }
 }
 
 /**
@@ -50,9 +50,9 @@ suspend fun StompClient.connectAwait(net : NetClient) : StompClientConnection {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompClient original] using Vert.x codegen.
  */
 suspend fun StompClient.connectAwait(port : Int, host : String, net : NetClient) : StompClientConnection {
-    return awaitResult{
-        this.connect(port, host, net, it)
-    }
+  return awaitResult{
+    this.connect(port, host, net, it)
+  }
 }
 
 /**
@@ -64,9 +64,9 @@ suspend fun StompClient.connectAwait(port : Int, host : String, net : NetClient)
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompClient original] using Vert.x codegen.
  */
 suspend fun StompClient.connectAwait() : StompClientConnection {
-    return awaitResult{
-        this.connect(it)
-    }
+  return awaitResult{
+    this.connect(it)
+  }
 }
 
 /**
@@ -82,9 +82,9 @@ suspend fun StompClient.connectAwait() : StompClientConnection {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompClient original] using Vert.x codegen.
  */
 suspend fun StompClient.receivedFrameHandlerAwait() : Frame {
-    return awaitEvent{
-        this.receivedFrameHandler(it)
-    }
+  return awaitEvent{
+    this.receivedFrameHandler(it)
+  }
 }
 
 /**
@@ -100,9 +100,9 @@ suspend fun StompClient.receivedFrameHandlerAwait() : Frame {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompClient original] using Vert.x codegen.
  */
 suspend fun StompClient.writingFrameHandlerAwait() : Frame {
-    return awaitEvent{
-        this.writingFrameHandler(it)
-    }
+  return awaitEvent{
+    this.writingFrameHandler(it)
+  }
 }
 
 /**
@@ -116,9 +116,9 @@ suspend fun StompClient.writingFrameHandlerAwait() : Frame {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompClient original] using Vert.x codegen.
  */
 suspend fun StompClient.errorFrameHandlerAwait() : Frame {
-    return awaitEvent{
-        this.errorFrameHandler(it)
-    }
+  return awaitEvent{
+    this.errorFrameHandler(it)
+  }
 }
 
 /**
@@ -130,8 +130,8 @@ suspend fun StompClient.errorFrameHandlerAwait() : Frame {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompClient original] using Vert.x codegen.
  */
 suspend fun StompClient.exceptionHandlerAwait() : Throwable {
-    return awaitEvent{
-        this.exceptionHandler(it)
-    }
+  return awaitEvent{
+    this.exceptionHandler(it)
+  }
 }
 

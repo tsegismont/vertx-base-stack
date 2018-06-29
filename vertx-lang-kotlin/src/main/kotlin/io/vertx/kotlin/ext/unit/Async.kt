@@ -12,7 +12,7 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.ext.unit.Async original] using Vert.x codegen.
  */
 suspend fun Async.handlerAwait() : Unit? {
-    return awaitResult{
-        this.handler({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.handler({ ar -> it.handle(ar.mapEmpty()) })}
 }
 

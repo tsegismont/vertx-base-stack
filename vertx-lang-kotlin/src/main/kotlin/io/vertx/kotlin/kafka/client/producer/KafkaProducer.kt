@@ -8,14 +8,14 @@ import io.vertx.kotlin.coroutines.awaitEvent
 import io.vertx.kotlin.coroutines.awaitResult
 
 suspend fun <K,V> KafkaProducer<K,V>.exceptionHandlerAwait() : Throwable {
-    return awaitEvent{
-        this.exceptionHandler(it)
-    }
+  return awaitEvent{
+    this.exceptionHandler(it)
+  }
 }
 
 suspend fun <K,V> KafkaProducer<K,V>.drainHandlerAwait() : Unit {
-    return awaitEvent{
-        this.drainHandler({ v -> it.handle(null) })}
+  return awaitEvent{
+    this.drainHandler({ v -> it.handle(null) })}
 }
 
 /**
@@ -28,9 +28,9 @@ suspend fun <K,V> KafkaProducer<K,V>.drainHandlerAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.producer.KafkaProducer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaProducer<K,V>.writeAwait(record : KafkaProducerRecord<K,V>) : RecordMetadata {
-    return awaitResult{
-        this.write(record, it)
-    }
+  return awaitResult{
+    this.write(record, it)
+  }
 }
 
 /**
@@ -43,9 +43,9 @@ suspend fun <K,V> KafkaProducer<K,V>.writeAwait(record : KafkaProducerRecord<K,V
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.producer.KafkaProducer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaProducer<K,V>.partitionsForAwait(topic : String) : List<PartitionInfo> {
-    return awaitResult{
-        this.partitionsFor(topic, it)
-    }
+  return awaitResult{
+    this.partitionsFor(topic, it)
+  }
 }
 
 /**
@@ -57,8 +57,8 @@ suspend fun <K,V> KafkaProducer<K,V>.partitionsForAwait(topic : String) : List<P
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.producer.KafkaProducer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaProducer<K,V>.flushAwait() : Unit {
-    return awaitEvent{
-        this.flush({ v -> it.handle(null) })}
+  return awaitEvent{
+    this.flush({ v -> it.handle(null) })}
 }
 
 /**
@@ -70,8 +70,8 @@ suspend fun <K,V> KafkaProducer<K,V>.flushAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.producer.KafkaProducer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaProducer<K,V>.closeAwait() : Unit {
-    return awaitResult{
-        this.close({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.close({ ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -84,7 +84,7 @@ suspend fun <K,V> KafkaProducer<K,V>.closeAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.producer.KafkaProducer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaProducer<K,V>.closeAwait(timeout : Long) : Unit {
-    return awaitResult{
-        this.close(timeout, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.close(timeout, { ar -> it.handle(ar.mapEmpty()) })}
 }
 

@@ -19,9 +19,9 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.ext.web.client.HttpRequest original] using Vert.x codegen.
  */
 suspend fun <T> HttpRequest<T>.sendStreamAwait(body : ReadStream<Buffer>) : HttpResponse<T> {
-    return awaitResult{
-        this.sendStream(body, it)
-    }
+  return awaitResult{
+    this.sendStream(body, it)
+  }
 }
 
 /**
@@ -34,9 +34,9 @@ suspend fun <T> HttpRequest<T>.sendStreamAwait(body : ReadStream<Buffer>) : Http
  * NOTE: This function has been automatically generated from the [io.vertx.ext.web.client.HttpRequest original] using Vert.x codegen.
  */
 suspend fun <T> HttpRequest<T>.sendBufferAwait(body : Buffer) : HttpResponse<T> {
-    return awaitResult{
-        this.sendBuffer(body, it)
-    }
+  return awaitResult{
+    this.sendBuffer(body, it)
+  }
 }
 
 /**
@@ -50,9 +50,9 @@ suspend fun <T> HttpRequest<T>.sendBufferAwait(body : Buffer) : HttpResponse<T> 
  * NOTE: This function has been automatically generated from the [io.vertx.ext.web.client.HttpRequest original] using Vert.x codegen.
  */
 suspend fun <T> HttpRequest<T>.sendJsonObjectAwait(body : JsonObject) : HttpResponse<T> {
-    return awaitResult{
-        this.sendJsonObject(body, it)
-    }
+  return awaitResult{
+    this.sendJsonObject(body, it)
+  }
 }
 
 /**
@@ -66,9 +66,9 @@ suspend fun <T> HttpRequest<T>.sendJsonObjectAwait(body : JsonObject) : HttpResp
  * NOTE: This function has been automatically generated from the [io.vertx.ext.web.client.HttpRequest original] using Vert.x codegen.
  */
 suspend fun <T> HttpRequest<T>.sendJsonAwait(body : Any) : HttpResponse<T> {
-    return awaitResult{
-        this.sendJson(body, it)
-    }
+  return awaitResult{
+    this.sendJson(body, it)
+  }
 }
 
 /**
@@ -84,9 +84,9 @@ suspend fun <T> HttpRequest<T>.sendJsonAwait(body : Any) : HttpResponse<T> {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.web.client.HttpRequest original] using Vert.x codegen.
  */
 suspend fun <T> HttpRequest<T>.sendFormAwait(body : MultiMap) : HttpResponse<T> {
-    return awaitResult{
-        this.sendForm(body, it)
-    }
+  return awaitResult{
+    this.sendForm(body, it)
+  }
 }
 
 /**
@@ -100,9 +100,9 @@ suspend fun <T> HttpRequest<T>.sendFormAwait(body : MultiMap) : HttpResponse<T> 
  * NOTE: This function has been automatically generated from the [io.vertx.ext.web.client.HttpRequest original] using Vert.x codegen.
  */
 suspend fun <T> HttpRequest<T>.sendMultipartFormAwait(body : MultipartForm) : HttpResponse<T> {
-    return awaitResult{
-        this.sendMultipartForm(body, it)
-    }
+  return awaitResult{
+    this.sendMultipartForm(body, it)
+  }
 }
 
 /**
@@ -114,8 +114,8 @@ suspend fun <T> HttpRequest<T>.sendMultipartFormAwait(body : MultipartForm) : Ht
  * NOTE: This function has been automatically generated from the [io.vertx.ext.web.client.HttpRequest original] using Vert.x codegen.
  */
 suspend fun <T> HttpRequest<T>.sendAwait() : HttpResponse<T> {
-    return awaitResult{
-        this.send(it)
-    }
+  return awaitResult{
+    this.send(it)
+  }
 }
 

@@ -12,8 +12,8 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.ext.shell.ShellService original] using Vert.x codegen.
  */
 suspend fun ShellService.startAwait() : Unit {
-    return awaitResult{
-        this.start({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.start({ ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -25,7 +25,7 @@ suspend fun ShellService.startAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.shell.ShellService original] using Vert.x codegen.
  */
 suspend fun ShellService.stopAwait() : Unit {
-    return awaitResult{
-        this.stop({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.stop({ ar -> it.handle(ar.mapEmpty()) })}
 }
 

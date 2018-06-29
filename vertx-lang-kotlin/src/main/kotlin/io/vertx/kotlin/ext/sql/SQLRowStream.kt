@@ -6,20 +6,20 @@ import io.vertx.kotlin.coroutines.awaitEvent
 import io.vertx.kotlin.coroutines.awaitResult
 
 suspend fun SQLRowStream.exceptionHandlerAwait() : Throwable {
-    return awaitEvent{
-        this.exceptionHandler(it)
-    }
+  return awaitEvent{
+    this.exceptionHandler(it)
+  }
 }
 
 suspend fun SQLRowStream.handlerAwait() : JsonArray {
-    return awaitEvent{
-        this.handler(it)
-    }
+  return awaitEvent{
+    this.handler(it)
+  }
 }
 
 suspend fun SQLRowStream.endHandlerAwait() : Unit {
-    return awaitEvent{
-        this.endHandler({ v -> it.handle(null) })}
+  return awaitEvent{
+    this.endHandler({ v -> it.handle(null) })}
 }
 
 /**
@@ -31,8 +31,8 @@ suspend fun SQLRowStream.endHandlerAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLRowStream original] using Vert.x codegen.
  */
 suspend fun SQLRowStream.resultSetClosedHandlerAwait() : Unit {
-    return awaitEvent{
-        this.resultSetClosedHandler({ v -> it.handle(null) })}
+  return awaitEvent{
+    this.resultSetClosedHandler({ v -> it.handle(null) })}
 }
 
 /**
@@ -44,7 +44,7 @@ suspend fun SQLRowStream.resultSetClosedHandlerAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLRowStream original] using Vert.x codegen.
  */
 suspend fun SQLRowStream.closeAwait() : Unit {
-    return awaitResult{
-        this.close({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.close({ ar -> it.handle(ar.mapEmpty()) })}
 }
 

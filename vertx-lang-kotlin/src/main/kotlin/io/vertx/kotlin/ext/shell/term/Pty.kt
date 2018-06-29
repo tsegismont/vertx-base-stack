@@ -12,8 +12,8 @@ import io.vertx.kotlin.coroutines.awaitEvent
  * NOTE: This function has been automatically generated from the [io.vertx.ext.shell.term.Pty original] using Vert.x codegen.
  */
 suspend fun Pty.stdoutHandlerAwait() : String {
-    return awaitEvent{
-        this.stdoutHandler(it)
-    }
+  return awaitEvent{
+    this.stdoutHandler(it)
+  }
 }
 

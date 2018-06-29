@@ -28,9 +28,9 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.core.WorkerExecutor original] using Vert.x codegen.
  */
 suspend fun <T> WorkerExecutor.executeBlockingAwait(blockingCodeHandler : Handler<Future<T>>, ordered : Boolean) : T {
-    return awaitResult{
-        this.executeBlocking(blockingCodeHandler, ordered, it)
-    }
+  return awaitResult{
+    this.executeBlocking(blockingCodeHandler, ordered, it)
+  }
 }
 
 /**
@@ -43,8 +43,8 @@ suspend fun <T> WorkerExecutor.executeBlockingAwait(blockingCodeHandler : Handle
  * NOTE: This function has been automatically generated from the [io.vertx.core.WorkerExecutor original] using Vert.x codegen.
  */
 suspend fun <T> WorkerExecutor.executeBlockingAwait(blockingCodeHandler : Handler<Future<T>>) : T {
-    return awaitResult{
-        this.executeBlocking(blockingCodeHandler, it)
-    }
+  return awaitResult{
+    this.executeBlocking(blockingCodeHandler, it)
+  }
 }
 

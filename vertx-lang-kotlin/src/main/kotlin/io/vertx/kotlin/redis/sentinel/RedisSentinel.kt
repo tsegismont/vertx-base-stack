@@ -13,8 +13,8 @@ import io.vertx.redis.sentinel.RedisSentinel
  * NOTE: This function has been automatically generated from the [io.vertx.redis.sentinel.RedisSentinel original] using Vert.x codegen.
  */
 suspend fun RedisSentinel.closeAwait() : Unit {
-    return awaitResult{
-        this.close({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.close({ ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -26,9 +26,9 @@ suspend fun RedisSentinel.closeAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.redis.sentinel.RedisSentinel original] using Vert.x codegen.
  */
 suspend fun RedisSentinel.mastersAwait() : JsonArray {
-    return awaitResult{
-        this.masters(it)
-    }
+  return awaitResult{
+    this.masters(it)
+  }
 }
 
 /**
@@ -41,9 +41,9 @@ suspend fun RedisSentinel.mastersAwait() : JsonArray {
  * NOTE: This function has been automatically generated from the [io.vertx.redis.sentinel.RedisSentinel original] using Vert.x codegen.
  */
 suspend fun RedisSentinel.masterAwait(name : String) : JsonArray {
-    return awaitResult{
-        this.master(name, it)
-    }
+  return awaitResult{
+    this.master(name, it)
+  }
 }
 
 /**
@@ -56,9 +56,9 @@ suspend fun RedisSentinel.masterAwait(name : String) : JsonArray {
  * NOTE: This function has been automatically generated from the [io.vertx.redis.sentinel.RedisSentinel original] using Vert.x codegen.
  */
 suspend fun RedisSentinel.slavesAwait(name : String) : JsonArray {
-    return awaitResult{
-        this.slaves(name, it)
-    }
+  return awaitResult{
+    this.slaves(name, it)
+  }
 }
 
 /**
@@ -71,9 +71,9 @@ suspend fun RedisSentinel.slavesAwait(name : String) : JsonArray {
  * NOTE: This function has been automatically generated from the [io.vertx.redis.sentinel.RedisSentinel original] using Vert.x codegen.
  */
 suspend fun RedisSentinel.sentinelsAwait(name : String) : JsonArray {
-    return awaitResult{
-        this.sentinels(name, it)
-    }
+  return awaitResult{
+    this.sentinels(name, it)
+  }
 }
 
 /**
@@ -88,9 +88,9 @@ suspend fun RedisSentinel.sentinelsAwait(name : String) : JsonArray {
  * NOTE: This function has been automatically generated from the [io.vertx.redis.sentinel.RedisSentinel original] using Vert.x codegen.
  */
 suspend fun RedisSentinel.getMasterAddrByNameAwait(name : String) : JsonArray {
-    return awaitResult{
-        this.getMasterAddrByName(name, it)
-    }
+  return awaitResult{
+    this.getMasterAddrByName(name, it)
+  }
 }
 
 /**
@@ -105,8 +105,8 @@ suspend fun RedisSentinel.getMasterAddrByNameAwait(name : String) : JsonArray {
  * NOTE: This function has been automatically generated from the [io.vertx.redis.sentinel.RedisSentinel original] using Vert.x codegen.
  */
 suspend fun RedisSentinel.resetAwait(pattern : String) : Unit {
-    return awaitResult{
-        this.reset(pattern, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.reset(pattern, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -121,9 +121,9 @@ suspend fun RedisSentinel.resetAwait(pattern : String) : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.redis.sentinel.RedisSentinel original] using Vert.x codegen.
  */
 suspend fun RedisSentinel.failoverAwait(name : String) : String {
-    return awaitResult{
-        this.failover(name, it)
-    }
+  return awaitResult{
+    this.failover(name, it)
+  }
 }
 
 /**
@@ -138,9 +138,9 @@ suspend fun RedisSentinel.failoverAwait(name : String) : String {
  * NOTE: This function has been automatically generated from the [io.vertx.redis.sentinel.RedisSentinel original] using Vert.x codegen.
  */
 suspend fun RedisSentinel.ckquorumAwait(name : String) : String {
-    return awaitResult{
-        this.ckquorum(name, it)
-    }
+  return awaitResult{
+    this.ckquorum(name, it)
+  }
 }
 
 /**
@@ -158,7 +158,7 @@ suspend fun RedisSentinel.ckquorumAwait(name : String) : String {
  * NOTE: This function has been automatically generated from the [io.vertx.redis.sentinel.RedisSentinel original] using Vert.x codegen.
  */
 suspend fun RedisSentinel.flushConfigAwait() : Unit {
-    return awaitResult{
-        this.flushConfig({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.flushConfig({ ar -> it.handle(ar.mapEmpty()) })}
 }
 

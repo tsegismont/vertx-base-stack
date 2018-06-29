@@ -15,8 +15,8 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.ext.bridge.BaseBridgeEvent original] using Vert.x codegen.
  */
 suspend fun BaseBridgeEvent.setHandlerAwait() : Boolean {
-    return awaitResult{
-        this.setHandler(it)
-    }
+  return awaitResult{
+    this.setHandler(it)
+  }
 }
 

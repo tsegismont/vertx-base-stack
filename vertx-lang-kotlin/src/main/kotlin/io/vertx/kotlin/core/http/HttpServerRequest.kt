@@ -7,20 +7,20 @@ import io.vertx.core.http.HttpServerRequest
 import io.vertx.kotlin.coroutines.awaitEvent
 
 suspend fun HttpServerRequest.exceptionHandlerAwait() : Throwable {
-    return awaitEvent{
-        this.exceptionHandler(it)
-    }
+  return awaitEvent{
+    this.exceptionHandler(it)
+  }
 }
 
 suspend fun HttpServerRequest.handlerAwait() : Buffer {
-    return awaitEvent{
-        this.handler(it)
-    }
+  return awaitEvent{
+    this.handler(it)
+  }
 }
 
 suspend fun HttpServerRequest.endHandlerAwait() : Unit {
-    return awaitEvent{
-        this.endHandler({ v -> it.handle(null) })}
+  return awaitEvent{
+    this.endHandler({ v -> it.handle(null) })}
 }
 
 /**
@@ -35,9 +35,9 @@ suspend fun HttpServerRequest.endHandlerAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpServerRequest original] using Vert.x codegen.
  */
 suspend fun HttpServerRequest.bodyHandlerAwait() : Buffer {
-    return awaitEvent{
-        this.bodyHandler(it)
-    }
+  return awaitEvent{
+    this.bodyHandler(it)
+  }
 }
 
 /**
@@ -50,9 +50,9 @@ suspend fun HttpServerRequest.bodyHandlerAwait() : Buffer {
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpServerRequest original] using Vert.x codegen.
  */
 suspend fun HttpServerRequest.uploadHandlerAwait() : HttpServerFileUpload {
-    return awaitEvent{
-        this.uploadHandler(it)
-    }
+  return awaitEvent{
+    this.uploadHandler(it)
+  }
 }
 
 /**
@@ -65,8 +65,8 @@ suspend fun HttpServerRequest.uploadHandlerAwait() : HttpServerFileUpload {
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpServerRequest original] using Vert.x codegen.
  */
 suspend fun HttpServerRequest.customFrameHandlerAwait() : HttpFrame {
-    return awaitEvent{
-        this.customFrameHandler(it)
-    }
+  return awaitEvent{
+    this.customFrameHandler(it)
+  }
 }
 

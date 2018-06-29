@@ -17,9 +17,9 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLOperations original] using Vert.x codegen.
  */
 suspend fun SQLOperations.queryAwait(sql : String) : ResultSet {
-    return awaitResult{
-        this.query(sql, it)
-    }
+  return awaitResult{
+    this.query(sql, it)
+  }
 }
 
 /**
@@ -33,9 +33,9 @@ suspend fun SQLOperations.queryAwait(sql : String) : ResultSet {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLOperations original] using Vert.x codegen.
  */
 suspend fun SQLOperations.queryWithParamsAwait(sql : String, params : JsonArray) : ResultSet {
-    return awaitResult{
-        this.queryWithParams(sql, params, it)
-    }
+  return awaitResult{
+    this.queryWithParams(sql, params, it)
+  }
 }
 
 /**
@@ -48,9 +48,9 @@ suspend fun SQLOperations.queryWithParamsAwait(sql : String, params : JsonArray)
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLOperations original] using Vert.x codegen.
  */
 suspend fun SQLOperations.queryStreamAwait(sql : String) : SQLRowStream {
-    return awaitResult{
-        this.queryStream(sql, it)
-    }
+  return awaitResult{
+    this.queryStream(sql, it)
+  }
 }
 
 /**
@@ -64,9 +64,9 @@ suspend fun SQLOperations.queryStreamAwait(sql : String) : SQLRowStream {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLOperations original] using Vert.x codegen.
  */
 suspend fun SQLOperations.queryStreamWithParamsAwait(sql : String, params : JsonArray) : SQLRowStream {
-    return awaitResult{
-        this.queryStreamWithParams(sql, params, it)
-    }
+  return awaitResult{
+    this.queryStreamWithParams(sql, params, it)
+  }
 }
 
 /**
@@ -81,9 +81,9 @@ suspend fun SQLOperations.queryStreamWithParamsAwait(sql : String, params : Json
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLOperations original] using Vert.x codegen.
  */
 suspend fun SQLOperations.querySingleAwait(sql : String) : JsonArray {
-    return awaitResult{
-        this.querySingle(sql, it)
-    }
+  return awaitResult{
+    this.querySingle(sql, it)
+  }
 }
 
 /**
@@ -99,9 +99,9 @@ suspend fun SQLOperations.querySingleAwait(sql : String) : JsonArray {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLOperations original] using Vert.x codegen.
  */
 suspend fun SQLOperations.querySingleWithParamsAwait(sql : String, arguments : JsonArray) : JsonArray {
-    return awaitResult{
-        this.querySingleWithParams(sql, arguments, it)
-    }
+  return awaitResult{
+    this.querySingleWithParams(sql, arguments, it)
+  }
 }
 
 /**
@@ -115,9 +115,9 @@ suspend fun SQLOperations.querySingleWithParamsAwait(sql : String, arguments : J
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLOperations original] using Vert.x codegen.
  */
 suspend fun SQLOperations.updateAwait(sql : String) : UpdateResult {
-    return awaitResult{
-        this.update(sql, it)
-    }
+  return awaitResult{
+    this.update(sql, it)
+  }
 }
 
 /**
@@ -132,9 +132,9 @@ suspend fun SQLOperations.updateAwait(sql : String) : UpdateResult {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLOperations original] using Vert.x codegen.
  */
 suspend fun SQLOperations.updateWithParamsAwait(sql : String, params : JsonArray) : UpdateResult {
-    return awaitResult{
-        this.updateWithParams(sql, params, it)
-    }
+  return awaitResult{
+    this.updateWithParams(sql, params, it)
+  }
 }
 
 /**
@@ -147,9 +147,9 @@ suspend fun SQLOperations.updateWithParamsAwait(sql : String, params : JsonArray
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLOperations original] using Vert.x codegen.
  */
 suspend fun SQLOperations.callAwait(sql : String) : ResultSet {
-    return awaitResult{
-        this.call(sql, it)
-    }
+  return awaitResult{
+    this.call(sql, it)
+  }
 }
 
 /**
@@ -172,8 +172,8 @@ suspend fun SQLOperations.callAwait(sql : String) : ResultSet {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLOperations original] using Vert.x codegen.
  */
 suspend fun SQLOperations.callWithParamsAwait(sql : String, params : JsonArray, outputs : JsonArray) : ResultSet {
-    return awaitResult{
-        this.callWithParams(sql, params, outputs, it)
-    }
+  return awaitResult{
+    this.callWithParams(sql, params, outputs, it)
+  }
 }
 

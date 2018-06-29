@@ -14,8 +14,8 @@ import io.vertx.kotlin.coroutines.awaitEvent
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompServerConnection original] using Vert.x codegen.
  */
 suspend fun StompServerConnection.configureHeartbeatAwait(ping : Long, pong : Long) : StompServerConnection {
-    return awaitEvent{
-        this.configureHeartbeat(ping, pong, it)
-    }
+  return awaitEvent{
+    this.configureHeartbeat(ping, pong, it)
+  }
 }
 

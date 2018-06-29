@@ -19,8 +19,8 @@ import io.vertx.mqtt.messages.MqttUnsubscribeMessage
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttEndpoint original] using Vert.x codegen.
  */
 suspend fun MqttEndpoint.disconnectHandlerAwait() : Unit {
-    return awaitEvent{
-        this.disconnectHandler({ v -> it.handle(null) })}
+  return awaitEvent{
+    this.disconnectHandler({ v -> it.handle(null) })}
 }
 
 /**
@@ -33,9 +33,9 @@ suspend fun MqttEndpoint.disconnectHandlerAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttEndpoint original] using Vert.x codegen.
  */
 suspend fun MqttEndpoint.subscribeHandlerAwait() : MqttSubscribeMessage {
-    return awaitEvent{
-        this.subscribeHandler(it)
-    }
+  return awaitEvent{
+    this.subscribeHandler(it)
+  }
 }
 
 /**
@@ -48,9 +48,9 @@ suspend fun MqttEndpoint.subscribeHandlerAwait() : MqttSubscribeMessage {
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttEndpoint original] using Vert.x codegen.
  */
 suspend fun MqttEndpoint.unsubscribeHandlerAwait() : MqttUnsubscribeMessage {
-    return awaitEvent{
-        this.unsubscribeHandler(it)
-    }
+  return awaitEvent{
+    this.unsubscribeHandler(it)
+  }
 }
 
 /**
@@ -63,9 +63,9 @@ suspend fun MqttEndpoint.unsubscribeHandlerAwait() : MqttUnsubscribeMessage {
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttEndpoint original] using Vert.x codegen.
  */
 suspend fun MqttEndpoint.publishHandlerAwait() : MqttPublishMessage {
-    return awaitEvent{
-        this.publishHandler(it)
-    }
+  return awaitEvent{
+    this.publishHandler(it)
+  }
 }
 
 /**
@@ -78,9 +78,9 @@ suspend fun MqttEndpoint.publishHandlerAwait() : MqttPublishMessage {
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttEndpoint original] using Vert.x codegen.
  */
 suspend fun MqttEndpoint.publishAcknowledgeHandlerAwait() : Int {
-    return awaitEvent{
-        this.publishAcknowledgeHandler(it)
-    }
+  return awaitEvent{
+    this.publishAcknowledgeHandler(it)
+  }
 }
 
 /**
@@ -93,9 +93,9 @@ suspend fun MqttEndpoint.publishAcknowledgeHandlerAwait() : Int {
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttEndpoint original] using Vert.x codegen.
  */
 suspend fun MqttEndpoint.publishReceivedHandlerAwait() : Int {
-    return awaitEvent{
-        this.publishReceivedHandler(it)
-    }
+  return awaitEvent{
+    this.publishReceivedHandler(it)
+  }
 }
 
 /**
@@ -108,9 +108,9 @@ suspend fun MqttEndpoint.publishReceivedHandlerAwait() : Int {
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttEndpoint original] using Vert.x codegen.
  */
 suspend fun MqttEndpoint.publishReleaseHandlerAwait() : Int {
-    return awaitEvent{
-        this.publishReleaseHandler(it)
-    }
+  return awaitEvent{
+    this.publishReleaseHandler(it)
+  }
 }
 
 /**
@@ -123,9 +123,9 @@ suspend fun MqttEndpoint.publishReleaseHandlerAwait() : Int {
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttEndpoint original] using Vert.x codegen.
  */
 suspend fun MqttEndpoint.publishCompletionHandlerAwait() : Int {
-    return awaitEvent{
-        this.publishCompletionHandler(it)
-    }
+  return awaitEvent{
+    this.publishCompletionHandler(it)
+  }
 }
 
 /**
@@ -139,8 +139,8 @@ suspend fun MqttEndpoint.publishCompletionHandlerAwait() : Int {
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttEndpoint original] using Vert.x codegen.
  */
 suspend fun MqttEndpoint.pingHandlerAwait() : Unit {
-    return awaitEvent{
-        this.pingHandler({ v -> it.handle(null) })}
+  return awaitEvent{
+    this.pingHandler({ v -> it.handle(null) })}
 }
 
 /**
@@ -152,8 +152,8 @@ suspend fun MqttEndpoint.pingHandlerAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttEndpoint original] using Vert.x codegen.
  */
 suspend fun MqttEndpoint.closeHandlerAwait() : Unit {
-    return awaitEvent{
-        this.closeHandler({ v -> it.handle(null) })}
+  return awaitEvent{
+    this.closeHandler({ v -> it.handle(null) })}
 }
 
 /**
@@ -165,9 +165,9 @@ suspend fun MqttEndpoint.closeHandlerAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttEndpoint original] using Vert.x codegen.
  */
 suspend fun MqttEndpoint.exceptionHandlerAwait() : Throwable {
-    return awaitEvent{
-        this.exceptionHandler(it)
-    }
+  return awaitEvent{
+    this.exceptionHandler(it)
+  }
 }
 
 /**
@@ -184,8 +184,8 @@ suspend fun MqttEndpoint.exceptionHandlerAwait() : Throwable {
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttEndpoint original] using Vert.x codegen.
  */
 suspend fun MqttEndpoint.publishAwait(topic : String, payload : Buffer, qosLevel : MqttQoS, isDup : Boolean, isRetain : Boolean) : Int {
-    return awaitResult{
-        this.publish(topic, payload, qosLevel, isDup, isRetain, it)
-    }
+  return awaitResult{
+    this.publish(topic, payload, qosLevel, isDup, isRetain, it)
+  }
 }
 

@@ -14,9 +14,9 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.core.net.NetServer original] using Vert.x codegen.
  */
 suspend fun NetServer.listenAwait() : NetServer {
-    return awaitResult{
-        this.listen(it)
-    }
+  return awaitResult{
+    this.listen(it)
+  }
 }
 
 /**
@@ -30,9 +30,9 @@ suspend fun NetServer.listenAwait() : NetServer {
  * NOTE: This function has been automatically generated from the [io.vertx.core.net.NetServer original] using Vert.x codegen.
  */
 suspend fun NetServer.listenAwait(port : Int, host : String) : NetServer {
-    return awaitResult{
-        this.listen(port, host, it)
-    }
+  return awaitResult{
+    this.listen(port, host, it)
+  }
 }
 
 /**
@@ -45,9 +45,9 @@ suspend fun NetServer.listenAwait(port : Int, host : String) : NetServer {
  * NOTE: This function has been automatically generated from the [io.vertx.core.net.NetServer original] using Vert.x codegen.
  */
 suspend fun NetServer.listenAwait(port : Int) : NetServer {
-    return awaitResult{
-        this.listen(port, it)
-    }
+  return awaitResult{
+    this.listen(port, it)
+  }
 }
 
 /**
@@ -60,9 +60,9 @@ suspend fun NetServer.listenAwait(port : Int) : NetServer {
  * NOTE: This function has been automatically generated from the [io.vertx.core.net.NetServer original] using Vert.x codegen.
  */
 suspend fun NetServer.listenAwait(localAddress : SocketAddress) : NetServer {
-    return awaitResult{
-        this.listen(localAddress, it)
-    }
+  return awaitResult{
+    this.listen(localAddress, it)
+  }
 }
 
 /**
@@ -75,9 +75,9 @@ suspend fun NetServer.listenAwait(localAddress : SocketAddress) : NetServer {
  * NOTE: This function has been automatically generated from the [io.vertx.core.net.NetServer original] using Vert.x codegen.
  */
 suspend fun NetServer.exceptionHandlerAwait() : Throwable {
-    return awaitEvent{
-        this.exceptionHandler(it)
-    }
+  return awaitEvent{
+    this.exceptionHandler(it)
+  }
 }
 
 /**
@@ -89,7 +89,7 @@ suspend fun NetServer.exceptionHandlerAwait() : Throwable {
  * NOTE: This function has been automatically generated from the [io.vertx.core.net.NetServer original] using Vert.x codegen.
  */
 suspend fun NetServer.closeAwait() : Unit {
-    return awaitResult{
-        this.close({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.close({ ar -> it.handle(ar.mapEmpty()) })}
 }
 

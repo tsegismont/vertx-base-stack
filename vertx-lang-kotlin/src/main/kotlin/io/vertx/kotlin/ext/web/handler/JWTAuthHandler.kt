@@ -18,9 +18,9 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.ext.web.handler.JWTAuthHandler original] using Vert.x codegen.
  */
 suspend fun JWTAuthHandler.parseCredentialsAwait(context : RoutingContext) : JsonObject {
-    return awaitResult{
-        this.parseCredentials(context, it)
-    }
+  return awaitResult{
+    this.parseCredentials(context, it)
+  }
 }
 
 /**
@@ -33,7 +33,7 @@ suspend fun JWTAuthHandler.parseCredentialsAwait(context : RoutingContext) : Jso
  * NOTE: This function has been automatically generated from the [io.vertx.ext.web.handler.JWTAuthHandler original] using Vert.x codegen.
  */
 suspend fun JWTAuthHandler.authorizeAwait(user : User) : Unit {
-    return awaitResult{
-        this.authorize(user, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.authorize(user, { ar -> it.handle(ar.mapEmpty()) })}
 }
 

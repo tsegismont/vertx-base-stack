@@ -12,7 +12,7 @@ import io.vertx.kotlin.coroutines.awaitEvent
  * NOTE: This function has been automatically generated from the [io.vertx.ext.shell.system.JobController original] using Vert.x codegen.
  */
 suspend fun JobController.closeAwait() : Unit {
-    return awaitEvent{
-        this.close({ v -> it.handle(null) })}
+  return awaitEvent{
+    this.close({ v -> it.handle(null) })}
 }
 

@@ -14,7 +14,7 @@ import io.vertx.kotlin.coroutines.awaitEvent
  * NOTE: This function has been automatically generated from the [io.vertx.ext.unit.TestContext original] using Vert.x codegen.
  */
 suspend fun TestContext.verifyAwait() : Unit {
-    return awaitEvent{
-        this.verify({ v -> it.handle(null) })}
+  return awaitEvent{
+    this.verify({ v -> it.handle(null) })}
 }
 

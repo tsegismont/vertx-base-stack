@@ -19,9 +19,9 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.core.datagram.DatagramSocket original] using Vert.x codegen.
  */
 suspend fun DatagramSocket.sendAwait(packet : Buffer, port : Int, host : String) : DatagramSocket {
-    return awaitResult{
-        this.send(packet, port, host, it)
-    }
+  return awaitResult{
+    this.send(packet, port, host, it)
+  }
 }
 
 /**
@@ -37,9 +37,9 @@ suspend fun DatagramSocket.sendAwait(packet : Buffer, port : Int, host : String)
  * NOTE: This function has been automatically generated from the [io.vertx.core.datagram.DatagramSocket original] using Vert.x codegen.
  */
 suspend fun DatagramSocket.sendAwait(str : String, port : Int, host : String) : DatagramSocket {
-    return awaitResult{
-        this.send(str, port, host, it)
-    }
+  return awaitResult{
+    this.send(str, port, host, it)
+  }
 }
 
 /**
@@ -56,9 +56,9 @@ suspend fun DatagramSocket.sendAwait(str : String, port : Int, host : String) : 
  * NOTE: This function has been automatically generated from the [io.vertx.core.datagram.DatagramSocket original] using Vert.x codegen.
  */
 suspend fun DatagramSocket.sendAwait(str : String, enc : String, port : Int, host : String) : DatagramSocket {
-    return awaitResult{
-        this.send(str, enc, port, host, it)
-    }
+  return awaitResult{
+    this.send(str, enc, port, host, it)
+  }
 }
 
 /**
@@ -71,8 +71,8 @@ suspend fun DatagramSocket.sendAwait(str : String, enc : String, port : Int, hos
  * NOTE: This function has been automatically generated from the [io.vertx.core.datagram.DatagramSocket original] using Vert.x codegen.
  */
 suspend fun DatagramSocket.closeAwait() : Unit {
-    return awaitResult{
-        this.close({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.close({ ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -86,9 +86,9 @@ suspend fun DatagramSocket.closeAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.core.datagram.DatagramSocket original] using Vert.x codegen.
  */
 suspend fun DatagramSocket.listenMulticastGroupAwait(multicastAddress : String) : DatagramSocket {
-    return awaitResult{
-        this.listenMulticastGroup(multicastAddress, it)
-    }
+  return awaitResult{
+    this.listenMulticastGroup(multicastAddress, it)
+  }
 }
 
 /**
@@ -104,9 +104,9 @@ suspend fun DatagramSocket.listenMulticastGroupAwait(multicastAddress : String) 
  * NOTE: This function has been automatically generated from the [io.vertx.core.datagram.DatagramSocket original] using Vert.x codegen.
  */
 suspend fun DatagramSocket.listenMulticastGroupAwait(multicastAddress : String, networkInterface : String, source : String) : DatagramSocket {
-    return awaitResult{
-        this.listenMulticastGroup(multicastAddress, networkInterface, source, it)
-    }
+  return awaitResult{
+    this.listenMulticastGroup(multicastAddress, networkInterface, source, it)
+  }
 }
 
 /**
@@ -120,9 +120,9 @@ suspend fun DatagramSocket.listenMulticastGroupAwait(multicastAddress : String, 
  * NOTE: This function has been automatically generated from the [io.vertx.core.datagram.DatagramSocket original] using Vert.x codegen.
  */
 suspend fun DatagramSocket.unlistenMulticastGroupAwait(multicastAddress : String) : DatagramSocket {
-    return awaitResult{
-        this.unlistenMulticastGroup(multicastAddress, it)
-    }
+  return awaitResult{
+    this.unlistenMulticastGroup(multicastAddress, it)
+  }
 }
 
 /**
@@ -138,9 +138,9 @@ suspend fun DatagramSocket.unlistenMulticastGroupAwait(multicastAddress : String
  * NOTE: This function has been automatically generated from the [io.vertx.core.datagram.DatagramSocket original] using Vert.x codegen.
  */
 suspend fun DatagramSocket.unlistenMulticastGroupAwait(multicastAddress : String, networkInterface : String, source : String) : DatagramSocket {
-    return awaitResult{
-        this.unlistenMulticastGroup(multicastAddress, networkInterface, source, it)
-    }
+  return awaitResult{
+    this.unlistenMulticastGroup(multicastAddress, networkInterface, source, it)
+  }
 }
 
 /**
@@ -155,9 +155,9 @@ suspend fun DatagramSocket.unlistenMulticastGroupAwait(multicastAddress : String
  * NOTE: This function has been automatically generated from the [io.vertx.core.datagram.DatagramSocket original] using Vert.x codegen.
  */
 suspend fun DatagramSocket.blockMulticastGroupAwait(multicastAddress : String, sourceToBlock : String) : DatagramSocket {
-    return awaitResult{
-        this.blockMulticastGroup(multicastAddress, sourceToBlock, it)
-    }
+  return awaitResult{
+    this.blockMulticastGroup(multicastAddress, sourceToBlock, it)
+  }
 }
 
 /**
@@ -173,9 +173,9 @@ suspend fun DatagramSocket.blockMulticastGroupAwait(multicastAddress : String, s
  * NOTE: This function has been automatically generated from the [io.vertx.core.datagram.DatagramSocket original] using Vert.x codegen.
  */
 suspend fun DatagramSocket.blockMulticastGroupAwait(multicastAddress : String, networkInterface : String, sourceToBlock : String) : DatagramSocket {
-    return awaitResult{
-        this.blockMulticastGroup(multicastAddress, networkInterface, sourceToBlock, it)
-    }
+  return awaitResult{
+    this.blockMulticastGroup(multicastAddress, networkInterface, sourceToBlock, it)
+  }
 }
 
 /**
@@ -189,25 +189,25 @@ suspend fun DatagramSocket.blockMulticastGroupAwait(multicastAddress : String, n
  * NOTE: This function has been automatically generated from the [io.vertx.core.datagram.DatagramSocket original] using Vert.x codegen.
  */
 suspend fun DatagramSocket.listenAwait(port : Int, host : String) : DatagramSocket {
-    return awaitResult{
-        this.listen(port, host, it)
-    }
+  return awaitResult{
+    this.listen(port, host, it)
+  }
 }
 
 suspend fun DatagramSocket.endHandlerAwait() : Unit {
-    return awaitEvent{
-        this.endHandler({ v -> it.handle(null) })}
+  return awaitEvent{
+    this.endHandler({ v -> it.handle(null) })}
 }
 
 suspend fun DatagramSocket.handlerAwait() : DatagramPacket {
-    return awaitEvent{
-        this.handler(it)
-    }
+  return awaitEvent{
+    this.handler(it)
+  }
 }
 
 suspend fun DatagramSocket.exceptionHandlerAwait() : Throwable {
-    return awaitEvent{
-        this.exceptionHandler(it)
-    }
+  return awaitEvent{
+    this.exceptionHandler(it)
+  }
 }
 

@@ -14,9 +14,9 @@ import io.vertx.servicediscovery.spi.ServicePublisher
  * NOTE: This function has been automatically generated from the [io.vertx.servicediscovery.spi.ServicePublisher original] using Vert.x codegen.
  */
 suspend fun ServicePublisher.publishAwait(record : Record) : Record {
-    return awaitResult{
-        this.publish(record, it)
-    }
+  return awaitResult{
+    this.publish(record, it)
+  }
 }
 
 /**
@@ -29,8 +29,8 @@ suspend fun ServicePublisher.publishAwait(record : Record) : Record {
  * NOTE: This function has been automatically generated from the [io.vertx.servicediscovery.spi.ServicePublisher original] using Vert.x codegen.
  */
 suspend fun ServicePublisher.unpublishAwait(id : String) : Unit {
-    return awaitResult{
-        this.unpublish(id, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.unpublish(id, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -43,8 +43,8 @@ suspend fun ServicePublisher.unpublishAwait(id : String) : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.servicediscovery.spi.ServicePublisher original] using Vert.x codegen.
  */
 suspend fun ServicePublisher.updateAwait(record : Record) : Record {
-    return awaitResult{
-        this.update(record, it)
-    }
+  return awaitResult{
+    this.update(record, it)
+  }
 }
 

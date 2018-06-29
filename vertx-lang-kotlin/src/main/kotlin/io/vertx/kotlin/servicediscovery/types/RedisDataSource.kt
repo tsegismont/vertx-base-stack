@@ -20,11 +20,11 @@ object RedisDataSource {
  * <p/>
  * NOTE: This function has been automatically generated from the [io.vertx.servicediscovery.types.RedisDataSource original] using Vert.x codegen.
  */
-    suspend fun getRedisClientAwait(discovery : ServiceDiscovery, filter : JsonObject) : RedisClient {
-        return awaitResult{
-            RedisDataSourceVertxAlias.getRedisClient(discovery, filter, it)
-        }
+  suspend fun getRedisClientAwait(discovery : ServiceDiscovery, filter : JsonObject) : RedisClient {
+    return awaitResult{
+      RedisDataSourceVertxAlias.getRedisClient(discovery, filter, it)
     }
+  }
 
 /**
  * Convenient method that looks for a Redis data source and provides the configured [io.vertx.redis.RedisClient].
@@ -37,11 +37,11 @@ object RedisDataSource {
  * <p/>
  * NOTE: This function has been automatically generated from the [io.vertx.servicediscovery.types.RedisDataSource original] using Vert.x codegen.
  */
-    suspend fun getRedisClientAwait(discovery : ServiceDiscovery, filter : Function<Record,Boolean>) : RedisClient {
-        return awaitResult{
-            RedisDataSourceVertxAlias.getRedisClient(discovery, filter, it)
-        }
+  suspend fun getRedisClientAwait(discovery : ServiceDiscovery, filter : Function<Record,Boolean>) : RedisClient {
+    return awaitResult{
+      RedisDataSourceVertxAlias.getRedisClient(discovery, filter, it)
     }
+  }
 
 /**
  * Convenient method that looks for a Redis data source and provides the configured [io.vertx.redis.RedisClient].
@@ -55,11 +55,11 @@ object RedisDataSource {
  * <p/>
  * NOTE: This function has been automatically generated from the [io.vertx.servicediscovery.types.RedisDataSource original] using Vert.x codegen.
  */
-    suspend fun getRedisClientAwait(discovery : ServiceDiscovery, filter : JsonObject, consumerConfiguration : JsonObject) : RedisClient {
-        return awaitResult{
-            RedisDataSourceVertxAlias.getRedisClient(discovery, filter, consumerConfiguration, it)
-        }
+  suspend fun getRedisClientAwait(discovery : ServiceDiscovery, filter : JsonObject, consumerConfiguration : JsonObject) : RedisClient {
+    return awaitResult{
+      RedisDataSourceVertxAlias.getRedisClient(discovery, filter, consumerConfiguration, it)
     }
+  }
 
 /**
  * Convenient method that looks for a Redis data source and provides the configured [io.vertx.redis.RedisClient].
@@ -73,10 +73,10 @@ object RedisDataSource {
  * <p/>
  * NOTE: This function has been automatically generated from the [io.vertx.servicediscovery.types.RedisDataSource original] using Vert.x codegen.
  */
-    suspend fun getRedisClientAwait(discovery : ServiceDiscovery, filter : Function<Record,Boolean>, consumerConfiguration : JsonObject) : RedisClient {
-        return awaitResult{
-            RedisDataSourceVertxAlias.getRedisClient(discovery, filter, consumerConfiguration, it)
-        }
+  suspend fun getRedisClientAwait(discovery : ServiceDiscovery, filter : Function<Record,Boolean>, consumerConfiguration : JsonObject) : RedisClient {
+    return awaitResult{
+      RedisDataSourceVertxAlias.getRedisClient(discovery, filter, consumerConfiguration, it)
     }
+  }
 
 }

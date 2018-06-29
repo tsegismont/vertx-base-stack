@@ -15,8 +15,8 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.core.Future original] using Vert.x codegen.
  */
 suspend fun <T> Future<T>.setHandlerAwait() : T {
-    return awaitResult{
-        this.setHandler(it)
-    }
+  return awaitResult{
+    this.setHandler(it)
+  }
 }
 

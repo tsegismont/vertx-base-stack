@@ -17,9 +17,9 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.core.eventbus.EventBus original] using Vert.x codegen.
  */
 suspend fun <T> EventBus.sendAwait(address : String, message : Any) : Message<T> {
-    return awaitResult{
-        this.send(address, message, it)
-    }
+  return awaitResult{
+    this.send(address, message, it)
+  }
 }
 
 /**
@@ -35,8 +35,8 @@ suspend fun <T> EventBus.sendAwait(address : String, message : Any) : Message<T>
  * NOTE: This function has been automatically generated from the [io.vertx.core.eventbus.EventBus original] using Vert.x codegen.
  */
 suspend fun <T> EventBus.sendAwait(address : String, message : Any, options : DeliveryOptions) : Message<T> {
-    return awaitResult{
-        this.send(address, message, options, it)
-    }
+  return awaitResult{
+    this.send(address, message, options, it)
+  }
 }
 

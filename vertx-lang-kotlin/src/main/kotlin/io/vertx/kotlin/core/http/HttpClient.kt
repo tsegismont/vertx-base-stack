@@ -20,9 +20,9 @@ import io.vertx.kotlin.coroutines.awaitEvent
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.getNowAwait(options : RequestOptions) : HttpClientResponse {
-    return awaitEvent{
-        this.getNow(options, it)
-    }
+  return awaitEvent{
+    this.getNow(options, it)
+  }
 }
 
 /**
@@ -38,9 +38,9 @@ suspend fun HttpClient.getNowAwait(options : RequestOptions) : HttpClientRespons
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.getNowAwait(port : Int, host : String, requestURI : String) : HttpClientResponse {
-    return awaitEvent{
-        this.getNow(port, host, requestURI, it)
-    }
+  return awaitEvent{
+    this.getNow(port, host, requestURI, it)
+  }
 }
 
 /**
@@ -55,9 +55,9 @@ suspend fun HttpClient.getNowAwait(port : Int, host : String, requestURI : Strin
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.getNowAwait(host : String, requestURI : String) : HttpClientResponse {
-    return awaitEvent{
-        this.getNow(host, requestURI, it)
-    }
+  return awaitEvent{
+    this.getNow(host, requestURI, it)
+  }
 }
 
 /**
@@ -71,9 +71,9 @@ suspend fun HttpClient.getNowAwait(host : String, requestURI : String) : HttpCli
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.getNowAwait(requestURI : String) : HttpClientResponse {
-    return awaitEvent{
-        this.getNow(requestURI, it)
-    }
+  return awaitEvent{
+    this.getNow(requestURI, it)
+  }
 }
 
 /**
@@ -87,9 +87,9 @@ suspend fun HttpClient.getNowAwait(requestURI : String) : HttpClientResponse {
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.headNowAwait(options : RequestOptions) : HttpClientResponse {
-    return awaitEvent{
-        this.headNow(options, it)
-    }
+  return awaitEvent{
+    this.headNow(options, it)
+  }
 }
 
 /**
@@ -105,9 +105,9 @@ suspend fun HttpClient.headNowAwait(options : RequestOptions) : HttpClientRespon
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.headNowAwait(port : Int, host : String, requestURI : String) : HttpClientResponse {
-    return awaitEvent{
-        this.headNow(port, host, requestURI, it)
-    }
+  return awaitEvent{
+    this.headNow(port, host, requestURI, it)
+  }
 }
 
 /**
@@ -122,9 +122,9 @@ suspend fun HttpClient.headNowAwait(port : Int, host : String, requestURI : Stri
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.headNowAwait(host : String, requestURI : String) : HttpClientResponse {
-    return awaitEvent{
-        this.headNow(host, requestURI, it)
-    }
+  return awaitEvent{
+    this.headNow(host, requestURI, it)
+  }
 }
 
 /**
@@ -138,9 +138,9 @@ suspend fun HttpClient.headNowAwait(host : String, requestURI : String) : HttpCl
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.headNowAwait(requestURI : String) : HttpClientResponse {
-    return awaitEvent{
-        this.headNow(requestURI, it)
-    }
+  return awaitEvent{
+    this.headNow(requestURI, it)
+  }
 }
 
 /**
@@ -154,9 +154,9 @@ suspend fun HttpClient.headNowAwait(requestURI : String) : HttpClientResponse {
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.optionsNowAwait(options : RequestOptions) : HttpClientResponse {
-    return awaitEvent{
-        this.optionsNow(options, it)
-    }
+  return awaitEvent{
+    this.optionsNow(options, it)
+  }
 }
 
 /**
@@ -172,9 +172,9 @@ suspend fun HttpClient.optionsNowAwait(options : RequestOptions) : HttpClientRes
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.optionsNowAwait(port : Int, host : String, requestURI : String) : HttpClientResponse {
-    return awaitEvent{
-        this.optionsNow(port, host, requestURI, it)
-    }
+  return awaitEvent{
+    this.optionsNow(port, host, requestURI, it)
+  }
 }
 
 /**
@@ -189,9 +189,9 @@ suspend fun HttpClient.optionsNowAwait(port : Int, host : String, requestURI : S
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.optionsNowAwait(host : String, requestURI : String) : HttpClientResponse {
-    return awaitEvent{
-        this.optionsNow(host, requestURI, it)
-    }
+  return awaitEvent{
+    this.optionsNow(host, requestURI, it)
+  }
 }
 
 /**
@@ -205,9 +205,9 @@ suspend fun HttpClient.optionsNowAwait(host : String, requestURI : String) : Htt
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.optionsNowAwait(requestURI : String) : HttpClientResponse {
-    return awaitEvent{
-        this.optionsNow(requestURI, it)
-    }
+  return awaitEvent{
+    this.optionsNow(requestURI, it)
+  }
 }
 
 /**
@@ -220,9 +220,9 @@ suspend fun HttpClient.optionsNowAwait(requestURI : String) : HttpClientResponse
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(options : RequestOptions) : WebSocket {
-    return awaitEvent{
-        this.websocket(options, it)
-    }
+  return awaitEvent{
+    this.websocket(options, it)
+  }
 }
 
 /**
@@ -237,9 +237,9 @@ suspend fun HttpClient.websocketAwait(options : RequestOptions) : WebSocket {
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(port : Int, host : String, requestURI : String) : WebSocket {
-    return awaitEvent{
-        this.websocket(port, host, requestURI, it)
-    }
+  return awaitEvent{
+    this.websocket(port, host, requestURI, it)
+  }
 }
 
 /**
@@ -253,9 +253,9 @@ suspend fun HttpClient.websocketAwait(port : Int, host : String, requestURI : St
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(options : RequestOptions, wsConnect : Handler<WebSocket>) : Throwable {
-    return awaitEvent{
-        this.websocket(options, wsConnect, it)
-    }
+  return awaitEvent{
+    this.websocket(options, wsConnect, it)
+  }
 }
 
 /**
@@ -271,9 +271,9 @@ suspend fun HttpClient.websocketAwait(options : RequestOptions, wsConnect : Hand
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(port : Int, host : String, requestURI : String, wsConnect : Handler<WebSocket>) : Throwable {
-    return awaitEvent{
-        this.websocket(port, host, requestURI, wsConnect, it)
-    }
+  return awaitEvent{
+    this.websocket(port, host, requestURI, wsConnect, it)
+  }
 }
 
 /**
@@ -287,9 +287,9 @@ suspend fun HttpClient.websocketAwait(port : Int, host : String, requestURI : St
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(host : String, requestURI : String) : WebSocket {
-    return awaitEvent{
-        this.websocket(host, requestURI, it)
-    }
+  return awaitEvent{
+    this.websocket(host, requestURI, it)
+  }
 }
 
 /**
@@ -304,9 +304,9 @@ suspend fun HttpClient.websocketAwait(host : String, requestURI : String) : WebS
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(host : String, requestURI : String, wsConnect : Handler<WebSocket>) : Throwable {
-    return awaitEvent{
-        this.websocket(host, requestURI, wsConnect, it)
-    }
+  return awaitEvent{
+    this.websocket(host, requestURI, wsConnect, it)
+  }
 }
 
 /**
@@ -320,9 +320,9 @@ suspend fun HttpClient.websocketAwait(host : String, requestURI : String, wsConn
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(options : RequestOptions, headers : MultiMap) : WebSocket {
-    return awaitEvent{
-        this.websocket(options, headers, it)
-    }
+  return awaitEvent{
+    this.websocket(options, headers, it)
+  }
 }
 
 /**
@@ -338,9 +338,9 @@ suspend fun HttpClient.websocketAwait(options : RequestOptions, headers : MultiM
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(port : Int, host : String, requestURI : String, headers : MultiMap) : WebSocket {
-    return awaitEvent{
-        this.websocket(port, host, requestURI, headers, it)
-    }
+  return awaitEvent{
+    this.websocket(port, host, requestURI, headers, it)
+  }
 }
 
 /**
@@ -355,9 +355,9 @@ suspend fun HttpClient.websocketAwait(port : Int, host : String, requestURI : St
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(options : RequestOptions, headers : MultiMap, wsConnect : Handler<WebSocket>) : Throwable {
-    return awaitEvent{
-        this.websocket(options, headers, wsConnect, it)
-    }
+  return awaitEvent{
+    this.websocket(options, headers, wsConnect, it)
+  }
 }
 
 /**
@@ -374,9 +374,9 @@ suspend fun HttpClient.websocketAwait(options : RequestOptions, headers : MultiM
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(port : Int, host : String, requestURI : String, headers : MultiMap, wsConnect : Handler<WebSocket>) : Throwable {
-    return awaitEvent{
-        this.websocket(port, host, requestURI, headers, wsConnect, it)
-    }
+  return awaitEvent{
+    this.websocket(port, host, requestURI, headers, wsConnect, it)
+  }
 }
 
 /**
@@ -391,9 +391,9 @@ suspend fun HttpClient.websocketAwait(port : Int, host : String, requestURI : St
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(host : String, requestURI : String, headers : MultiMap) : WebSocket {
-    return awaitEvent{
-        this.websocket(host, requestURI, headers, it)
-    }
+  return awaitEvent{
+    this.websocket(host, requestURI, headers, it)
+  }
 }
 
 /**
@@ -409,9 +409,9 @@ suspend fun HttpClient.websocketAwait(host : String, requestURI : String, header
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(host : String, requestURI : String, headers : MultiMap, wsConnect : Handler<WebSocket>) : Throwable {
-    return awaitEvent{
-        this.websocket(host, requestURI, headers, wsConnect, it)
-    }
+  return awaitEvent{
+    this.websocket(host, requestURI, headers, wsConnect, it)
+  }
 }
 
 /**
@@ -427,9 +427,9 @@ suspend fun HttpClient.websocketAwait(host : String, requestURI : String, header
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(options : RequestOptions, headers : MultiMap, version : WebsocketVersion) : WebSocket {
-    return awaitEvent{
-        this.websocket(options, headers, version, it)
-    }
+  return awaitEvent{
+    this.websocket(options, headers, version, it)
+  }
 }
 
 /**
@@ -447,9 +447,9 @@ suspend fun HttpClient.websocketAwait(options : RequestOptions, headers : MultiM
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(port : Int, host : String, requestURI : String, headers : MultiMap, version : WebsocketVersion) : WebSocket {
-    return awaitEvent{
-        this.websocket(port, host, requestURI, headers, version, it)
-    }
+  return awaitEvent{
+    this.websocket(port, host, requestURI, headers, version, it)
+  }
 }
 
 /**
@@ -466,9 +466,9 @@ suspend fun HttpClient.websocketAwait(port : Int, host : String, requestURI : St
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(options : RequestOptions, headers : MultiMap, version : WebsocketVersion, wsConnect : Handler<WebSocket>) : Throwable {
-    return awaitEvent{
-        this.websocket(options, headers, version, wsConnect, it)
-    }
+  return awaitEvent{
+    this.websocket(options, headers, version, wsConnect, it)
+  }
 }
 
 /**
@@ -487,9 +487,9 @@ suspend fun HttpClient.websocketAwait(options : RequestOptions, headers : MultiM
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(port : Int, host : String, requestURI : String, headers : MultiMap, version : WebsocketVersion, wsConnect : Handler<WebSocket>) : Throwable {
-    return awaitEvent{
-        this.websocket(port, host, requestURI, headers, version, wsConnect, it)
-    }
+  return awaitEvent{
+    this.websocket(port, host, requestURI, headers, version, wsConnect, it)
+  }
 }
 
 /**
@@ -506,9 +506,9 @@ suspend fun HttpClient.websocketAwait(port : Int, host : String, requestURI : St
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(host : String, requestURI : String, headers : MultiMap, version : WebsocketVersion) : WebSocket {
-    return awaitEvent{
-        this.websocket(host, requestURI, headers, version, it)
-    }
+  return awaitEvent{
+    this.websocket(host, requestURI, headers, version, it)
+  }
 }
 
 /**
@@ -526,9 +526,9 @@ suspend fun HttpClient.websocketAwait(host : String, requestURI : String, header
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(host : String, requestURI : String, headers : MultiMap, version : WebsocketVersion, wsConnect : Handler<WebSocket>) : Throwable {
-    return awaitEvent{
-        this.websocket(host, requestURI, headers, version, wsConnect, it)
-    }
+  return awaitEvent{
+    this.websocket(host, requestURI, headers, version, wsConnect, it)
+  }
 }
 
 /**
@@ -545,9 +545,9 @@ suspend fun HttpClient.websocketAwait(host : String, requestURI : String, header
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(options : RequestOptions, headers : MultiMap, version : WebsocketVersion, subProtocols : String) : WebSocket {
-    return awaitEvent{
-        this.websocket(options, headers, version, subProtocols, it)
-    }
+  return awaitEvent{
+    this.websocket(options, headers, version, subProtocols, it)
+  }
 }
 
 /**
@@ -566,9 +566,9 @@ suspend fun HttpClient.websocketAwait(options : RequestOptions, headers : MultiM
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(port : Int, host : String, requestURI : String, headers : MultiMap, version : WebsocketVersion, subProtocols : String) : WebSocket {
-    return awaitEvent{
-        this.websocket(port, host, requestURI, headers, version, subProtocols, it)
-    }
+  return awaitEvent{
+    this.websocket(port, host, requestURI, headers, version, subProtocols, it)
+  }
 }
 
 /**
@@ -586,9 +586,9 @@ suspend fun HttpClient.websocketAwait(port : Int, host : String, requestURI : St
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAbsAwait(url : String, headers : MultiMap, version : WebsocketVersion, subProtocols : String, wsConnect : Handler<WebSocket>) : Throwable {
-    return awaitEvent{
-        this.websocketAbs(url, headers, version, subProtocols, wsConnect, it)
-    }
+  return awaitEvent{
+    this.websocketAbs(url, headers, version, subProtocols, wsConnect, it)
+  }
 }
 
 /**
@@ -606,9 +606,9 @@ suspend fun HttpClient.websocketAbsAwait(url : String, headers : MultiMap, versi
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(options : RequestOptions, headers : MultiMap, version : WebsocketVersion, subProtocols : String, wsConnect : Handler<WebSocket>) : Throwable {
-    return awaitEvent{
-        this.websocket(options, headers, version, subProtocols, wsConnect, it)
-    }
+  return awaitEvent{
+    this.websocket(options, headers, version, subProtocols, wsConnect, it)
+  }
 }
 
 /**
@@ -628,9 +628,9 @@ suspend fun HttpClient.websocketAwait(options : RequestOptions, headers : MultiM
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(port : Int, host : String, requestURI : String, headers : MultiMap, version : WebsocketVersion, subProtocols : String, wsConnect : Handler<WebSocket>) : Throwable {
-    return awaitEvent{
-        this.websocket(port, host, requestURI, headers, version, subProtocols, wsConnect, it)
-    }
+  return awaitEvent{
+    this.websocket(port, host, requestURI, headers, version, subProtocols, wsConnect, it)
+  }
 }
 
 /**
@@ -648,9 +648,9 @@ suspend fun HttpClient.websocketAwait(port : Int, host : String, requestURI : St
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(host : String, requestURI : String, headers : MultiMap, version : WebsocketVersion, subProtocols : String) : WebSocket {
-    return awaitEvent{
-        this.websocket(host, requestURI, headers, version, subProtocols, it)
-    }
+  return awaitEvent{
+    this.websocket(host, requestURI, headers, version, subProtocols, it)
+  }
 }
 
 /**
@@ -669,9 +669,9 @@ suspend fun HttpClient.websocketAwait(host : String, requestURI : String, header
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(host : String, requestURI : String, headers : MultiMap, version : WebsocketVersion, subProtocols : String, wsConnect : Handler<WebSocket>) : Throwable {
-    return awaitEvent{
-        this.websocket(host, requestURI, headers, version, subProtocols, wsConnect, it)
-    }
+  return awaitEvent{
+    this.websocket(host, requestURI, headers, version, subProtocols, wsConnect, it)
+  }
 }
 
 /**
@@ -684,9 +684,9 @@ suspend fun HttpClient.websocketAwait(host : String, requestURI : String, header
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(requestURI : String) : WebSocket {
-    return awaitEvent{
-        this.websocket(requestURI, it)
-    }
+  return awaitEvent{
+    this.websocket(requestURI, it)
+  }
 }
 
 /**
@@ -700,9 +700,9 @@ suspend fun HttpClient.websocketAwait(requestURI : String) : WebSocket {
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(requestURI : String, wsConnect : Handler<WebSocket>) : Throwable {
-    return awaitEvent{
-        this.websocket(requestURI, wsConnect, it)
-    }
+  return awaitEvent{
+    this.websocket(requestURI, wsConnect, it)
+  }
 }
 
 /**
@@ -716,9 +716,9 @@ suspend fun HttpClient.websocketAwait(requestURI : String, wsConnect : Handler<W
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(requestURI : String, headers : MultiMap) : WebSocket {
-    return awaitEvent{
-        this.websocket(requestURI, headers, it)
-    }
+  return awaitEvent{
+    this.websocket(requestURI, headers, it)
+  }
 }
 
 /**
@@ -733,9 +733,9 @@ suspend fun HttpClient.websocketAwait(requestURI : String, headers : MultiMap) :
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(requestURI : String, headers : MultiMap, wsConnect : Handler<WebSocket>) : Throwable {
-    return awaitEvent{
-        this.websocket(requestURI, headers, wsConnect, it)
-    }
+  return awaitEvent{
+    this.websocket(requestURI, headers, wsConnect, it)
+  }
 }
 
 /**
@@ -751,9 +751,9 @@ suspend fun HttpClient.websocketAwait(requestURI : String, headers : MultiMap, w
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(requestURI : String, headers : MultiMap, version : WebsocketVersion) : WebSocket {
-    return awaitEvent{
-        this.websocket(requestURI, headers, version, it)
-    }
+  return awaitEvent{
+    this.websocket(requestURI, headers, version, it)
+  }
 }
 
 /**
@@ -770,9 +770,9 @@ suspend fun HttpClient.websocketAwait(requestURI : String, headers : MultiMap, v
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(requestURI : String, headers : MultiMap, version : WebsocketVersion, wsConnect : Handler<WebSocket>) : Throwable {
-    return awaitEvent{
-        this.websocket(requestURI, headers, version, wsConnect, it)
-    }
+  return awaitEvent{
+    this.websocket(requestURI, headers, version, wsConnect, it)
+  }
 }
 
 /**
@@ -789,9 +789,9 @@ suspend fun HttpClient.websocketAwait(requestURI : String, headers : MultiMap, v
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(requestURI : String, headers : MultiMap, version : WebsocketVersion, subProtocols : String) : WebSocket {
-    return awaitEvent{
-        this.websocket(requestURI, headers, version, subProtocols, it)
-    }
+  return awaitEvent{
+    this.websocket(requestURI, headers, version, subProtocols, it)
+  }
 }
 
 /**
@@ -809,8 +809,8 @@ suspend fun HttpClient.websocketAwait(requestURI : String, headers : MultiMap, v
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClient original] using Vert.x codegen.
  */
 suspend fun HttpClient.websocketAwait(requestURI : String, headers : MultiMap, version : WebsocketVersion, subProtocols : String, wsConnect : Handler<WebSocket>) : Throwable {
-    return awaitEvent{
-        this.websocket(requestURI, headers, version, subProtocols, wsConnect, it)
-    }
+  return awaitEvent{
+    this.websocket(requestURI, headers, version, subProtocols, wsConnect, it)
+  }
 }
 

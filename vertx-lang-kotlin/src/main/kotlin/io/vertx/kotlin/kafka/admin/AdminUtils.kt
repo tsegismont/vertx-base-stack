@@ -15,8 +15,8 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.admin.AdminUtils original] using Vert.x codegen.
  */
 suspend fun AdminUtils.createTopicAwait(topicName : String, partitionCount : Int, replicationFactor : Int) : Unit {
-    return awaitResult{
-        this.createTopic(topicName, partitionCount, replicationFactor, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.createTopic(topicName, partitionCount, replicationFactor, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -34,8 +34,8 @@ suspend fun AdminUtils.createTopicAwait(topicName : String, partitionCount : Int
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.admin.AdminUtils original] using Vert.x codegen.
  */
 suspend fun AdminUtils.createTopicAwait(topicName : String, partitionCount : Int, replicationFactor : Int, topicConfig : Map<String,String>) : Unit {
-    return awaitResult{
-        this.createTopic(topicName, partitionCount, replicationFactor, topicConfig, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.createTopic(topicName, partitionCount, replicationFactor, topicConfig, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -48,8 +48,8 @@ suspend fun AdminUtils.createTopicAwait(topicName : String, partitionCount : Int
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.admin.AdminUtils original] using Vert.x codegen.
  */
 suspend fun AdminUtils.deleteTopicAwait(topicName : String) : Unit {
-    return awaitResult{
-        this.deleteTopic(topicName, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.deleteTopic(topicName, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -62,9 +62,9 @@ suspend fun AdminUtils.deleteTopicAwait(topicName : String) : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.admin.AdminUtils original] using Vert.x codegen.
  */
 suspend fun AdminUtils.topicExistsAwait(topicName : String) : Boolean {
-    return awaitResult{
-        this.topicExists(topicName, it)
-    }
+  return awaitResult{
+    this.topicExists(topicName, it)
+  }
 }
 
 /**
@@ -79,8 +79,8 @@ suspend fun AdminUtils.topicExistsAwait(topicName : String) : Boolean {
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.admin.AdminUtils original] using Vert.x codegen.
  */
 suspend fun AdminUtils.changeTopicConfigAwait(topicName : String, topicConfig : Map<String,String>) : Unit {
-    return awaitResult{
-        this.changeTopicConfig(topicName, topicConfig, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.changeTopicConfig(topicName, topicConfig, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -93,7 +93,7 @@ suspend fun AdminUtils.changeTopicConfigAwait(topicName : String, topicConfig : 
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.admin.AdminUtils original] using Vert.x codegen.
  */
 suspend fun AdminUtils.closeAwait() : Unit {
-    return awaitResult{
-        this.close({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.close({ ar -> it.handle(ar.mapEmpty()) })}
 }
 

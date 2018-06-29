@@ -17,9 +17,9 @@ import io.vertx.mqtt.MqttServer
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttServer original] using Vert.x codegen.
  */
 suspend fun MqttServer.listenAwait(port : Int, host : String) : MqttServer {
-    return awaitResult{
-        this.listen(port, host, it)
-    }
+  return awaitResult{
+    this.listen(port, host, it)
+  }
 }
 
 /**
@@ -33,9 +33,9 @@ suspend fun MqttServer.listenAwait(port : Int, host : String) : MqttServer {
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttServer original] using Vert.x codegen.
  */
 suspend fun MqttServer.listenAwait(port : Int) : MqttServer {
-    return awaitResult{
-        this.listen(port, it)
-    }
+  return awaitResult{
+    this.listen(port, it)
+  }
 }
 
 /**
@@ -48,9 +48,9 @@ suspend fun MqttServer.listenAwait(port : Int) : MqttServer {
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttServer original] using Vert.x codegen.
  */
 suspend fun MqttServer.listenAwait() : MqttServer {
-    return awaitResult{
-        this.listen(it)
-    }
+  return awaitResult{
+    this.listen(it)
+  }
 }
 
 /**
@@ -63,9 +63,9 @@ suspend fun MqttServer.listenAwait() : MqttServer {
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttServer original] using Vert.x codegen.
  */
 suspend fun MqttServer.endpointHandlerAwait() : MqttEndpoint {
-    return awaitEvent{
-        this.endpointHandler(it)
-    }
+  return awaitEvent{
+    this.endpointHandler(it)
+  }
 }
 
 /**
@@ -78,9 +78,9 @@ suspend fun MqttServer.endpointHandlerAwait() : MqttEndpoint {
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttServer original] using Vert.x codegen.
  */
 suspend fun MqttServer.exceptionHandlerAwait() : Throwable {
-    return awaitEvent{
-        this.exceptionHandler(it)
-    }
+  return awaitEvent{
+    this.exceptionHandler(it)
+  }
 }
 
 /**
@@ -92,7 +92,7 @@ suspend fun MqttServer.exceptionHandlerAwait() : Throwable {
  * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttServer original] using Vert.x codegen.
  */
 suspend fun MqttServer.closeAwait() : Unit {
-    return awaitResult{
-        this.close({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.close({ ar -> it.handle(ar.mapEmpty()) })}
 }
 

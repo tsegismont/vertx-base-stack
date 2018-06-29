@@ -13,9 +13,9 @@ import io.vertx.kotlin.coroutines.awaitEvent
  * NOTE: This function has been automatically generated from the [io.vertx.ext.unit.TestSuite original] using Vert.x codegen.
  */
 suspend fun TestSuite.beforeAwait() : TestContext {
-    return awaitEvent{
-        this.before(it)
-    }
+  return awaitEvent{
+    this.before(it)
+  }
 }
 
 /**
@@ -27,9 +27,9 @@ suspend fun TestSuite.beforeAwait() : TestContext {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.unit.TestSuite original] using Vert.x codegen.
  */
 suspend fun TestSuite.beforeEachAwait() : TestContext {
-    return awaitEvent{
-        this.beforeEach(it)
-    }
+  return awaitEvent{
+    this.beforeEach(it)
+  }
 }
 
 /**
@@ -41,9 +41,9 @@ suspend fun TestSuite.beforeEachAwait() : TestContext {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.unit.TestSuite original] using Vert.x codegen.
  */
 suspend fun TestSuite.afterAwait() : TestContext {
-    return awaitEvent{
-        this.after(it)
-    }
+  return awaitEvent{
+    this.after(it)
+  }
 }
 
 /**
@@ -55,9 +55,9 @@ suspend fun TestSuite.afterAwait() : TestContext {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.unit.TestSuite original] using Vert.x codegen.
  */
 suspend fun TestSuite.afterEachAwait() : TestContext {
-    return awaitEvent{
-        this.afterEach(it)
-    }
+  return awaitEvent{
+    this.afterEach(it)
+  }
 }
 
 /**
@@ -70,9 +70,9 @@ suspend fun TestSuite.afterEachAwait() : TestContext {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.unit.TestSuite original] using Vert.x codegen.
  */
 suspend fun TestSuite.testAwait(name : String) : TestContext {
-    return awaitEvent{
-        this.test(name, it)
-    }
+  return awaitEvent{
+    this.test(name, it)
+  }
 }
 
 /**
@@ -86,8 +86,8 @@ suspend fun TestSuite.testAwait(name : String) : TestContext {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.unit.TestSuite original] using Vert.x codegen.
  */
 suspend fun TestSuite.testAwait(name : String, repeat : Int) : TestContext {
-    return awaitEvent{
-        this.test(name, repeat, it)
-    }
+  return awaitEvent{
+    this.test(name, repeat, it)
+  }
 }
 

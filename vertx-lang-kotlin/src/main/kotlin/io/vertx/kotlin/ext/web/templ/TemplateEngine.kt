@@ -20,8 +20,8 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.ext.web.templ.TemplateEngine original] using Vert.x codegen.
  */
 suspend fun TemplateEngine.renderAwait(context : RoutingContext, templateDirectory : String, templateFileName : String) : Buffer {
-    return awaitResult{
-        this.render(context, templateDirectory, templateFileName, it)
-    }
+  return awaitResult{
+    this.render(context, templateDirectory, templateFileName, it)
+  }
 }
 

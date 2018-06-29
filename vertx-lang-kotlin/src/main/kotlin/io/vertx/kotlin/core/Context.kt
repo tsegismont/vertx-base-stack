@@ -15,8 +15,8 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.core.Context original] using Vert.x codegen.
  */
 suspend fun Context.runOnContextAwait() : Unit {
-    return awaitEvent{
-        this.runOnContext({ v -> it.handle(null) })}
+  return awaitEvent{
+    this.runOnContext({ v -> it.handle(null) })}
 }
 
 /**
@@ -39,9 +39,9 @@ suspend fun Context.runOnContextAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.core.Context original] using Vert.x codegen.
  */
 suspend fun <T> Context.executeBlockingAwait(blockingCodeHandler : Handler<Future<T>>, ordered : Boolean) : T {
-    return awaitResult{
-        this.executeBlocking(blockingCodeHandler, ordered, it)
-    }
+  return awaitResult{
+    this.executeBlocking(blockingCodeHandler, ordered, it)
+  }
 }
 
 /**
@@ -54,9 +54,9 @@ suspend fun <T> Context.executeBlockingAwait(blockingCodeHandler : Handler<Futur
  * NOTE: This function has been automatically generated from the [io.vertx.core.Context original] using Vert.x codegen.
  */
 suspend fun <T> Context.executeBlockingAwait(blockingCodeHandler : Handler<Future<T>>) : T {
-    return awaitResult{
-        this.executeBlocking(blockingCodeHandler, it)
-    }
+  return awaitResult{
+    this.executeBlocking(blockingCodeHandler, it)
+  }
 }
 
 /**
@@ -70,8 +70,8 @@ suspend fun <T> Context.executeBlockingAwait(blockingCodeHandler : Handler<Futur
  * NOTE: This function has been automatically generated from the [io.vertx.core.Context original] using Vert.x codegen.
  */
 suspend fun Context.exceptionHandlerAwait() : Throwable {
-    return awaitEvent{
-        this.exceptionHandler(it)
-    }
+  return awaitEvent{
+    this.exceptionHandler(it)
+  }
 }
 

@@ -12,8 +12,8 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.ext.unit.Completion original] using Vert.x codegen.
  */
 suspend fun <T> Completion<T>.handlerAwait() : T? {
-    return awaitResult{
-        this.handler(it)
-    }
+  return awaitResult{
+    this.handler(it)
+  }
 }
 

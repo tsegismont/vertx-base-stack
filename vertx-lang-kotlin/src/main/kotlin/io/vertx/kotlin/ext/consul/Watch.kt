@@ -13,8 +13,8 @@ import io.vertx.kotlin.coroutines.awaitEvent
  * NOTE: This function has been automatically generated from the [io.vertx.ext.consul.Watch original] using Vert.x codegen.
  */
 suspend fun <T> Watch<T>.setHandlerAwait() : WatchResult<T> {
-    return awaitEvent{
-        this.setHandler(it)
-    }
+  return awaitEvent{
+    this.setHandler(it)
+  }
 }
 

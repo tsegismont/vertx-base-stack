@@ -14,9 +14,9 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.ext.shell.command.CommandRegistry original] using Vert.x codegen.
  */
 suspend fun CommandRegistry.registerCommandAwait(command : Command) : Command {
-    return awaitResult{
-        this.registerCommand(command, it)
-    }
+  return awaitResult{
+    this.registerCommand(command, it)
+  }
 }
 
 /**
@@ -29,9 +29,9 @@ suspend fun CommandRegistry.registerCommandAwait(command : Command) : Command {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.shell.command.CommandRegistry original] using Vert.x codegen.
  */
 suspend fun CommandRegistry.registerCommandsAwait(commands : List<Command>) : List<Command> {
-    return awaitResult{
-        this.registerCommands(commands, it)
-    }
+  return awaitResult{
+    this.registerCommands(commands, it)
+  }
 }
 
 /**
@@ -44,7 +44,7 @@ suspend fun CommandRegistry.registerCommandsAwait(commands : List<Command>) : Li
  * NOTE: This function has been automatically generated from the [io.vertx.ext.shell.command.CommandRegistry original] using Vert.x codegen.
  */
 suspend fun CommandRegistry.unregisterCommandAwait(commandName : String) : Unit {
-    return awaitResult{
-        this.unregisterCommand(commandName, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.unregisterCommand(commandName, { ar -> it.handle(ar.mapEmpty()) })}
 }
 

@@ -16,9 +16,9 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.config.ConfigRetriever original] using Vert.x codegen.
  */
 suspend fun ConfigRetriever.getConfigAwait() : JsonObject {
-    return awaitResult{
-        this.getConfig(it)
-    }
+  return awaitResult{
+    this.getConfig(it)
+  }
 }
 
 /**
@@ -31,8 +31,8 @@ suspend fun ConfigRetriever.getConfigAwait() : JsonObject {
  * NOTE: This function has been automatically generated from the [io.vertx.config.ConfigRetriever original] using Vert.x codegen.
  */
 suspend fun ConfigRetriever.listenAwait() : ConfigChange {
-    return awaitEvent{
-        this.listen(it)
-    }
+  return awaitEvent{
+    this.listen(it)
+  }
 }
 

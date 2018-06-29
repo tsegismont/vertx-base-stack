@@ -13,8 +13,8 @@ import io.vertx.kotlin.coroutines.awaitEvent
  * NOTE: This function has been automatically generated from the [io.vertx.ext.unit.report.TestCaseReport original] using Vert.x codegen.
  */
 suspend fun TestCaseReport.endHandlerAwait() : TestResult {
-    return awaitEvent{
-        this.endHandler(it)
-    }
+  return awaitEvent{
+    this.endHandler(it)
+  }
 }
 

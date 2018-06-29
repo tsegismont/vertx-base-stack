@@ -15,9 +15,9 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompServer original] using Vert.x codegen.
  */
 suspend fun StompServer.listenAwait() : StompServer {
-    return awaitResult{
-        this.listen(it)
-    }
+  return awaitResult{
+    this.listen(it)
+  }
 }
 
 /**
@@ -31,9 +31,9 @@ suspend fun StompServer.listenAwait() : StompServer {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompServer original] using Vert.x codegen.
  */
 suspend fun StompServer.listenAwait(port : Int) : StompServer {
-    return awaitResult{
-        this.listen(port, it)
-    }
+  return awaitResult{
+    this.listen(port, it)
+  }
 }
 
 /**
@@ -48,9 +48,9 @@ suspend fun StompServer.listenAwait(port : Int) : StompServer {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompServer original] using Vert.x codegen.
  */
 suspend fun StompServer.listenAwait(port : Int, host : String) : StompServer {
-    return awaitResult{
-        this.listen(port, host, it)
-    }
+  return awaitResult{
+    this.listen(port, host, it)
+  }
 }
 
 /**
@@ -62,8 +62,8 @@ suspend fun StompServer.listenAwait(port : Int, host : String) : StompServer {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompServer original] using Vert.x codegen.
  */
 suspend fun StompServer.closeAwait() : Unit {
-    return awaitResult{
-        this.close({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.close({ ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -76,8 +76,8 @@ suspend fun StompServer.closeAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompServer original] using Vert.x codegen.
  */
 suspend fun StompServer.writingFrameHandlerAwait() : ServerFrame {
-    return awaitEvent{
-        this.writingFrameHandler(it)
-    }
+  return awaitEvent{
+    this.writingFrameHandler(it)
+  }
 }
 

@@ -12,9 +12,9 @@ import io.vertx.kotlin.coroutines.awaitEvent
  * NOTE: This function has been automatically generated from the [io.vertx.ext.shell.term.Tty original] using Vert.x codegen.
  */
 suspend fun Tty.stdinHandlerAwait() : String {
-    return awaitEvent{
-        this.stdinHandler(it)
-    }
+  return awaitEvent{
+    this.stdinHandler(it)
+  }
 }
 
 /**
@@ -26,7 +26,7 @@ suspend fun Tty.stdinHandlerAwait() : String {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.shell.term.Tty original] using Vert.x codegen.
  */
 suspend fun Tty.resizehandlerAwait() : Unit {
-    return awaitEvent{
-        this.resizehandler({ v -> it.handle(null) })}
+  return awaitEvent{
+    this.resizehandler({ v -> it.handle(null) })}
 }
 

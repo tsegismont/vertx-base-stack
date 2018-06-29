@@ -15,9 +15,9 @@ import io.vertx.kotlin.coroutines.awaitEvent
  * NOTE: This function has been automatically generated from the [io.vertx.ext.web.Route original] using Vert.x codegen.
  */
 suspend fun Route.handlerAwait() : RoutingContext {
-    return awaitEvent{
-        this.handler(it)
-    }
+  return awaitEvent{
+    this.handler(it)
+  }
 }
 
 /**
@@ -29,9 +29,9 @@ suspend fun Route.handlerAwait() : RoutingContext {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.web.Route original] using Vert.x codegen.
  */
 suspend fun Route.blockingHandlerAwait() : RoutingContext {
-    return awaitEvent{
-        this.blockingHandler(it)
-    }
+  return awaitEvent{
+    this.blockingHandler(it)
+  }
 }
 
 /**
@@ -45,8 +45,8 @@ suspend fun Route.blockingHandlerAwait() : RoutingContext {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.web.Route original] using Vert.x codegen.
  */
 suspend fun Route.failureHandlerAwait() : RoutingContext {
-    return awaitEvent{
-        this.failureHandler(it)
-    }
+  return awaitEvent{
+    this.failureHandler(it)
+  }
 }
 

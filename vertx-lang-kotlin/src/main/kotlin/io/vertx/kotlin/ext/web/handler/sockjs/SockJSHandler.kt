@@ -16,9 +16,9 @@ import io.vertx.kotlin.coroutines.awaitEvent
  * NOTE: This function has been automatically generated from the [io.vertx.ext.web.handler.sockjs.SockJSHandler original] using Vert.x codegen.
  */
 suspend fun SockJSHandler.socketHandlerAwait() : SockJSSocket {
-    return awaitEvent{
-        this.socketHandler(it)
-    }
+  return awaitEvent{
+    this.socketHandler(it)
+  }
 }
 
 /**
@@ -32,8 +32,8 @@ suspend fun SockJSHandler.socketHandlerAwait() : SockJSSocket {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.web.handler.sockjs.SockJSHandler original] using Vert.x codegen.
  */
 suspend fun SockJSHandler.bridgeAwait(bridgeOptions : BridgeOptions) : BridgeEvent {
-    return awaitEvent{
-        this.bridge(bridgeOptions, it)
-    }
+  return awaitEvent{
+    this.bridge(bridgeOptions, it)
+  }
 }
 

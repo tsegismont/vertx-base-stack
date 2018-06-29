@@ -18,9 +18,9 @@ import io.vertx.rabbitmq.RabbitMQConsumer
  * NOTE: This function has been automatically generated from the [io.vertx.rabbitmq.RabbitMQClient original] using Vert.x codegen.
  */
 suspend fun RabbitMQClient.basicAckAwait(deliveryTag : Long, multiple : Boolean) : JsonObject {
-    return awaitResult{
-        this.basicAck(deliveryTag, multiple, it)
-    }
+  return awaitResult{
+    this.basicAck(deliveryTag, multiple, it)
+  }
 }
 
 /**
@@ -35,9 +35,9 @@ suspend fun RabbitMQClient.basicAckAwait(deliveryTag : Long, multiple : Boolean)
  * NOTE: This function has been automatically generated from the [io.vertx.rabbitmq.RabbitMQClient original] using Vert.x codegen.
  */
 suspend fun RabbitMQClient.basicNackAwait(deliveryTag : Long, multiple : Boolean, requeue : Boolean) : JsonObject {
-    return awaitResult{
-        this.basicNack(deliveryTag, multiple, requeue, it)
-    }
+  return awaitResult{
+    this.basicNack(deliveryTag, multiple, requeue, it)
+  }
 }
 
 /**
@@ -51,9 +51,9 @@ suspend fun RabbitMQClient.basicNackAwait(deliveryTag : Long, multiple : Boolean
  * NOTE: This function has been automatically generated from the [io.vertx.rabbitmq.RabbitMQClient original] using Vert.x codegen.
  */
 suspend fun RabbitMQClient.basicGetAwait(queue : String, autoAck : Boolean) : JsonObject {
-    return awaitResult{
-        this.basicGet(queue, autoAck, it)
-    }
+  return awaitResult{
+    this.basicGet(queue, autoAck, it)
+  }
 }
 
 /**
@@ -65,9 +65,9 @@ suspend fun RabbitMQClient.basicGetAwait(queue : String, autoAck : Boolean) : Js
  * NOTE: This function has been automatically generated from the [io.vertx.rabbitmq.RabbitMQClient original] using Vert.x codegen.
  */
 suspend fun RabbitMQClient.basicConsumerAwait(queue : String) : RabbitMQConsumer {
-    return awaitResult{
-        this.basicConsumer(queue, it)
-    }
+  return awaitResult{
+    this.basicConsumer(queue, it)
+  }
 }
 
 /**
@@ -81,9 +81,9 @@ suspend fun RabbitMQClient.basicConsumerAwait(queue : String) : RabbitMQConsumer
  * NOTE: This function has been automatically generated from the [io.vertx.rabbitmq.RabbitMQClient original] using Vert.x codegen.
  */
 suspend fun RabbitMQClient.basicConsumerAwait(queue : String, options : QueueOptions) : RabbitMQConsumer {
-    return awaitResult{
-        this.basicConsumer(queue, options, it)
-    }
+  return awaitResult{
+    this.basicConsumer(queue, options, it)
+  }
 }
 
 /**
@@ -99,8 +99,8 @@ suspend fun RabbitMQClient.basicConsumerAwait(queue : String, options : QueueOpt
  * NOTE: This function has been automatically generated from the [io.vertx.rabbitmq.RabbitMQClient original] using Vert.x codegen.
  */
 suspend fun RabbitMQClient.basicPublishAwait(exchange : String, routingKey : String, message : JsonObject) : Unit {
-    return awaitResult{
-        this.basicPublish(exchange, routingKey, message, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.basicPublish(exchange, routingKey, message, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -113,8 +113,8 @@ suspend fun RabbitMQClient.basicPublishAwait(exchange : String, routingKey : Str
  * NOTE: This function has been automatically generated from the [io.vertx.rabbitmq.RabbitMQClient original] using Vert.x codegen.
  */
 suspend fun RabbitMQClient.confirmSelectAwait() : Unit {
-    return awaitResult{
-        this.confirmSelect({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.confirmSelect({ ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -128,8 +128,8 @@ suspend fun RabbitMQClient.confirmSelectAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.rabbitmq.RabbitMQClient original] using Vert.x codegen.
  */
 suspend fun RabbitMQClient.waitForConfirmsAwait() : Unit {
-    return awaitResult{
-        this.waitForConfirms({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.waitForConfirms({ ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -142,8 +142,8 @@ suspend fun RabbitMQClient.waitForConfirmsAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.rabbitmq.RabbitMQClient original] using Vert.x codegen.
  */
 suspend fun RabbitMQClient.waitForConfirmsAwait(timeout : Long) : Unit {
-    return awaitResult{
-        this.waitForConfirms(timeout, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.waitForConfirms(timeout, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -157,8 +157,8 @@ suspend fun RabbitMQClient.waitForConfirmsAwait(timeout : Long) : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.rabbitmq.RabbitMQClient original] using Vert.x codegen.
  */
 suspend fun RabbitMQClient.basicQosAwait(prefetchCount : Int) : Unit {
-    return awaitResult{
-        this.basicQos(prefetchCount, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.basicQos(prefetchCount, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -173,8 +173,8 @@ suspend fun RabbitMQClient.basicQosAwait(prefetchCount : Int) : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.rabbitmq.RabbitMQClient original] using Vert.x codegen.
  */
 suspend fun RabbitMQClient.basicQosAwait(prefetchCount : Int, global : Boolean) : Unit {
-    return awaitResult{
-        this.basicQos(prefetchCount, global, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.basicQos(prefetchCount, global, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -193,8 +193,8 @@ suspend fun RabbitMQClient.basicQosAwait(prefetchCount : Int, global : Boolean) 
  * NOTE: This function has been automatically generated from the [io.vertx.rabbitmq.RabbitMQClient original] using Vert.x codegen.
  */
 suspend fun RabbitMQClient.basicQosAwait(prefetchSize : Int, prefetchCount : Int, global : Boolean) : Unit {
-    return awaitResult{
-        this.basicQos(prefetchSize, prefetchCount, global, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.basicQos(prefetchSize, prefetchCount, global, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -210,8 +210,8 @@ suspend fun RabbitMQClient.basicQosAwait(prefetchSize : Int, prefetchCount : Int
  * NOTE: This function has been automatically generated from the [io.vertx.rabbitmq.RabbitMQClient original] using Vert.x codegen.
  */
 suspend fun RabbitMQClient.exchangeDeclareAwait(exchange : String, type : String, durable : Boolean, autoDelete : Boolean) : Unit {
-    return awaitResult{
-        this.exchangeDeclare(exchange, type, durable, autoDelete, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.exchangeDeclare(exchange, type, durable, autoDelete, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -228,8 +228,8 @@ suspend fun RabbitMQClient.exchangeDeclareAwait(exchange : String, type : String
  * NOTE: This function has been automatically generated from the [io.vertx.rabbitmq.RabbitMQClient original] using Vert.x codegen.
  */
 suspend fun RabbitMQClient.exchangeDeclareAwait(exchange : String, type : String, durable : Boolean, autoDelete : Boolean, config : JsonObject) : Unit {
-    return awaitResult{
-        this.exchangeDeclare(exchange, type, durable, autoDelete, config, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.exchangeDeclare(exchange, type, durable, autoDelete, config, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -242,8 +242,8 @@ suspend fun RabbitMQClient.exchangeDeclareAwait(exchange : String, type : String
  * NOTE: This function has been automatically generated from the [io.vertx.rabbitmq.RabbitMQClient original] using Vert.x codegen.
  */
 suspend fun RabbitMQClient.exchangeDeleteAwait(exchange : String) : Unit {
-    return awaitResult{
-        this.exchangeDelete(exchange, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.exchangeDelete(exchange, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -258,8 +258,8 @@ suspend fun RabbitMQClient.exchangeDeleteAwait(exchange : String) : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.rabbitmq.RabbitMQClient original] using Vert.x codegen.
  */
 suspend fun RabbitMQClient.exchangeBindAwait(destination : String, source : String, routingKey : String) : Unit {
-    return awaitResult{
-        this.exchangeBind(destination, source, routingKey, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.exchangeBind(destination, source, routingKey, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -274,8 +274,8 @@ suspend fun RabbitMQClient.exchangeBindAwait(destination : String, source : Stri
  * NOTE: This function has been automatically generated from the [io.vertx.rabbitmq.RabbitMQClient original] using Vert.x codegen.
  */
 suspend fun RabbitMQClient.exchangeUnbindAwait(destination : String, source : String, routingKey : String) : Unit {
-    return awaitResult{
-        this.exchangeUnbind(destination, source, routingKey, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.exchangeUnbind(destination, source, routingKey, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -287,9 +287,9 @@ suspend fun RabbitMQClient.exchangeUnbindAwait(destination : String, source : St
  * NOTE: This function has been automatically generated from the [io.vertx.rabbitmq.RabbitMQClient original] using Vert.x codegen.
  */
 suspend fun RabbitMQClient.queueDeclareAutoAwait() : JsonObject {
-    return awaitResult{
-        this.queueDeclareAuto(it)
-    }
+  return awaitResult{
+    this.queueDeclareAuto(it)
+  }
 }
 
 /**
@@ -305,9 +305,9 @@ suspend fun RabbitMQClient.queueDeclareAutoAwait() : JsonObject {
  * NOTE: This function has been automatically generated from the [io.vertx.rabbitmq.RabbitMQClient original] using Vert.x codegen.
  */
 suspend fun RabbitMQClient.queueDeclareAwait(queue : String, durable : Boolean, exclusive : Boolean, autoDelete : Boolean) : JsonObject {
-    return awaitResult{
-        this.queueDeclare(queue, durable, exclusive, autoDelete, it)
-    }
+  return awaitResult{
+    this.queueDeclare(queue, durable, exclusive, autoDelete, it)
+  }
 }
 
 /**
@@ -324,9 +324,9 @@ suspend fun RabbitMQClient.queueDeclareAwait(queue : String, durable : Boolean, 
  * NOTE: This function has been automatically generated from the [io.vertx.rabbitmq.RabbitMQClient original] using Vert.x codegen.
  */
 suspend fun RabbitMQClient.queueDeclareAwait(queue : String, durable : Boolean, exclusive : Boolean, autoDelete : Boolean, config : JsonObject) : JsonObject {
-    return awaitResult{
-        this.queueDeclare(queue, durable, exclusive, autoDelete, config, it)
-    }
+  return awaitResult{
+    this.queueDeclare(queue, durable, exclusive, autoDelete, config, it)
+  }
 }
 
 /**
@@ -339,9 +339,9 @@ suspend fun RabbitMQClient.queueDeclareAwait(queue : String, durable : Boolean, 
  * NOTE: This function has been automatically generated from the [io.vertx.rabbitmq.RabbitMQClient original] using Vert.x codegen.
  */
 suspend fun RabbitMQClient.queueDeleteAwait(queue : String) : JsonObject {
-    return awaitResult{
-        this.queueDelete(queue, it)
-    }
+  return awaitResult{
+    this.queueDelete(queue, it)
+  }
 }
 
 /**
@@ -356,9 +356,9 @@ suspend fun RabbitMQClient.queueDeleteAwait(queue : String) : JsonObject {
  * NOTE: This function has been automatically generated from the [io.vertx.rabbitmq.RabbitMQClient original] using Vert.x codegen.
  */
 suspend fun RabbitMQClient.queueDeleteIfAwait(queue : String, ifUnused : Boolean, ifEmpty : Boolean) : JsonObject {
-    return awaitResult{
-        this.queueDeleteIf(queue, ifUnused, ifEmpty, it)
-    }
+  return awaitResult{
+    this.queueDeleteIf(queue, ifUnused, ifEmpty, it)
+  }
 }
 
 /**
@@ -373,8 +373,8 @@ suspend fun RabbitMQClient.queueDeleteIfAwait(queue : String, ifUnused : Boolean
  * NOTE: This function has been automatically generated from the [io.vertx.rabbitmq.RabbitMQClient original] using Vert.x codegen.
  */
 suspend fun RabbitMQClient.queueBindAwait(queue : String, exchange : String, routingKey : String) : Unit {
-    return awaitResult{
-        this.queueBind(queue, exchange, routingKey, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.queueBind(queue, exchange, routingKey, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -387,9 +387,9 @@ suspend fun RabbitMQClient.queueBindAwait(queue : String, exchange : String, rou
  * NOTE: This function has been automatically generated from the [io.vertx.rabbitmq.RabbitMQClient original] using Vert.x codegen.
  */
 suspend fun RabbitMQClient.messageCountAwait(queue : String) : Long {
-    return awaitResult{
-        this.messageCount(queue, it)
-    }
+  return awaitResult{
+    this.messageCount(queue, it)
+  }
 }
 
 /**
@@ -401,8 +401,8 @@ suspend fun RabbitMQClient.messageCountAwait(queue : String) : Long {
  * NOTE: This function has been automatically generated from the [io.vertx.rabbitmq.RabbitMQClient original] using Vert.x codegen.
  */
 suspend fun RabbitMQClient.startAwait() : Unit {
-    return awaitResult{
-        this.start({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.start({ ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -414,7 +414,7 @@ suspend fun RabbitMQClient.startAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.rabbitmq.RabbitMQClient original] using Vert.x codegen.
  */
 suspend fun RabbitMQClient.stopAwait() : Unit {
-    return awaitResult{
-        this.stop({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.stop({ ar -> it.handle(ar.mapEmpty()) })}
 }
 

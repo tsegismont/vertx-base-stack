@@ -16,8 +16,8 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.ext.auth.mongo.MongoAuth original] using Vert.x codegen.
  */
 suspend fun MongoAuth.insertUserAwait(username : String, password : String, roles : List<String>, permissions : List<String>) : String {
-    return awaitResult{
-        this.insertUser(username, password, roles, permissions, it)
-    }
+  return awaitResult{
+    this.insertUser(username, password, roles, permissions, it)
+  }
 }
 

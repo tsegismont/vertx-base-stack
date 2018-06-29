@@ -16,8 +16,8 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.ext.auth.oauth2.AccessToken original] using Vert.x codegen.
  */
 suspend fun AccessToken.refreshAwait() : Unit {
-    return awaitResult{
-        this.refresh({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.refresh({ ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -30,8 +30,8 @@ suspend fun AccessToken.refreshAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.auth.oauth2.AccessToken original] using Vert.x codegen.
  */
 suspend fun AccessToken.revokeAwait(token_type : String) : Unit {
-    return awaitResult{
-        this.revoke(token_type, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.revoke(token_type, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -44,8 +44,8 @@ suspend fun AccessToken.revokeAwait(token_type : String) : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.auth.oauth2.AccessToken original] using Vert.x codegen.
  */
 suspend fun AccessToken.logoutAwait() : Unit {
-    return awaitResult{
-        this.logout({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.logout({ ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -57,8 +57,8 @@ suspend fun AccessToken.logoutAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.auth.oauth2.AccessToken original] using Vert.x codegen.
  */
 suspend fun AccessToken.introspectAwait() : Unit {
-    return awaitResult{
-        this.introspect({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.introspect({ ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -71,8 +71,8 @@ suspend fun AccessToken.introspectAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.auth.oauth2.AccessToken original] using Vert.x codegen.
  */
 suspend fun AccessToken.introspectAwait(tokenType : String) : Unit {
-    return awaitResult{
-        this.introspect(tokenType, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.introspect(tokenType, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -84,9 +84,9 @@ suspend fun AccessToken.introspectAwait(tokenType : String) : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.auth.oauth2.AccessToken original] using Vert.x codegen.
  */
 suspend fun AccessToken.userInfoAwait() : JsonObject {
-    return awaitResult{
-        this.userInfo(it)
-    }
+  return awaitResult{
+    this.userInfo(it)
+  }
 }
 
 /**
@@ -99,9 +99,9 @@ suspend fun AccessToken.userInfoAwait() : JsonObject {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.auth.oauth2.AccessToken original] using Vert.x codegen.
  */
 suspend fun AccessToken.fetchAwait(resource : String) : OAuth2Response {
-    return awaitResult{
-        this.fetch(resource, it)
-    }
+  return awaitResult{
+    this.fetch(resource, it)
+  }
 }
 
 /**
@@ -117,8 +117,8 @@ suspend fun AccessToken.fetchAwait(resource : String) : OAuth2Response {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.auth.oauth2.AccessToken original] using Vert.x codegen.
  */
 suspend fun AccessToken.fetchAwait(method : HttpMethod, resource : String, headers : JsonObject, payload : Buffer) : OAuth2Response {
-    return awaitResult{
-        this.fetch(method, resource, headers, payload, it)
-    }
+  return awaitResult{
+    this.fetch(method, resource, headers, payload, it)
+  }
 }
 

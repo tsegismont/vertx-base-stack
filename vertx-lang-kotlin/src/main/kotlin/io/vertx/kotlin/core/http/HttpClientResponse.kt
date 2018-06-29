@@ -6,20 +6,20 @@ import io.vertx.core.http.HttpFrame
 import io.vertx.kotlin.coroutines.awaitEvent
 
 suspend fun HttpClientResponse.exceptionHandlerAwait() : Throwable {
-    return awaitEvent{
-        this.exceptionHandler(it)
-    }
+  return awaitEvent{
+    this.exceptionHandler(it)
+  }
 }
 
 suspend fun HttpClientResponse.handlerAwait() : Buffer {
-    return awaitEvent{
-        this.handler(it)
-    }
+  return awaitEvent{
+    this.handler(it)
+  }
 }
 
 suspend fun HttpClientResponse.endHandlerAwait() : Unit {
-    return awaitEvent{
-        this.endHandler({ v -> it.handle(null) })}
+  return awaitEvent{
+    this.endHandler({ v -> it.handle(null) })}
 }
 
 /**
@@ -34,9 +34,9 @@ suspend fun HttpClientResponse.endHandlerAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClientResponse original] using Vert.x codegen.
  */
 suspend fun HttpClientResponse.bodyHandlerAwait() : Buffer {
-    return awaitEvent{
-        this.bodyHandler(it)
-    }
+  return awaitEvent{
+    this.bodyHandler(it)
+  }
 }
 
 /**
@@ -49,8 +49,8 @@ suspend fun HttpClientResponse.bodyHandlerAwait() : Buffer {
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpClientResponse original] using Vert.x codegen.
  */
 suspend fun HttpClientResponse.customFrameHandlerAwait() : HttpFrame {
-    return awaitEvent{
-        this.customFrameHandler(it)
-    }
+  return awaitEvent{
+    this.customFrameHandler(it)
+  }
 }
 

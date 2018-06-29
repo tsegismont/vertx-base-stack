@@ -17,9 +17,9 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.core.shareddata.SharedData original] using Vert.x codegen.
  */
 suspend fun <K,V> SharedData.getClusterWideMapAwait(name : String) : AsyncMap<K,V> {
-    return awaitResult{
-        this.getClusterWideMap(name, it)
-    }
+  return awaitResult{
+    this.getClusterWideMap(name, it)
+  }
 }
 
 /**
@@ -37,9 +37,9 @@ suspend fun <K,V> SharedData.getClusterWideMapAwait(name : String) : AsyncMap<K,
  * NOTE: This function has been automatically generated from the [io.vertx.core.shareddata.SharedData original] using Vert.x codegen.
  */
 suspend fun <K,V> SharedData.getAsyncMapAwait(name : String) : AsyncMap<K,V> {
-    return awaitResult{
-        this.getAsyncMap(name, it)
-    }
+  return awaitResult{
+    this.getAsyncMap(name, it)
+  }
 }
 
 /**
@@ -52,9 +52,9 @@ suspend fun <K,V> SharedData.getAsyncMapAwait(name : String) : AsyncMap<K,V> {
  * NOTE: This function has been automatically generated from the [io.vertx.core.shareddata.SharedData original] using Vert.x codegen.
  */
 suspend fun SharedData.getLockAwait(name : String) : Lock {
-    return awaitResult{
-        this.getLock(name, it)
-    }
+  return awaitResult{
+    this.getLock(name, it)
+  }
 }
 
 /**
@@ -69,9 +69,9 @@ suspend fun SharedData.getLockAwait(name : String) : Lock {
  * NOTE: This function has been automatically generated from the [io.vertx.core.shareddata.SharedData original] using Vert.x codegen.
  */
 suspend fun SharedData.getLockWithTimeoutAwait(name : String, timeout : Long) : Lock {
-    return awaitResult{
-        this.getLockWithTimeout(name, timeout, it)
-    }
+  return awaitResult{
+    this.getLockWithTimeout(name, timeout, it)
+  }
 }
 
 /**
@@ -84,8 +84,8 @@ suspend fun SharedData.getLockWithTimeoutAwait(name : String, timeout : Long) : 
  * NOTE: This function has been automatically generated from the [io.vertx.core.shareddata.SharedData original] using Vert.x codegen.
  */
 suspend fun SharedData.getCounterAwait(name : String) : Counter {
-    return awaitResult{
-        this.getCounter(name, it)
-    }
+  return awaitResult{
+    this.getCounter(name, it)
+  }
 }
 

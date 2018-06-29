@@ -15,8 +15,8 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.ext.mail.MailClient original] using Vert.x codegen.
  */
 suspend fun MailClient.sendMailAwait(email : MailMessage) : MailResult {
-    return awaitResult{
-        this.sendMail(email, it)
-    }
+  return awaitResult{
+    this.sendMail(email, it)
+  }
 }
 

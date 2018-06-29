@@ -13,8 +13,8 @@ import io.vertx.kotlin.coroutines.awaitEvent
  * NOTE: This function has been automatically generated from the [io.vertx.ext.shell.system.Job original] using Vert.x codegen.
  */
 suspend fun Job.statusUpdateHandlerAwait() : ExecStatus {
-    return awaitEvent{
-        this.statusUpdateHandler(it)
-    }
+  return awaitEvent{
+    this.statusUpdateHandler(it)
+  }
 }
 

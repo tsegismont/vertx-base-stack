@@ -12,9 +12,9 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.core.shareddata.Counter original] using Vert.x codegen.
  */
 suspend fun Counter.getAwait() : Long {
-    return awaitResult{
-        this.get(it)
-    }
+  return awaitResult{
+    this.get(it)
+  }
 }
 
 /**
@@ -26,9 +26,9 @@ suspend fun Counter.getAwait() : Long {
  * NOTE: This function has been automatically generated from the [io.vertx.core.shareddata.Counter original] using Vert.x codegen.
  */
 suspend fun Counter.incrementAndGetAwait() : Long {
-    return awaitResult{
-        this.incrementAndGet(it)
-    }
+  return awaitResult{
+    this.incrementAndGet(it)
+  }
 }
 
 /**
@@ -40,9 +40,9 @@ suspend fun Counter.incrementAndGetAwait() : Long {
  * NOTE: This function has been automatically generated from the [io.vertx.core.shareddata.Counter original] using Vert.x codegen.
  */
 suspend fun Counter.getAndIncrementAwait() : Long {
-    return awaitResult{
-        this.getAndIncrement(it)
-    }
+  return awaitResult{
+    this.getAndIncrement(it)
+  }
 }
 
 /**
@@ -54,9 +54,9 @@ suspend fun Counter.getAndIncrementAwait() : Long {
  * NOTE: This function has been automatically generated from the [io.vertx.core.shareddata.Counter original] using Vert.x codegen.
  */
 suspend fun Counter.decrementAndGetAwait() : Long {
-    return awaitResult{
-        this.decrementAndGet(it)
-    }
+  return awaitResult{
+    this.decrementAndGet(it)
+  }
 }
 
 /**
@@ -69,9 +69,9 @@ suspend fun Counter.decrementAndGetAwait() : Long {
  * NOTE: This function has been automatically generated from the [io.vertx.core.shareddata.Counter original] using Vert.x codegen.
  */
 suspend fun Counter.addAndGetAwait(value : Long) : Long {
-    return awaitResult{
-        this.addAndGet(value, it)
-    }
+  return awaitResult{
+    this.addAndGet(value, it)
+  }
 }
 
 /**
@@ -84,9 +84,9 @@ suspend fun Counter.addAndGetAwait(value : Long) : Long {
  * NOTE: This function has been automatically generated from the [io.vertx.core.shareddata.Counter original] using Vert.x codegen.
  */
 suspend fun Counter.getAndAddAwait(value : Long) : Long {
-    return awaitResult{
-        this.getAndAdd(value, it)
-    }
+  return awaitResult{
+    this.getAndAdd(value, it)
+  }
 }
 
 /**
@@ -101,8 +101,8 @@ suspend fun Counter.getAndAddAwait(value : Long) : Long {
  * NOTE: This function has been automatically generated from the [io.vertx.core.shareddata.Counter original] using Vert.x codegen.
  */
 suspend fun Counter.compareAndSetAwait(expected : Long, value : Long) : Boolean {
-    return awaitResult{
-        this.compareAndSet(expected, value, it)
-    }
+  return awaitResult{
+    this.compareAndSet(expected, value, it)
+  }
 }
 

@@ -20,11 +20,11 @@ object JDBCDataSource {
  * <p/>
  * NOTE: This function has been automatically generated from the [io.vertx.servicediscovery.types.JDBCDataSource original] using Vert.x codegen.
  */
-    suspend fun getJDBCClientAwait(discovery : ServiceDiscovery, filter : JsonObject) : JDBCClient {
-        return awaitResult{
-            JDBCDataSourceVertxAlias.getJDBCClient(discovery, filter, it)
-        }
+  suspend fun getJDBCClientAwait(discovery : ServiceDiscovery, filter : JsonObject) : JDBCClient {
+    return awaitResult{
+      JDBCDataSourceVertxAlias.getJDBCClient(discovery, filter, it)
     }
+  }
 
 /**
  * Convenient method that looks for a JDBC datasource source and provides the configured [io.vertx.ext.jdbc.JDBCClient]. The
@@ -37,11 +37,11 @@ object JDBCDataSource {
  * <p/>
  * NOTE: This function has been automatically generated from the [io.vertx.servicediscovery.types.JDBCDataSource original] using Vert.x codegen.
  */
-    suspend fun getJDBCClientAwait(discovery : ServiceDiscovery, filter : Function<Record,Boolean>) : JDBCClient {
-        return awaitResult{
-            JDBCDataSourceVertxAlias.getJDBCClient(discovery, filter, it)
-        }
+  suspend fun getJDBCClientAwait(discovery : ServiceDiscovery, filter : Function<Record,Boolean>) : JDBCClient {
+    return awaitResult{
+      JDBCDataSourceVertxAlias.getJDBCClient(discovery, filter, it)
     }
+  }
 
 /**
  * Convenient method that looks for a JDBC datasource source and provides the configured [io.vertx.ext.jdbc.JDBCClient]. The
@@ -55,11 +55,11 @@ object JDBCDataSource {
  * <p/>
  * NOTE: This function has been automatically generated from the [io.vertx.servicediscovery.types.JDBCDataSource original] using Vert.x codegen.
  */
-    suspend fun getJDBCClientAwait(discovery : ServiceDiscovery, filter : JsonObject, consumerConfiguration : JsonObject) : JDBCClient {
-        return awaitResult{
-            JDBCDataSourceVertxAlias.getJDBCClient(discovery, filter, consumerConfiguration, it)
-        }
+  suspend fun getJDBCClientAwait(discovery : ServiceDiscovery, filter : JsonObject, consumerConfiguration : JsonObject) : JDBCClient {
+    return awaitResult{
+      JDBCDataSourceVertxAlias.getJDBCClient(discovery, filter, consumerConfiguration, it)
     }
+  }
 
 /**
  * Convenient method that looks for a JDBC datasource source and provides the configured [io.vertx.ext.jdbc.JDBCClient]. The
@@ -73,10 +73,10 @@ object JDBCDataSource {
  * <p/>
  * NOTE: This function has been automatically generated from the [io.vertx.servicediscovery.types.JDBCDataSource original] using Vert.x codegen.
  */
-    suspend fun getJDBCClientAwait(discovery : ServiceDiscovery, filter : Function<Record,Boolean>, consumerConfiguration : JsonObject) : JDBCClient {
-        return awaitResult{
-            JDBCDataSourceVertxAlias.getJDBCClient(discovery, filter, consumerConfiguration, it)
-        }
+  suspend fun getJDBCClientAwait(discovery : ServiceDiscovery, filter : Function<Record,Boolean>, consumerConfiguration : JsonObject) : JDBCClient {
+    return awaitResult{
+      JDBCDataSourceVertxAlias.getJDBCClient(discovery, filter, consumerConfiguration, it)
     }
+  }
 
 }

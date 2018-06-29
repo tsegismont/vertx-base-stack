@@ -5,8 +5,8 @@ import io.vertx.ext.shell.term.Term
 import io.vertx.kotlin.coroutines.awaitEvent
 
 suspend fun SockJSTermHandler.termHandlerAwait() : Term {
-    return awaitEvent{
-        this.termHandler(it)
-    }
+  return awaitEvent{
+    this.termHandler(it)
+  }
 }
 

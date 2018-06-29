@@ -17,9 +17,9 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.amqpbridge.AmqpBridge original] using Vert.x codegen.
  */
 suspend fun AmqpBridge.startAwait(hostname : String, port : Int, username : String, password : String) : AmqpBridge {
-    return awaitResult{
-        this.start(hostname, port, username, password, it)
-    }
+  return awaitResult{
+    this.start(hostname, port, username, password, it)
+  }
 }
 
 /**
@@ -33,9 +33,9 @@ suspend fun AmqpBridge.startAwait(hostname : String, port : Int, username : Stri
  * NOTE: This function has been automatically generated from the [io.vertx.amqpbridge.AmqpBridge original] using Vert.x codegen.
  */
 suspend fun AmqpBridge.startAwait(hostname : String, port : Int) : AmqpBridge {
-    return awaitResult{
-        this.start(hostname, port, it)
-    }
+  return awaitResult{
+    this.start(hostname, port, it)
+  }
 }
 
 /**
@@ -47,8 +47,8 @@ suspend fun AmqpBridge.startAwait(hostname : String, port : Int) : AmqpBridge {
  * NOTE: This function has been automatically generated from the [io.vertx.amqpbridge.AmqpBridge original] using Vert.x codegen.
  */
 suspend fun AmqpBridge.closeAwait() : Unit {
-    return awaitResult{
-        this.close({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.close({ ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -60,7 +60,7 @@ suspend fun AmqpBridge.closeAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.amqpbridge.AmqpBridge original] using Vert.x codegen.
  */
 suspend fun AmqpBridge.endHandlerAwait() : Unit {
-    return awaitEvent{
-        this.endHandler({ v -> it.handle(null) })}
+  return awaitEvent{
+    this.endHandler({ v -> it.handle(null) })}
 }
 

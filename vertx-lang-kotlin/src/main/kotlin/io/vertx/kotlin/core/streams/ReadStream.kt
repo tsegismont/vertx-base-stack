@@ -12,9 +12,9 @@ import io.vertx.kotlin.coroutines.awaitEvent
  * NOTE: This function has been automatically generated from the [io.vertx.core.streams.ReadStream original] using Vert.x codegen.
  */
 suspend fun <T> ReadStream<T>.exceptionHandlerAwait() : Throwable {
-    return awaitEvent{
-        this.exceptionHandler(it)
-    }
+  return awaitEvent{
+    this.exceptionHandler(it)
+  }
 }
 
 /**
@@ -26,9 +26,9 @@ suspend fun <T> ReadStream<T>.exceptionHandlerAwait() : Throwable {
  * NOTE: This function has been automatically generated from the [io.vertx.core.streams.ReadStream original] using Vert.x codegen.
  */
 suspend fun <T> ReadStream<T>.handlerAwait() : T {
-    return awaitEvent{
-        this.handler(it)
-    }
+  return awaitEvent{
+    this.handler(it)
+  }
 }
 
 /**
@@ -40,7 +40,7 @@ suspend fun <T> ReadStream<T>.handlerAwait() : T {
  * NOTE: This function has been automatically generated from the [io.vertx.core.streams.ReadStream original] using Vert.x codegen.
  */
 suspend fun <T> ReadStream<T>.endHandlerAwait() : Unit {
-    return awaitEvent{
-        this.endHandler({ v -> it.handle(null) })}
+  return awaitEvent{
+    this.endHandler({ v -> it.handle(null) })}
 }
 

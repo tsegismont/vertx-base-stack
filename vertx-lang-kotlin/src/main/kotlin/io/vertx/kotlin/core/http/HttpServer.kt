@@ -18,9 +18,9 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpServer original] using Vert.x codegen.
  */
 suspend fun HttpServer.requestHandlerAwait() : HttpServerRequest {
-    return awaitEvent{
-        this.requestHandler(it)
-    }
+  return awaitEvent{
+    this.requestHandler(it)
+  }
 }
 
 /**
@@ -32,9 +32,9 @@ suspend fun HttpServer.requestHandlerAwait() : HttpServerRequest {
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpServer original] using Vert.x codegen.
  */
 suspend fun HttpServer.connectionHandlerAwait() : HttpConnection {
-    return awaitEvent{
-        this.connectionHandler(it)
-    }
+  return awaitEvent{
+    this.connectionHandler(it)
+  }
 }
 
 /**
@@ -47,9 +47,9 @@ suspend fun HttpServer.connectionHandlerAwait() : HttpConnection {
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpServer original] using Vert.x codegen.
  */
 suspend fun HttpServer.exceptionHandlerAwait() : Throwable {
-    return awaitEvent{
-        this.exceptionHandler(it)
-    }
+  return awaitEvent{
+    this.exceptionHandler(it)
+  }
 }
 
 /**
@@ -62,9 +62,9 @@ suspend fun HttpServer.exceptionHandlerAwait() : Throwable {
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpServer original] using Vert.x codegen.
  */
 suspend fun HttpServer.websocketHandlerAwait() : ServerWebSocket {
-    return awaitEvent{
-        this.websocketHandler(it)
-    }
+  return awaitEvent{
+    this.websocketHandler(it)
+  }
 }
 
 /**
@@ -79,9 +79,9 @@ suspend fun HttpServer.websocketHandlerAwait() : ServerWebSocket {
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpServer original] using Vert.x codegen.
  */
 suspend fun HttpServer.listenAwait(port : Int, host : String) : HttpServer {
-    return awaitResult{
-        this.listen(port, host, it)
-    }
+  return awaitResult{
+    this.listen(port, host, it)
+  }
 }
 
 /**
@@ -96,9 +96,9 @@ suspend fun HttpServer.listenAwait(port : Int, host : String) : HttpServer {
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpServer original] using Vert.x codegen.
  */
 suspend fun HttpServer.listenAwait(address : SocketAddress) : HttpServer {
-    return awaitResult{
-        this.listen(address, it)
-    }
+  return awaitResult{
+    this.listen(address, it)
+  }
 }
 
 /**
@@ -111,9 +111,9 @@ suspend fun HttpServer.listenAwait(address : SocketAddress) : HttpServer {
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpServer original] using Vert.x codegen.
  */
 suspend fun HttpServer.listenAwait(port : Int) : HttpServer {
-    return awaitResult{
-        this.listen(port, it)
-    }
+  return awaitResult{
+    this.listen(port, it)
+  }
 }
 
 /**
@@ -125,9 +125,9 @@ suspend fun HttpServer.listenAwait(port : Int) : HttpServer {
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpServer original] using Vert.x codegen.
  */
 suspend fun HttpServer.listenAwait() : HttpServer {
-    return awaitResult{
-        this.listen(it)
-    }
+  return awaitResult{
+    this.listen(it)
+  }
 }
 
 /**
@@ -139,7 +139,7 @@ suspend fun HttpServer.listenAwait() : HttpServer {
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpServer original] using Vert.x codegen.
  */
 suspend fun HttpServer.closeAwait() : Unit {
-    return awaitResult{
-        this.close({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.close({ ar -> it.handle(ar.mapEmpty()) })}
 }
 

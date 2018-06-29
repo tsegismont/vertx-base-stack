@@ -11,20 +11,20 @@ import io.vertx.kotlin.coroutines.awaitEvent
 import io.vertx.kotlin.coroutines.awaitResult
 
 suspend fun <K,V> KafkaConsumer<K,V>.exceptionHandlerAwait() : Throwable {
-    return awaitEvent{
-        this.exceptionHandler(it)
-    }
+  return awaitEvent{
+    this.exceptionHandler(it)
+  }
 }
 
 suspend fun <K,V> KafkaConsumer<K,V>.handlerAwait() : KafkaConsumerRecord<K,V> {
-    return awaitEvent{
-        this.handler(it)
-    }
+  return awaitEvent{
+    this.handler(it)
+  }
 }
 
 suspend fun <K,V> KafkaConsumer<K,V>.endHandlerAwait() : Unit {
-    return awaitEvent{
-        this.endHandler({ v -> it.handle(null) })}
+  return awaitEvent{
+    this.endHandler({ v -> it.handle(null) })}
 }
 
 /**
@@ -45,8 +45,8 @@ suspend fun <K,V> KafkaConsumer<K,V>.endHandlerAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaConsumer<K,V>.subscribeAwait(topic : String) : Unit {
-    return awaitResult{
-        this.subscribe(topic, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.subscribe(topic, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -67,8 +67,8 @@ suspend fun <K,V> KafkaConsumer<K,V>.subscribeAwait(topic : String) : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaConsumer<K,V>.subscribeAwait(topics : Set<String>) : Unit {
-    return awaitResult{
-        this.subscribe(topics, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.subscribe(topics, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -89,8 +89,8 @@ suspend fun <K,V> KafkaConsumer<K,V>.subscribeAwait(topics : Set<String>) : Unit
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaConsumer<K,V>.assignAwait(topicPartition : TopicPartition) : Unit {
-    return awaitResult{
-        this.assign(topicPartition, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.assign(topicPartition, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -111,8 +111,8 @@ suspend fun <K,V> KafkaConsumer<K,V>.assignAwait(topicPartition : TopicPartition
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaConsumer<K,V>.assignAwait(topicPartitions : Set<TopicPartition>) : Unit {
-    return awaitResult{
-        this.assign(topicPartitions, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.assign(topicPartitions, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -124,9 +124,9 @@ suspend fun <K,V> KafkaConsumer<K,V>.assignAwait(topicPartitions : Set<TopicPart
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaConsumer<K,V>.assignmentAwait() : Set<TopicPartition> {
-    return awaitResult{
-        this.assignment(it)
-    }
+  return awaitResult{
+    this.assignment(it)
+  }
 }
 
 /**
@@ -138,8 +138,8 @@ suspend fun <K,V> KafkaConsumer<K,V>.assignmentAwait() : Set<TopicPartition> {
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaConsumer<K,V>.unsubscribeAwait() : Unit {
-    return awaitResult{
-        this.unsubscribe({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.unsubscribe({ ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -151,9 +151,9 @@ suspend fun <K,V> KafkaConsumer<K,V>.unsubscribeAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaConsumer<K,V>.subscriptionAwait() : Set<String> {
-    return awaitResult{
-        this.subscription(it)
-    }
+  return awaitResult{
+    this.subscription(it)
+  }
 }
 
 /**
@@ -174,8 +174,8 @@ suspend fun <K,V> KafkaConsumer<K,V>.subscriptionAwait() : Set<String> {
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaConsumer<K,V>.pauseAwait(topicPartition : TopicPartition) : Unit {
-    return awaitResult{
-        this.pause(topicPartition, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.pause(topicPartition, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -196,8 +196,8 @@ suspend fun <K,V> KafkaConsumer<K,V>.pauseAwait(topicPartition : TopicPartition)
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaConsumer<K,V>.pauseAwait(topicPartitions : Set<TopicPartition>) : Unit {
-    return awaitResult{
-        this.pause(topicPartitions, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.pause(topicPartitions, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -209,9 +209,9 @@ suspend fun <K,V> KafkaConsumer<K,V>.pauseAwait(topicPartitions : Set<TopicParti
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaConsumer<K,V>.pausedAwait() : Set<TopicPartition> {
-    return awaitResult{
-        this.paused(it)
-    }
+  return awaitResult{
+    this.paused(it)
+  }
 }
 
 /**
@@ -224,8 +224,8 @@ suspend fun <K,V> KafkaConsumer<K,V>.pausedAwait() : Set<TopicPartition> {
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaConsumer<K,V>.resumeAwait(topicPartition : TopicPartition) : Unit {
-    return awaitResult{
-        this.resume(topicPartition, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.resume(topicPartition, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -238,8 +238,8 @@ suspend fun <K,V> KafkaConsumer<K,V>.resumeAwait(topicPartition : TopicPartition
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaConsumer<K,V>.resumeAwait(topicPartitions : Set<TopicPartition>) : Unit {
-    return awaitResult{
-        this.resume(topicPartitions, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.resume(topicPartitions, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -251,9 +251,9 @@ suspend fun <K,V> KafkaConsumer<K,V>.resumeAwait(topicPartitions : Set<TopicPart
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaConsumer<K,V>.partitionsRevokedHandlerAwait() : Set<TopicPartition> {
-    return awaitEvent{
-        this.partitionsRevokedHandler(it)
-    }
+  return awaitEvent{
+    this.partitionsRevokedHandler(it)
+  }
 }
 
 /**
@@ -265,9 +265,9 @@ suspend fun <K,V> KafkaConsumer<K,V>.partitionsRevokedHandlerAwait() : Set<Topic
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaConsumer<K,V>.partitionsAssignedHandlerAwait() : Set<TopicPartition> {
-    return awaitEvent{
-        this.partitionsAssignedHandler(it)
-    }
+  return awaitEvent{
+    this.partitionsAssignedHandler(it)
+  }
 }
 
 /**
@@ -289,8 +289,8 @@ suspend fun <K,V> KafkaConsumer<K,V>.partitionsAssignedHandlerAwait() : Set<Topi
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaConsumer<K,V>.seekAwait(topicPartition : TopicPartition, offset : Long) : Unit {
-    return awaitResult{
-        this.seek(topicPartition, offset, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.seek(topicPartition, offset, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -311,8 +311,8 @@ suspend fun <K,V> KafkaConsumer<K,V>.seekAwait(topicPartition : TopicPartition, 
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaConsumer<K,V>.seekToBeginningAwait(topicPartition : TopicPartition) : Unit {
-    return awaitResult{
-        this.seekToBeginning(topicPartition, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.seekToBeginning(topicPartition, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -333,8 +333,8 @@ suspend fun <K,V> KafkaConsumer<K,V>.seekToBeginningAwait(topicPartition : Topic
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaConsumer<K,V>.seekToBeginningAwait(topicPartitions : Set<TopicPartition>) : Unit {
-    return awaitResult{
-        this.seekToBeginning(topicPartitions, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.seekToBeginning(topicPartitions, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -355,8 +355,8 @@ suspend fun <K,V> KafkaConsumer<K,V>.seekToBeginningAwait(topicPartitions : Set<
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaConsumer<K,V>.seekToEndAwait(topicPartition : TopicPartition) : Unit {
-    return awaitResult{
-        this.seekToEnd(topicPartition, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.seekToEnd(topicPartition, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -377,8 +377,8 @@ suspend fun <K,V> KafkaConsumer<K,V>.seekToEndAwait(topicPartition : TopicPartit
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaConsumer<K,V>.seekToEndAwait(topicPartitions : Set<TopicPartition>) : Unit {
-    return awaitResult{
-        this.seekToEnd(topicPartitions, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.seekToEnd(topicPartitions, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -390,8 +390,8 @@ suspend fun <K,V> KafkaConsumer<K,V>.seekToEndAwait(topicPartitions : Set<TopicP
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaConsumer<K,V>.commitAwait() : Unit {
-    return awaitResult{
-        this.commit({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.commit({ ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -404,9 +404,9 @@ suspend fun <K,V> KafkaConsumer<K,V>.commitAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaConsumer<K,V>.committedAwait(topicPartition : TopicPartition) : OffsetAndMetadata {
-    return awaitResult{
-        this.committed(topicPartition, it)
-    }
+  return awaitResult{
+    this.committed(topicPartition, it)
+  }
 }
 
 /**
@@ -419,9 +419,9 @@ suspend fun <K,V> KafkaConsumer<K,V>.committedAwait(topicPartition : TopicPartit
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaConsumer<K,V>.partitionsForAwait(topic : String) : List<PartitionInfo> {
-    return awaitResult{
-        this.partitionsFor(topic, it)
-    }
+  return awaitResult{
+    this.partitionsFor(topic, it)
+  }
 }
 
 /**
@@ -436,9 +436,9 @@ suspend fun <K,V> KafkaConsumer<K,V>.partitionsForAwait(topic : String) : List<P
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaConsumer<K,V>.batchHandlerAwait() : KafkaConsumerRecords<K,V> {
-    return awaitEvent{
-        this.batchHandler(it)
-    }
+  return awaitEvent{
+    this.batchHandler(it)
+  }
 }
 
 /**
@@ -450,8 +450,8 @@ suspend fun <K,V> KafkaConsumer<K,V>.batchHandlerAwait() : KafkaConsumerRecords<
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaConsumer<K,V>.closeAwait() : Unit {
-    return awaitResult{
-        this.close({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.close({ ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -464,9 +464,9 @@ suspend fun <K,V> KafkaConsumer<K,V>.closeAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaConsumer<K,V>.positionAwait(partition : TopicPartition) : Long {
-    return awaitResult{
-        this.position(partition, it)
-    }
+  return awaitResult{
+    this.position(partition, it)
+  }
 }
 
 /**
@@ -481,9 +481,9 @@ suspend fun <K,V> KafkaConsumer<K,V>.positionAwait(partition : TopicPartition) :
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaConsumer<K,V>.offsetsForTimesAwait(topicPartition : TopicPartition, timestamp : Long) : OffsetAndTimestamp {
-    return awaitResult{
-        this.offsetsForTimes(topicPartition, timestamp, it)
-    }
+  return awaitResult{
+    this.offsetsForTimes(topicPartition, timestamp, it)
+  }
 }
 
 /**
@@ -496,9 +496,9 @@ suspend fun <K,V> KafkaConsumer<K,V>.offsetsForTimesAwait(topicPartition : Topic
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaConsumer<K,V>.beginningOffsetsAwait(topicPartition : TopicPartition) : Long {
-    return awaitResult{
-        this.beginningOffsets(topicPartition, it)
-    }
+  return awaitResult{
+    this.beginningOffsets(topicPartition, it)
+  }
 }
 
 /**
@@ -512,9 +512,9 @@ suspend fun <K,V> KafkaConsumer<K,V>.beginningOffsetsAwait(topicPartition : Topi
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaConsumer<K,V>.endOffsetsAwait(topicPartition : TopicPartition) : Long {
-    return awaitResult{
-        this.endOffsets(topicPartition, it)
-    }
+  return awaitResult{
+    this.endOffsets(topicPartition, it)
+  }
 }
 
 /**
@@ -527,8 +527,8 @@ suspend fun <K,V> KafkaConsumer<K,V>.endOffsetsAwait(topicPartition : TopicParti
  * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
  */
 suspend fun <K,V> KafkaConsumer<K,V>.pollAwait(timeout : Long) : KafkaConsumerRecords<K,V> {
-    return awaitResult{
-        this.poll(timeout, it)
-    }
+  return awaitResult{
+    this.poll(timeout, it)
+  }
 }
 

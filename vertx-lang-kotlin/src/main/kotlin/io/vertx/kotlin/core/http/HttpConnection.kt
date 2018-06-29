@@ -18,9 +18,9 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpConnection original] using Vert.x codegen.
  */
 suspend fun HttpConnection.goAwayHandlerAwait() : GoAway {
-    return awaitEvent{
-        this.goAwayHandler(it)
-    }
+  return awaitEvent{
+    this.goAwayHandler(it)
+  }
 }
 
 /**
@@ -34,8 +34,8 @@ suspend fun HttpConnection.goAwayHandlerAwait() : GoAway {
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpConnection original] using Vert.x codegen.
  */
 suspend fun HttpConnection.shutdownHandlerAwait() : Unit {
-    return awaitEvent{
-        this.shutdownHandler({ v -> it.handle(null) })}
+  return awaitEvent{
+    this.shutdownHandler({ v -> it.handle(null) })}
 }
 
 /**
@@ -47,8 +47,8 @@ suspend fun HttpConnection.shutdownHandlerAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpConnection original] using Vert.x codegen.
  */
 suspend fun HttpConnection.closeHandlerAwait() : Unit {
-    return awaitEvent{
-        this.closeHandler({ v -> it.handle(null) })}
+  return awaitEvent{
+    this.closeHandler({ v -> it.handle(null) })}
 }
 
 /**
@@ -65,8 +65,8 @@ suspend fun HttpConnection.closeHandlerAwait() : Unit {
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpConnection original] using Vert.x codegen.
  */
 suspend fun HttpConnection.updateSettingsAwait(settings : Http2Settings) : Unit {
-    return awaitResult{
-        this.updateSettings(settings, { ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.updateSettings(settings, { ar -> it.handle(ar.mapEmpty()) })}
 }
 
 /**
@@ -80,9 +80,9 @@ suspend fun HttpConnection.updateSettingsAwait(settings : Http2Settings) : Unit 
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpConnection original] using Vert.x codegen.
  */
 suspend fun HttpConnection.remoteSettingsHandlerAwait() : Http2Settings {
-    return awaitEvent{
-        this.remoteSettingsHandler(it)
-    }
+  return awaitEvent{
+    this.remoteSettingsHandler(it)
+  }
 }
 
 /**
@@ -97,9 +97,9 @@ suspend fun HttpConnection.remoteSettingsHandlerAwait() : Http2Settings {
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpConnection original] using Vert.x codegen.
  */
 suspend fun HttpConnection.pingAwait(data : Buffer) : Buffer {
-    return awaitResult{
-        this.ping(data, it)
-    }
+  return awaitResult{
+    this.ping(data, it)
+  }
 }
 
 /**
@@ -113,9 +113,9 @@ suspend fun HttpConnection.pingAwait(data : Buffer) : Buffer {
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpConnection original] using Vert.x codegen.
  */
 suspend fun HttpConnection.pingHandlerAwait() : Buffer {
-    return awaitEvent{
-        this.pingHandler(it)
-    }
+  return awaitEvent{
+    this.pingHandler(it)
+  }
 }
 
 /**
@@ -127,8 +127,8 @@ suspend fun HttpConnection.pingHandlerAwait() : Buffer {
  * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpConnection original] using Vert.x codegen.
  */
 suspend fun HttpConnection.exceptionHandlerAwait() : Throwable {
-    return awaitEvent{
-        this.exceptionHandler(it)
-    }
+  return awaitEvent{
+    this.exceptionHandler(it)
+  }
 }
 

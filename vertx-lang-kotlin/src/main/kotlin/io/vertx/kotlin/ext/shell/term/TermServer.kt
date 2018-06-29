@@ -16,9 +16,9 @@ import io.vertx.kotlin.coroutines.awaitResult
  * NOTE: This function has been automatically generated from the [io.vertx.ext.shell.term.TermServer original] using Vert.x codegen.
  */
 suspend fun TermServer.termHandlerAwait() : Term {
-    return awaitEvent{
-        this.termHandler(it)
-    }
+  return awaitEvent{
+    this.termHandler(it)
+  }
 }
 
 /**
@@ -30,9 +30,9 @@ suspend fun TermServer.termHandlerAwait() : Term {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.shell.term.TermServer original] using Vert.x codegen.
  */
 suspend fun TermServer.listenAwait() : TermServer {
-    return awaitResult{
-        this.listen(it)
-    }
+  return awaitResult{
+    this.listen(it)
+  }
 }
 
 /**
@@ -44,7 +44,7 @@ suspend fun TermServer.listenAwait() : TermServer {
  * NOTE: This function has been automatically generated from the [io.vertx.ext.shell.term.TermServer original] using Vert.x codegen.
  */
 suspend fun TermServer.closeAwait() : Unit {
-    return awaitResult{
-        this.close({ ar -> it.handle(ar.mapEmpty()) })}
+  return awaitResult{
+    this.close({ ar -> it.handle(ar.mapEmpty()) })}
 }
 
