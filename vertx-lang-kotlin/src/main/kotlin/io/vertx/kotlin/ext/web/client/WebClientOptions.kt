@@ -76,11 +76,16 @@ import java.util.concurrent.TimeUnit
  * @param trustAll  Set whether all server certificates should be trusted
  * @param trustStoreOptions  Set the trust options in jks format, aka Java truststore
  * @param tryUseCompression  Set whether compression is enabled
+ * @param tryUsePerFrameWebsocketCompression  Set option to offer Deflate Frame websocket compression
+ * @param tryUsePerMessageWebsocketCompression  Set option to offer Permessage Deflate websocket compression
  * @param useAlpn  Set the ALPN usage.
  * @param usePooledBuffers  Set whether Netty pooled buffers are enabled
  * @param userAgent  Sets the Web Client user agent header. Defaults to Vert.x-WebClient/&lt;version&gt;.
  * @param userAgentEnabled  Sets whether the Web Client should send a user agent header. Defaults to true.
  * @param verifyHost  Set whether hostname verification is enabled
+ * @param websocketCompressionAllowClientNoContext  Set the websocket compression allow client no context option
+ * @param websocketCompressionLevel  Set websocket compression level
+ * @param websocketCompressionRequestServerNoContext  Set the websocket compression server no context option
  *
  * <p/>
  * NOTE: This function has been automatically generated from the [io.vertx.ext.web.client.WebClientOptions original] using Vert.x codegen.
@@ -146,11 +151,16 @@ fun WebClientOptions(
   trustAll: Boolean? = null,
   trustStoreOptions: io.vertx.core.net.JksOptions? = null,
   tryUseCompression: Boolean? = null,
+  tryUsePerFrameWebsocketCompression: Boolean? = null,
+  tryUsePerMessageWebsocketCompression: Boolean? = null,
   useAlpn: Boolean? = null,
   usePooledBuffers: Boolean? = null,
   userAgent: String? = null,
   userAgentEnabled: Boolean? = null,
-  verifyHost: Boolean? = null): WebClientOptions = io.vertx.ext.web.client.WebClientOptions().apply {
+  verifyHost: Boolean? = null,
+  websocketCompressionAllowClientNoContext: Boolean? = null,
+  websocketCompressionLevel: Int? = null,
+  websocketCompressionRequestServerNoContext: Boolean? = null): WebClientOptions = io.vertx.ext.web.client.WebClientOptions().apply {
 
   if (alpnVersions != null) {
     this.setAlpnVersions(alpnVersions.toList())
@@ -338,6 +348,12 @@ fun WebClientOptions(
   if (tryUseCompression != null) {
     this.setTryUseCompression(tryUseCompression)
   }
+  if (tryUsePerFrameWebsocketCompression != null) {
+    this.setTryUsePerFrameWebsocketCompression(tryUsePerFrameWebsocketCompression)
+  }
+  if (tryUsePerMessageWebsocketCompression != null) {
+    this.setTryUsePerMessageWebsocketCompression(tryUsePerMessageWebsocketCompression)
+  }
   if (useAlpn != null) {
     this.setUseAlpn(useAlpn)
   }
@@ -352,6 +368,15 @@ fun WebClientOptions(
   }
   if (verifyHost != null) {
     this.setVerifyHost(verifyHost)
+  }
+  if (websocketCompressionAllowClientNoContext != null) {
+    this.setWebsocketCompressionAllowClientNoContext(websocketCompressionAllowClientNoContext)
+  }
+  if (websocketCompressionLevel != null) {
+    this.setWebsocketCompressionLevel(websocketCompressionLevel)
+  }
+  if (websocketCompressionRequestServerNoContext != null) {
+    this.setWebsocketCompressionRequestServerNoContext(websocketCompressionRequestServerNoContext)
   }
 }
 

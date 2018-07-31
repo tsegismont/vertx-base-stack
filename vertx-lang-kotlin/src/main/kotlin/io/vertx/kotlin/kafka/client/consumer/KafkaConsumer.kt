@@ -3,29 +3,10 @@ package io.vertx.kotlin.kafka.client.consumer
 import io.vertx.kafka.client.common.PartitionInfo
 import io.vertx.kafka.client.common.TopicPartition
 import io.vertx.kafka.client.consumer.KafkaConsumer
-import io.vertx.kafka.client.consumer.KafkaConsumerRecord
 import io.vertx.kafka.client.consumer.KafkaConsumerRecords
 import io.vertx.kafka.client.consumer.OffsetAndMetadata
 import io.vertx.kafka.client.consumer.OffsetAndTimestamp
-import io.vertx.kotlin.coroutines.awaitEvent
 import io.vertx.kotlin.coroutines.awaitResult
-
-suspend fun <K,V> KafkaConsumer<K,V>.exceptionHandlerAwait() : Throwable {
-  return awaitEvent{
-    this.exceptionHandler(it)
-  }
-}
-
-suspend fun <K,V> KafkaConsumer<K,V>.handlerAwait() : KafkaConsumerRecord<K,V> {
-  return awaitEvent{
-    this.handler(it)
-  }
-}
-
-suspend fun <K,V> KafkaConsumer<K,V>.endHandlerAwait() : Unit {
-  return awaitEvent{
-    this.endHandler({ v -> it.handle(null) })}
-}
 
 /**
  * Subscribe to the given topic to get dynamically assigned partitions.
@@ -161,11 +142,11 @@ suspend fun <K,V> KafkaConsumer<K,V>.subscriptionAwait() : Set<String> {
  * <p>
  * Due to internal buffering of messages,
  * the  will
- * continue to observe messages from the given <code>topicParation</code>
+ * continue to observe messages from the given <code>topicPartition</code>
  * until some time <em>after</em> the given <code>completionHandler</code>
  * is called. In contrast, the once the given <code>completionHandler</code>
  * is called the [io.vertx.kafka.client.consumer.KafkaConsumer] will not see messages
- * from the given <code>topicParation</code>.
+ * from the given <code>topicPartition</code>.
  *
  * @param topicPartition topic partition from which suspend fetching
  * @param completionHandler handler called on operation completed
@@ -183,11 +164,11 @@ suspend fun <K,V> KafkaConsumer<K,V>.pauseAwait(topicPartition : TopicPartition)
  * <p>
  * Due to internal buffering of messages,
  * the  will
- * continue to observe messages from the given <code>topicParations</code>
+ * continue to observe messages from the given <code>topicPartitions</code>
  * until some time <em>after</em> the given <code>completionHandler</code>
  * is called. In contrast, the once the given <code>completionHandler</code>
  * is called the [io.vertx.kafka.client.consumer.KafkaConsumer] will not see messages
- * from the given <code>topicParations</code>.
+ * from the given <code>topicPartitions</code>.
  *
  * @param topicPartitions topic partition from which suspend fetching
  * @param completionHandler handler called on operation completed
@@ -240,34 +221,6 @@ suspend fun <K,V> KafkaConsumer<K,V>.resumeAwait(topicPartition : TopicPartition
 suspend fun <K,V> KafkaConsumer<K,V>.resumeAwait(topicPartitions : Set<TopicPartition>) : Unit {
   return awaitResult{
     this.resume(topicPartitions, { ar -> it.handle(ar.mapEmpty()) })}
-}
-
-/**
- * Set the handler called when topic partitions are revoked to the consumer
- *
- * @param handler handler called on revoked topic partitions
- * @returncurrent KafkaConsumer instance *
- * <p/>
- * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
- */
-suspend fun <K,V> KafkaConsumer<K,V>.partitionsRevokedHandlerAwait() : Set<TopicPartition> {
-  return awaitEvent{
-    this.partitionsRevokedHandler(it)
-  }
-}
-
-/**
- * Set the handler called when topic partitions are assigned to the consumer
- *
- * @param handler handler called on assigned topic partitions
- * @returncurrent KafkaConsumer instance *
- * <p/>
- * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
- */
-suspend fun <K,V> KafkaConsumer<K,V>.partitionsAssignedHandlerAwait() : Set<TopicPartition> {
-  return awaitEvent{
-    this.partitionsAssignedHandler(it)
-  }
 }
 
 /**
@@ -421,23 +374,6 @@ suspend fun <K,V> KafkaConsumer<K,V>.committedAwait(topicPartition : TopicPartit
 suspend fun <K,V> KafkaConsumer<K,V>.partitionsForAwait(topic : String) : List<PartitionInfo> {
   return awaitResult{
     this.partitionsFor(topic, it)
-  }
-}
-
-/**
- * Set the handler to be used when batches of messages are fetched
- * from the Kafka server. Batch handlers need to take care not to block
- * the event loop when dealing with large batches. It is better to process
- * records individually using the [io.vertx.kafka.client.consumer.KafkaConsumer][#handler(Handler) record handler][io.vertx.kafka.client.consumer.KafkaConsumer].
- *
- * @param handler handler called when batches of messages are fetched
- * @returncurrent KafkaConsumer instance *
- * <p/>
- * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.consumer.KafkaConsumer original] using Vert.x codegen.
- */
-suspend fun <K,V> KafkaConsumer<K,V>.batchHandlerAwait() : KafkaConsumerRecords<K,V> {
-  return awaitEvent{
-    this.batchHandler(it)
   }
 }
 

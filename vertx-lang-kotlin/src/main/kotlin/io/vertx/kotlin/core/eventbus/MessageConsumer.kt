@@ -1,26 +1,7 @@
 package io.vertx.kotlin.core.eventbus
 
-import io.vertx.core.eventbus.Message
 import io.vertx.core.eventbus.MessageConsumer
-import io.vertx.kotlin.coroutines.awaitEvent
 import io.vertx.kotlin.coroutines.awaitResult
-
-suspend fun <T> MessageConsumer<T>.exceptionHandlerAwait() : Throwable {
-  return awaitEvent{
-    this.exceptionHandler(it)
-  }
-}
-
-suspend fun <T> MessageConsumer<T>.handlerAwait() : Message<T> {
-  return awaitEvent{
-    this.handler(it)
-  }
-}
-
-suspend fun <T> MessageConsumer<T>.endHandlerAwait() : Unit {
-  return awaitEvent{
-    this.endHandler({ v -> it.handle(null) })}
-}
 
 /**
  * Optional method which can be called to indicate when the registration has been propagated across the cluster.

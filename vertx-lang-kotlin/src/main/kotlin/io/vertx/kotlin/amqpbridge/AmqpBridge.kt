@@ -1,7 +1,6 @@
 package io.vertx.kotlin.amqpbridge
 
 import io.vertx.amqpbridge.AmqpBridge
-import io.vertx.kotlin.coroutines.awaitEvent
 import io.vertx.kotlin.coroutines.awaitResult
 
 /**
@@ -49,18 +48,5 @@ suspend fun AmqpBridge.startAwait(hostname : String, port : Int) : AmqpBridge {
 suspend fun AmqpBridge.closeAwait() : Unit {
   return awaitResult{
     this.close({ ar -> it.handle(ar.mapEmpty()) })}
-}
-
-/**
- * Set an end handler. This will fire if the underlying connection is unexpectedly disconnected or remotely closed.
- *
- * @param endHandler the handler
- *
- * <p/>
- * NOTE: This function has been automatically generated from the [io.vertx.amqpbridge.AmqpBridge original] using Vert.x codegen.
- */
-suspend fun AmqpBridge.endHandlerAwait() : Unit {
-  return awaitEvent{
-    this.endHandler({ v -> it.handle(null) })}
 }
 

@@ -47,6 +47,8 @@ import java.util.concurrent.TimeUnit
  * @param openSslEngineOptions 
  * @param pemKeyCertOptions  Set the key/cert store options in pem format.
  * @param pemTrustOptions  Set the trust options in pem format
+ * @param perFrameWebsocketCompressionSupported  Enable or disable support for WebSocket Defalte Frame compression
+ * @param perMessageWebsocketCompressionSupported  Enable or disable support for WebSocket Permessage Deflate compression
  * @param pfxKeyCertOptions  Set the key/cert options in pfx format.
  * @param pfxTrustOptions  Set the trust options in pfx format
  * @param port  Set the port
@@ -66,6 +68,9 @@ import java.util.concurrent.TimeUnit
  * @param trustStoreOptions  Set the trust options in jks format, aka Java truststore
  * @param useAlpn  Set the ALPN usage.
  * @param usePooledBuffers  Set whether Netty pooled buffers are enabled
+ * @param websocketAllowServerNoContext  Set the WebSocket Allow Server No Context option
+ * @param websocketCompressionLevel  Set the WebSocket compression level 
+ * @param websocketPreferredClientNoContext  Set the WebSocket Preferred Client No Context setting
  * @param websocketSubProtocols  Set the websocket subprotocols supported by the server.
  *
  * <p/>
@@ -102,6 +107,8 @@ fun HttpServerOptions(
   openSslEngineOptions: io.vertx.core.net.OpenSSLEngineOptions? = null,
   pemKeyCertOptions: io.vertx.core.net.PemKeyCertOptions? = null,
   pemTrustOptions: io.vertx.core.net.PemTrustOptions? = null,
+  perFrameWebsocketCompressionSupported: Boolean? = null,
+  perMessageWebsocketCompressionSupported: Boolean? = null,
   pfxKeyCertOptions: io.vertx.core.net.PfxOptions? = null,
   pfxTrustOptions: io.vertx.core.net.PfxOptions? = null,
   port: Int? = null,
@@ -121,6 +128,9 @@ fun HttpServerOptions(
   trustStoreOptions: io.vertx.core.net.JksOptions? = null,
   useAlpn: Boolean? = null,
   usePooledBuffers: Boolean? = null,
+  websocketAllowServerNoContext: Boolean? = null,
+  websocketCompressionLevel: Int? = null,
+  websocketPreferredClientNoContext: Boolean? = null,
   websocketSubProtocols: String? = null): HttpServerOptions = io.vertx.core.http.HttpServerOptions().apply {
 
   if (acceptBacklog != null) {
@@ -219,6 +229,12 @@ fun HttpServerOptions(
   if (pemTrustOptions != null) {
     this.setPemTrustOptions(pemTrustOptions)
   }
+  if (perFrameWebsocketCompressionSupported != null) {
+    this.setPerFrameWebsocketCompressionSupported(perFrameWebsocketCompressionSupported)
+  }
+  if (perMessageWebsocketCompressionSupported != null) {
+    this.setPerMessageWebsocketCompressionSupported(perMessageWebsocketCompressionSupported)
+  }
   if (pfxKeyCertOptions != null) {
     this.setPfxKeyCertOptions(pfxKeyCertOptions)
   }
@@ -275,6 +291,15 @@ fun HttpServerOptions(
   }
   if (usePooledBuffers != null) {
     this.setUsePooledBuffers(usePooledBuffers)
+  }
+  if (websocketAllowServerNoContext != null) {
+    this.setWebsocketAllowServerNoContext(websocketAllowServerNoContext)
+  }
+  if (websocketCompressionLevel != null) {
+    this.setWebsocketCompressionLevel(websocketCompressionLevel)
+  }
+  if (websocketPreferredClientNoContext != null) {
+    this.setWebsocketPreferredClientNoContext(websocketPreferredClientNoContext)
   }
   if (websocketSubProtocols != null) {
     this.setWebsocketSubProtocols(websocketSubProtocols)

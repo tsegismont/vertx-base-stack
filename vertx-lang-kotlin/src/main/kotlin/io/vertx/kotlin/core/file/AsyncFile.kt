@@ -2,30 +2,7 @@ package io.vertx.kotlin.core.file
 
 import io.vertx.core.buffer.Buffer
 import io.vertx.core.file.AsyncFile
-import io.vertx.kotlin.coroutines.awaitEvent
 import io.vertx.kotlin.coroutines.awaitResult
-
-suspend fun AsyncFile.handlerAwait() : Buffer {
-  return awaitEvent{
-    this.handler(it)
-  }
-}
-
-suspend fun AsyncFile.endHandlerAwait() : Unit {
-  return awaitEvent{
-    this.endHandler({ v -> it.handle(null) })}
-}
-
-suspend fun AsyncFile.drainHandlerAwait() : Unit {
-  return awaitEvent{
-    this.drainHandler({ v -> it.handle(null) })}
-}
-
-suspend fun AsyncFile.exceptionHandlerAwait() : Throwable {
-  return awaitEvent{
-    this.exceptionHandler(it)
-  }
-}
 
 /**
  * Close the file. The actual close happens asynchronously.

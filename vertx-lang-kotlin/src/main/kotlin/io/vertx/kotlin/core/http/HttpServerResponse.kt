@@ -3,52 +3,7 @@ package io.vertx.kotlin.core.http
 import io.vertx.core.MultiMap
 import io.vertx.core.http.HttpMethod
 import io.vertx.core.http.HttpServerResponse
-import io.vertx.kotlin.coroutines.awaitEvent
 import io.vertx.kotlin.coroutines.awaitResult
-
-suspend fun HttpServerResponse.exceptionHandlerAwait() : Throwable {
-  return awaitEvent{
-    this.exceptionHandler(it)
-  }
-}
-
-suspend fun HttpServerResponse.drainHandlerAwait() : Unit {
-  return awaitEvent{
-    this.drainHandler({ v -> it.handle(null) })}
-}
-
-/**
- * Set a close handler for the response, this is called when the underlying connection is closed and the response
- * was still using the connection.
- * <p>
- * For HTTP/1.x it is called when the connection is closed before <code>end()</code> is called, therefore it is not
- * guaranteed to be called.
- * <p>
- * For HTTP/2 it is called when the related stream is closed, and therefore it will be always be called.
- *
- * @param handler the handler
- * @returna reference to this, so the API can be used fluently *
- * <p/>
- * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpServerResponse original] using Vert.x codegen.
- */
-suspend fun HttpServerResponse.closeHandlerAwait() : Unit {
-  return awaitEvent{
-    this.closeHandler({ v -> it.handle(null) })}
-}
-
-/**
- * Set an end handler for the response. This will be called when the response is disposed to allow consistent cleanup
- * of the response.
- *
- * @param handler the handler
- * @returna reference to this, so the API can be used fluently *
- * <p/>
- * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpServerResponse original] using Vert.x codegen.
- */
-suspend fun HttpServerResponse.endHandlerAwait() : Unit {
-  return awaitEvent{
-    this.endHandler({ v -> it.handle(null) })}
-}
 
 /**
  * Like [io.vertx.core.http.HttpServerResponse] but providing a handler which will be notified once the file has been completely
@@ -96,36 +51,6 @@ suspend fun HttpServerResponse.sendFileAwait(filename : String, offset : Long) :
 suspend fun HttpServerResponse.sendFileAwait(filename : String, offset : Long, length : Long) : Unit {
   return awaitResult{
     this.sendFile(filename, offset, length, { ar -> it.handle(ar.mapEmpty()) })}
-}
-
-/**
- * Provide a handler that will be called just before the headers are written to the wire.<p>
- * This provides a hook allowing you to add any more headers or do any more operations before this occurs.
- *
- * @param handler the handler
- * @returna reference to this, so the API can be used fluently *
- * <p/>
- * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpServerResponse original] using Vert.x codegen.
- */
-suspend fun HttpServerResponse.headersEndHandlerAwait() : Unit {
-  return awaitEvent{
-    this.headersEndHandler({ v -> it.handle(null) })}
-}
-
-/**
- * Provides a handler that will be called after the last part of the body is written to the wire.
- * The handler is called asynchronously of when the response has been received by the client.
- * This provides a hook allowing you to do more operations once the request has been sent over the wire
- * such as resource cleanup.
- *
- * @param handler the handler
- * @returna reference to this, so the API can be used fluently *
- * <p/>
- * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpServerResponse original] using Vert.x codegen.
- */
-suspend fun HttpServerResponse.bodyEndHandlerAwait() : Unit {
-  return awaitEvent{
-    this.bodyEndHandler({ v -> it.handle(null) })}
 }
 
 /**

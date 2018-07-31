@@ -15,7 +15,7 @@ import io.vertx.kotlin.coroutines.awaitResult
  * <p/>
  * NOTE: This function has been automatically generated from the [io.vertx.ext.asyncsql.MySQLClient original] using Vert.x codegen.
  */
-suspend fun MySQLClient.querySingleAwait(sql : String) : JsonArray {
+suspend fun MySQLClient.querySingleAwait(sql : String) : JsonArray? {
   return awaitResult{
     this.querySingle(sql, it)
   }
@@ -33,7 +33,7 @@ suspend fun MySQLClient.querySingleAwait(sql : String) : JsonArray {
  * <p/>
  * NOTE: This function has been automatically generated from the [io.vertx.ext.asyncsql.MySQLClient original] using Vert.x codegen.
  */
-suspend fun MySQLClient.querySingleWithParamsAwait(sql : String, arguments : JsonArray) : JsonArray {
+suspend fun MySQLClient.querySingleWithParamsAwait(sql : String, arguments : JsonArray) : JsonArray? {
   return awaitResult{
     this.querySingleWithParams(sql, arguments, it)
   }

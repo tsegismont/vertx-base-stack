@@ -12,7 +12,7 @@ import io.vertx.kotlin.coroutines.awaitResult
  * <p/>
  * NOTE: This function has been automatically generated from the [io.vertx.core.shareddata.AsyncMap original] using Vert.x codegen.
  */
-suspend fun <K,V> AsyncMap<K,V>.getAwait(k : K) : V {
+suspend fun <K,V> AsyncMap<K,V>.getAwait(k : K) : V? {
   return awaitResult{
     this.get(k, it)
   }
@@ -61,7 +61,7 @@ suspend fun <K,V> AsyncMap<K,V>.putAwait(k : K, v : V, ttl : Long) : Unit {
  * <p/>
  * NOTE: This function has been automatically generated from the [io.vertx.core.shareddata.AsyncMap original] using Vert.x codegen.
  */
-suspend fun <K,V> AsyncMap<K,V>.putIfAbsentAwait(k : K, v : V) : V {
+suspend fun <K,V> AsyncMap<K,V>.putIfAbsentAwait(k : K, v : V) : V? {
   return awaitResult{
     this.putIfAbsent(k, v, it)
   }
@@ -79,7 +79,7 @@ suspend fun <K,V> AsyncMap<K,V>.putIfAbsentAwait(k : K, v : V) : V {
  * <p/>
  * NOTE: This function has been automatically generated from the [io.vertx.core.shareddata.AsyncMap original] using Vert.x codegen.
  */
-suspend fun <K,V> AsyncMap<K,V>.putIfAbsentAwait(k : K, v : V, ttl : Long) : V {
+suspend fun <K,V> AsyncMap<K,V>.putIfAbsentAwait(k : K, v : V, ttl : Long) : V? {
   return awaitResult{
     this.putIfAbsent(k, v, ttl, it)
   }
@@ -94,7 +94,7 @@ suspend fun <K,V> AsyncMap<K,V>.putIfAbsentAwait(k : K, v : V, ttl : Long) : V {
  * <p/>
  * NOTE: This function has been automatically generated from the [io.vertx.core.shareddata.AsyncMap original] using Vert.x codegen.
  */
-suspend fun <K,V> AsyncMap<K,V>.removeAwait(k : K) : V {
+suspend fun <K,V> AsyncMap<K,V>.removeAwait(k : K) : V? {
   return awaitResult{
     this.remove(k, it)
   }
@@ -126,7 +126,7 @@ suspend fun <K,V> AsyncMap<K,V>.removeIfPresentAwait(k : K, v : V) : Boolean {
  * <p/>
  * NOTE: This function has been automatically generated from the [io.vertx.core.shareddata.AsyncMap original] using Vert.x codegen.
  */
-suspend fun <K,V> AsyncMap<K,V>.replaceAwait(k : K, v : V) : V {
+suspend fun <K,V> AsyncMap<K,V>.replaceAwait(k : K, v : V) : V? {
   return awaitResult{
     this.replace(k, v, it)
   }

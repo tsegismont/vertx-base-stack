@@ -4,19 +4,7 @@ import io.vertx.kafka.client.common.PartitionInfo
 import io.vertx.kafka.client.producer.KafkaProducer
 import io.vertx.kafka.client.producer.KafkaProducerRecord
 import io.vertx.kafka.client.producer.RecordMetadata
-import io.vertx.kotlin.coroutines.awaitEvent
 import io.vertx.kotlin.coroutines.awaitResult
-
-suspend fun <K,V> KafkaProducer<K,V>.exceptionHandlerAwait() : Throwable {
-  return awaitEvent{
-    this.exceptionHandler(it)
-  }
-}
-
-suspend fun <K,V> KafkaProducer<K,V>.drainHandlerAwait() : Unit {
-  return awaitEvent{
-    this.drainHandler({ v -> it.handle(null) })}
-}
 
 /**
  * Asynchronously write a record to a topic
@@ -46,19 +34,6 @@ suspend fun <K,V> KafkaProducer<K,V>.partitionsForAwait(topic : String) : List<P
   return awaitResult{
     this.partitionsFor(topic, it)
   }
-}
-
-/**
- * Invoking this method makes all buffered records immediately available to write
- *
- * @param completionHandler handler called on operation completed
- * @returncurrent KafkaProducer instance *
- * <p/>
- * NOTE: This function has been automatically generated from the [io.vertx.kafka.client.producer.KafkaProducer original] using Vert.x codegen.
- */
-suspend fun <K,V> KafkaProducer<K,V>.flushAwait() : Unit {
-  return awaitEvent{
-    this.flush({ v -> it.handle(null) })}
 }
 
 /**

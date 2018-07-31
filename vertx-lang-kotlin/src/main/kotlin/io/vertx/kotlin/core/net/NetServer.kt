@@ -2,7 +2,6 @@ package io.vertx.kotlin.core.net
 
 import io.vertx.core.net.NetServer
 import io.vertx.core.net.SocketAddress
-import io.vertx.kotlin.coroutines.awaitEvent
 import io.vertx.kotlin.coroutines.awaitResult
 
 /**
@@ -62,21 +61,6 @@ suspend fun NetServer.listenAwait(port : Int) : NetServer {
 suspend fun NetServer.listenAwait(localAddress : SocketAddress) : NetServer {
   return awaitResult{
     this.listen(localAddress, it)
-  }
-}
-
-/**
- * Set an exception handler called for socket errors happening before the connection
- * is passed to the [io.vertx.core.net.NetServer], e.g during the TLS handshake.
- *
- * @param handler the handler to set
- * @returna reference to this, so the API can be used fluently *
- * <p/>
- * NOTE: This function has been automatically generated from the [io.vertx.core.net.NetServer original] using Vert.x codegen.
- */
-suspend fun NetServer.exceptionHandlerAwait() : Throwable {
-  return awaitEvent{
-    this.exceptionHandler(it)
   }
 }
 

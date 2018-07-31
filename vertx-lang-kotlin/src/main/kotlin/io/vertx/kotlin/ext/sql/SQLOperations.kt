@@ -80,7 +80,7 @@ suspend fun SQLOperations.queryStreamWithParamsAwait(sql : String, params : Json
  * <p/>
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLOperations original] using Vert.x codegen.
  */
-suspend fun SQLOperations.querySingleAwait(sql : String) : JsonArray {
+suspend fun SQLOperations.querySingleAwait(sql : String) : JsonArray? {
   return awaitResult{
     this.querySingle(sql, it)
   }
@@ -98,7 +98,7 @@ suspend fun SQLOperations.querySingleAwait(sql : String) : JsonArray {
  * <p/>
  * NOTE: This function has been automatically generated from the [io.vertx.ext.sql.SQLOperations original] using Vert.x codegen.
  */
-suspend fun SQLOperations.querySingleWithParamsAwait(sql : String, arguments : JsonArray) : JsonArray {
+suspend fun SQLOperations.querySingleWithParamsAwait(sql : String, arguments : JsonArray) : JsonArray? {
   return awaitResult{
     this.querySingleWithParams(sql, arguments, it)
   }

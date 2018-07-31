@@ -3,21 +3,7 @@ package io.vertx.kotlin.core
 import io.vertx.core.Context
 import io.vertx.core.Future
 import io.vertx.core.Handler
-import io.vertx.kotlin.coroutines.awaitEvent
 import io.vertx.kotlin.coroutines.awaitResult
-
-/**
- * Run the specified action asynchronously on the same context, some time after the current execution has completed.
- *
- * @param action the action to run
- *
- * <p/>
- * NOTE: This function has been automatically generated from the [io.vertx.core.Context original] using Vert.x codegen.
- */
-suspend fun Context.runOnContextAwait() : Unit {
-  return awaitEvent{
-    this.runOnContext({ v -> it.handle(null) })}
-}
 
 /**
  * Safely execute some blocking code.
@@ -38,7 +24,7 @@ suspend fun Context.runOnContextAwait() : Unit {
  * <p/>
  * NOTE: This function has been automatically generated from the [io.vertx.core.Context original] using Vert.x codegen.
  */
-suspend fun <T> Context.executeBlockingAwait(blockingCodeHandler : Handler<Future<T>>, ordered : Boolean) : T {
+suspend fun <T> Context.executeBlockingAwait(blockingCodeHandler : Handler<Future<T>>, ordered : Boolean) : T? {
   return awaitResult{
     this.executeBlocking(blockingCodeHandler, ordered, it)
   }
@@ -53,25 +39,9 @@ suspend fun <T> Context.executeBlockingAwait(blockingCodeHandler : Handler<Futur
  * <p/>
  * NOTE: This function has been automatically generated from the [io.vertx.core.Context original] using Vert.x codegen.
  */
-suspend fun <T> Context.executeBlockingAwait(blockingCodeHandler : Handler<Future<T>>) : T {
+suspend fun <T> Context.executeBlockingAwait(blockingCodeHandler : Handler<Future<T>>) : T? {
   return awaitResult{
     this.executeBlocking(blockingCodeHandler, it)
-  }
-}
-
-/**
- * Set an exception handler called when the context runs an action throwing an uncaught throwable.<p/>
- *
- * When this handler is called, [io.vertx.core.Vertx] will return this context.
- *
- * @param handler the exception handler
- * @returna reference to this, so the API can be used fluently *
- * <p/>
- * NOTE: This function has been automatically generated from the [io.vertx.core.Context original] using Vert.x codegen.
- */
-suspend fun Context.exceptionHandlerAwait() : Throwable {
-  return awaitEvent{
-    this.exceptionHandler(it)
   }
 }
 

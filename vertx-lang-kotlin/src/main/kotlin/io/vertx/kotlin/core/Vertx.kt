@@ -5,22 +5,7 @@ import io.vertx.core.Future
 import io.vertx.core.Handler
 import io.vertx.core.Vertx as VertxVertxAlias
 import io.vertx.core.VertxOptions
-import io.vertx.kotlin.coroutines.awaitEvent
 import io.vertx.kotlin.coroutines.awaitResult
-
-/**
- * Puts the handler on the event queue for the current context so it will be run asynchronously ASAP after all
- * preceeding events have been handled.
- *
- * @param action - a handler representing the action to execute
- *
- * <p/>
- * NOTE: This function has been automatically generated from the [io.vertx.core.Vertx original] using Vert.x codegen.
- */
-suspend fun VertxVertxAlias.runOnContextAwait() : Unit {
-  return awaitEvent{
-    this.runOnContext({ v -> it.handle(null) })}
-}
 
 /**
  * Like [io.vertx.core.Vertx] but the completionHandler will be called when the close is complete
@@ -108,7 +93,7 @@ suspend fun VertxVertxAlias.undeployAwait(deploymentID : String) : Unit {
  * <p/>
  * NOTE: This function has been automatically generated from the [io.vertx.core.Vertx original] using Vert.x codegen.
  */
-suspend fun <T> VertxVertxAlias.executeBlockingAwait(blockingCodeHandler : Handler<Future<T>>, ordered : Boolean) : T {
+suspend fun <T> VertxVertxAlias.executeBlockingAwait(blockingCodeHandler : Handler<Future<T>>, ordered : Boolean) : T? {
   return awaitResult{
     this.executeBlocking(blockingCodeHandler, ordered, it)
   }
@@ -123,23 +108,9 @@ suspend fun <T> VertxVertxAlias.executeBlockingAwait(blockingCodeHandler : Handl
  * <p/>
  * NOTE: This function has been automatically generated from the [io.vertx.core.Vertx original] using Vert.x codegen.
  */
-suspend fun <T> VertxVertxAlias.executeBlockingAwait(blockingCodeHandler : Handler<Future<T>>) : T {
+suspend fun <T> VertxVertxAlias.executeBlockingAwait(blockingCodeHandler : Handler<Future<T>>) : T? {
   return awaitResult{
     this.executeBlocking(blockingCodeHandler, it)
-  }
-}
-
-/**
- * Set a default exception handler for [io.vertx.core.Context], set on  at creation.
- *
- * @param handler the exception handler
- * @returna reference to this, so the API can be used fluently *
- * <p/>
- * NOTE: This function has been automatically generated from the [io.vertx.core.Vertx original] using Vert.x codegen.
- */
-suspend fun VertxVertxAlias.exceptionHandlerAwait() : Throwable {
-  return awaitEvent{
-    this.exceptionHandler(it)
   }
 }
 

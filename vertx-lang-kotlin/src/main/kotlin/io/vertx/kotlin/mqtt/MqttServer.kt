@@ -1,8 +1,6 @@
 package io.vertx.kotlin.mqtt
 
-import io.vertx.kotlin.coroutines.awaitEvent
 import io.vertx.kotlin.coroutines.awaitResult
-import io.vertx.mqtt.MqttEndpoint
 import io.vertx.mqtt.MqttServer
 
 /**
@@ -50,36 +48,6 @@ suspend fun MqttServer.listenAwait(port : Int) : MqttServer {
 suspend fun MqttServer.listenAwait() : MqttServer {
   return awaitResult{
     this.listen(it)
-  }
-}
-
-/**
- * Set the endpoint handler for the server. If an MQTT client connect to the server a
- * new MqttEndpoint instance will be created and passed to the handler
- *
- * @param handler the endpoint handler
- * @returna reference to this, so the API can be used fluently *
- * <p/>
- * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttServer original] using Vert.x codegen.
- */
-suspend fun MqttServer.endpointHandlerAwait() : MqttEndpoint {
-  return awaitEvent{
-    this.endpointHandler(it)
-  }
-}
-
-/**
- * Set an exception handler for the server, that will be called when an error happens independantly of an
- * accepted [io.vertx.mqtt.MqttEndpoint], like a rejected connection
- *
- * @param handler the exception handler
- * @returna reference to this, so the API can be used fluently *
- * <p/>
- * NOTE: This function has been automatically generated from the [io.vertx.mqtt.MqttServer original] using Vert.x codegen.
- */
-suspend fun MqttServer.exceptionHandlerAwait() : Throwable {
-  return awaitEvent{
-    this.exceptionHandler(it)
   }
 }
 

@@ -1,8 +1,6 @@
 package io.vertx.kotlin.ext.stomp
 
-import io.vertx.ext.stomp.ServerFrame
 import io.vertx.ext.stomp.StompServer
-import io.vertx.kotlin.coroutines.awaitEvent
 import io.vertx.kotlin.coroutines.awaitResult
 
 /**
@@ -64,20 +62,5 @@ suspend fun StompServer.listenAwait(port : Int, host : String) : StompServer {
 suspend fun StompServer.closeAwait() : Unit {
   return awaitResult{
     this.close({ ar -> it.handle(ar.mapEmpty()) })}
-}
-
-/**
- * Configures the handler that is invoked every time a frame is going to be written to the "wire". It lets you log
- * the frames, but also adapt the frame if needed.
- *
- * @param handler the handler, must not be <code>null</code>
- * @returnthe current [io.vertx.ext.stomp.StompServer] *
- * <p/>
- * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompServer original] using Vert.x codegen.
- */
-suspend fun StompServer.writingFrameHandlerAwait() : ServerFrame {
-  return awaitEvent{
-    this.writingFrameHandler(it)
-  }
 }
 

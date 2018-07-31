@@ -5,21 +5,6 @@ import io.vertx.ext.auth.oauth2.OAuth2Auth
 import io.vertx.kotlin.coroutines.awaitResult
 
 /**
- * Decode a token to a [io.vertx.ext.auth.oauth2.AccessToken] object. This is useful to handle bearer JWT tokens.
- *
- * @param token the access token (base64 string)
- * @param handler A handler to receive the event
- * @returnself *
- * <p/>
- * NOTE: This function has been automatically generated from the [io.vertx.ext.auth.oauth2.OAuth2Auth original] using Vert.x codegen.
- */
-suspend fun OAuth2Auth.decodeTokenAwait(token : String) : AccessToken {
-  return awaitResult{
-    this.decodeToken(token, it)
-  }
-}
-
-/**
  * Query an OAuth 2.0 authorization server to determine the active state of an OAuth 2.0 token and to determine
  * meta-information about this token.
  *

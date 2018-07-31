@@ -1,10 +1,8 @@
 package io.vertx.kotlin.ext.stomp
 
 import io.vertx.core.net.NetClient
-import io.vertx.ext.stomp.Frame
 import io.vertx.ext.stomp.StompClient
 import io.vertx.ext.stomp.StompClientConnection
-import io.vertx.kotlin.coroutines.awaitEvent
 import io.vertx.kotlin.coroutines.awaitResult
 
 /**
@@ -66,72 +64,6 @@ suspend fun StompClient.connectAwait(port : Int, host : String, net : NetClient)
 suspend fun StompClient.connectAwait() : StompClientConnection {
   return awaitResult{
     this.connect(it)
-  }
-}
-
-/**
- * Configures a received handler that gets notified when a STOMP frame is received by the client.
- * This handler can be used for logging, debugging or ad-hoc behavior. The frame can still be modified at the time.
- * <p>
- * When a connection is created, the handler is used as
- * [io.vertx.ext.stomp.StompClientConnection].
- *
- * @param handler the handler
- * @returnthe current [io.vertx.ext.stomp.StompClient] *
- * <p/>
- * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompClient original] using Vert.x codegen.
- */
-suspend fun StompClient.receivedFrameHandlerAwait() : Frame {
-  return awaitEvent{
-    this.receivedFrameHandler(it)
-  }
-}
-
-/**
- * Configures a writing handler that gets notified when a STOMP frame is written on the wire.
- * This handler can be used for logging, debugging or ad-hoc behavior. The frame can still be modified at the time.
- * <p>
- * When a connection is created, the handler is used as
- * [io.vertx.ext.stomp.StompClientConnection].
- *
- * @param handler the handler
- * @returnthe current [io.vertx.ext.stomp.StompClient] *
- * <p/>
- * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompClient original] using Vert.x codegen.
- */
-suspend fun StompClient.writingFrameHandlerAwait() : Frame {
-  return awaitEvent{
-    this.writingFrameHandler(it)
-  }
-}
-
-/**
- * A general error frame handler. It can be used to catch <code>ERROR</code> frame emitted during the connection process
- * (wrong authentication). This error handler will be pass to all [io.vertx.ext.stomp.StompClientConnection] created from this
- * client. Obviously, the client can override it when the connection is established.
- *
- * @param handler the handler
- * @returnthe current [io.vertx.ext.stomp.StompClient] *
- * <p/>
- * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompClient original] using Vert.x codegen.
- */
-suspend fun StompClient.errorFrameHandlerAwait() : Frame {
-  return awaitEvent{
-    this.errorFrameHandler(it)
-  }
-}
-
-/**
- * Sets an exception handler notified for TCP-level errors.
- *
- * @param handler the handler
- * @returnthe current [io.vertx.ext.stomp.StompClient] *
- * <p/>
- * NOTE: This function has been automatically generated from the [io.vertx.ext.stomp.StompClient original] using Vert.x codegen.
- */
-suspend fun StompClient.exceptionHandlerAwait() : Throwable {
-  return awaitEvent{
-    this.exceptionHandler(it)
   }
 }
 

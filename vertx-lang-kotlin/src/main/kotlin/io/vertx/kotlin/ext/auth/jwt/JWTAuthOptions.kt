@@ -11,6 +11,7 @@ import io.vertx.ext.jwt.JWTOptions
  *
  * Options describing how an JWT Auth should behave.
  *
+ * @param jwks 
  * @param jwtOptions 
  * @param keyStore 
  * @param permissionsClaimKey 
@@ -21,12 +22,16 @@ import io.vertx.ext.jwt.JWTOptions
  * NOTE: This function has been automatically generated from the [io.vertx.ext.auth.jwt.JWTAuthOptions original] using Vert.x codegen.
  */
 fun JWTAuthOptions(
+  jwks: Iterable<io.vertx.core.json.JsonObject>? = null,
   jwtOptions: io.vertx.ext.jwt.JWTOptions? = null,
   keyStore: io.vertx.ext.auth.KeyStoreOptions? = null,
   permissionsClaimKey: String? = null,
   pubSecKeys: Iterable<io.vertx.ext.auth.PubSecKeyOptions>? = null,
   secrets: Iterable<io.vertx.ext.auth.SecretOptions>? = null): JWTAuthOptions = io.vertx.ext.auth.jwt.JWTAuthOptions().apply {
 
+  if (jwks != null) {
+    this.setJwks(jwks.toList())
+  }
   if (jwtOptions != null) {
     this.setJWTOptions(jwtOptions)
   }

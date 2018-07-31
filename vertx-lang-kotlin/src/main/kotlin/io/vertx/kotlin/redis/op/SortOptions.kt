@@ -6,7 +6,9 @@ import io.vertx.redis.op.SortOptions
  * A function providing a DSL for building [io.vertx.redis.op.SortOptions] objects.
  *
  *
+ * @param alpha 
  * @param by 
+ * @param descending 
  * @param gets 
  * @param store 
  *
@@ -14,12 +16,20 @@ import io.vertx.redis.op.SortOptions
  * NOTE: This function has been automatically generated from the [io.vertx.redis.op.SortOptions original] using Vert.x codegen.
  */
 fun SortOptions(
+  alpha: Boolean? = null,
   by: String? = null,
+  descending: Boolean? = null,
   gets: Iterable<String>? = null,
   store: String? = null): SortOptions = io.vertx.redis.op.SortOptions().apply {
 
+  if (alpha != null) {
+    this.setAlpha(alpha)
+  }
   if (by != null) {
     this.setBy(by)
+  }
+  if (descending != null) {
+    this.setDescending(descending)
   }
   if (gets != null) {
     for (item in gets) {

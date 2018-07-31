@@ -11,6 +11,7 @@ import io.vertx.core.net.PemTrustOptions
 import io.vertx.core.net.PfxOptions
 import io.vertx.core.net.ProxyOptions
 import io.vertx.ext.auth.PubSecKeyOptions
+import io.vertx.ext.auth.oauth2.OAuth2FlowType
 import io.vertx.ext.jwt.JWTOptions
 import java.util.concurrent.TimeUnit
 
@@ -33,6 +34,7 @@ import java.util.concurrent.TimeUnit
  * @param enabledCipherSuites  Add an enabled cipher suite, appended to the ordered suites.
  * @param enabledSecureTransportProtocols  Sets the list of enabled SSL/TLS protocols.
  * @param extraParameters  Set extra parameters to be sent to the provider on each request
+ * @param flow 
  * @param forceSni  By default, the server name is only sent for Fully Qualified Domain Name (FQDN), setting this property to <code>true</code> forces the server name to be always sent.
  * @param headers  Set custom headers to be sent with every request to the provider
  * @param http2ClearTextUpgrade  Set to <code>true</code> when an <i>h2c</i> connection is established using an HTTP/1.1 upgrade request, and <code>false</code> when an <i>h2c</i> connection is established directly (with prior knowledge).
@@ -47,7 +49,6 @@ import java.util.concurrent.TimeUnit
  * @param jdkSslEngineOptions 
  * @param jwkPath 
  * @param jwtOptions 
- * @param jwtToken 
  * @param keepAlive  Set whether keep alive is enabled on the client
  * @param keepAliveTimeout  Set the keep alive timeout for HTTP/1.x, in seconds. <p/> This value determines how long a connection remains unused in the pool before being evicted and closed.
  * @param keyStoreOptions  Set the key/cert options in jks format, aka Java keystore.
@@ -94,13 +95,19 @@ import java.util.concurrent.TimeUnit
  * @param trustAll  Set whether all server certificates should be trusted
  * @param trustStoreOptions  Set the trust options in jks format, aka Java truststore
  * @param tryUseCompression  Set whether compression is enabled
+ * @param tryUsePerFrameWebsocketCompression  Set option to offer Deflate Frame websocket compression
+ * @param tryUsePerMessageWebsocketCompression  Set option to offer Permessage Deflate websocket compression
  * @param useAlpn  Set the ALPN usage.
  * @param useBasicAuthorizationHeader  Flag to use HTTP basic auth header with client id, client secret.
  * @param usePooledBuffers  Set whether Netty pooled buffers are enabled
  * @param userAgent  Set a custom user agent to use when communicating to a provider
  * @param userInfoParameters  Set custom parameters to be sent during the userInfo resource request
  * @param userInfoPath  Set the provider userInfo resource path
+ * @param validateIssuer 
  * @param verifyHost  Set whether hostname verification is enabled
+ * @param websocketCompressionAllowClientNoContext  Set the websocket compression allow client no context option
+ * @param websocketCompressionLevel  Set websocket compression level
+ * @param websocketCompressionRequestServerNoContext  Set the websocket compression server no context option
  *
  * <p/>
  * NOTE: This function has been automatically generated from the [io.vertx.ext.auth.oauth2.OAuth2ClientOptions original] using Vert.x codegen.
@@ -120,6 +127,7 @@ fun OAuth2ClientOptions(
   enabledCipherSuites: Iterable<String>? = null,
   enabledSecureTransportProtocols: Iterable<String>? = null,
   extraParameters: io.vertx.core.json.JsonObject? = null,
+  flow: OAuth2FlowType? = null,
   forceSni: Boolean? = null,
   headers: io.vertx.core.json.JsonObject? = null,
   http2ClearTextUpgrade: Boolean? = null,
@@ -134,7 +142,6 @@ fun OAuth2ClientOptions(
   jdkSslEngineOptions: io.vertx.core.net.JdkSSLEngineOptions? = null,
   jwkPath: String? = null,
   jwtOptions: io.vertx.ext.jwt.JWTOptions? = null,
-  jwtToken: Boolean? = null,
   keepAlive: Boolean? = null,
   keepAliveTimeout: Int? = null,
   keyStoreOptions: io.vertx.core.net.JksOptions? = null,
@@ -181,13 +188,19 @@ fun OAuth2ClientOptions(
   trustAll: Boolean? = null,
   trustStoreOptions: io.vertx.core.net.JksOptions? = null,
   tryUseCompression: Boolean? = null,
+  tryUsePerFrameWebsocketCompression: Boolean? = null,
+  tryUsePerMessageWebsocketCompression: Boolean? = null,
   useAlpn: Boolean? = null,
   useBasicAuthorizationHeader: Boolean? = null,
   usePooledBuffers: Boolean? = null,
   userAgent: String? = null,
   userInfoParameters: io.vertx.core.json.JsonObject? = null,
   userInfoPath: String? = null,
-  verifyHost: Boolean? = null): OAuth2ClientOptions = io.vertx.ext.auth.oauth2.OAuth2ClientOptions().apply {
+  validateIssuer: Boolean? = null,
+  verifyHost: Boolean? = null,
+  websocketCompressionAllowClientNoContext: Boolean? = null,
+  websocketCompressionLevel: Int? = null,
+  websocketCompressionRequestServerNoContext: Boolean? = null): OAuth2ClientOptions = io.vertx.ext.auth.oauth2.OAuth2ClientOptions().apply {
 
   if (alpnVersions != null) {
     this.setAlpnVersions(alpnVersions.toList())
@@ -237,6 +250,9 @@ fun OAuth2ClientOptions(
   if (extraParameters != null) {
     this.setExtraParameters(extraParameters)
   }
+  if (flow != null) {
+    this.setFlow(flow)
+  }
   if (forceSni != null) {
     this.setForceSni(forceSni)
   }
@@ -278,9 +294,6 @@ fun OAuth2ClientOptions(
   }
   if (jwtOptions != null) {
     this.setJWTOptions(jwtOptions)
-  }
-  if (jwtToken != null) {
-    this.setJWTToken(jwtToken)
   }
   if (keepAlive != null) {
     this.setKeepAlive(keepAlive)
@@ -420,6 +433,12 @@ fun OAuth2ClientOptions(
   if (tryUseCompression != null) {
     this.setTryUseCompression(tryUseCompression)
   }
+  if (tryUsePerFrameWebsocketCompression != null) {
+    this.setTryUsePerFrameWebsocketCompression(tryUsePerFrameWebsocketCompression)
+  }
+  if (tryUsePerMessageWebsocketCompression != null) {
+    this.setTryUsePerMessageWebsocketCompression(tryUsePerMessageWebsocketCompression)
+  }
   if (useAlpn != null) {
     this.setUseAlpn(useAlpn)
   }
@@ -438,8 +457,20 @@ fun OAuth2ClientOptions(
   if (userInfoPath != null) {
     this.setUserInfoPath(userInfoPath)
   }
+  if (validateIssuer != null) {
+    this.setValidateIssuer(validateIssuer)
+  }
   if (verifyHost != null) {
     this.setVerifyHost(verifyHost)
+  }
+  if (websocketCompressionAllowClientNoContext != null) {
+    this.setWebsocketCompressionAllowClientNoContext(websocketCompressionAllowClientNoContext)
+  }
+  if (websocketCompressionLevel != null) {
+    this.setWebsocketCompressionLevel(websocketCompressionLevel)
+  }
+  if (websocketCompressionRequestServerNoContext != null) {
+    this.setWebsocketCompressionRequestServerNoContext(websocketCompressionRequestServerNoContext)
   }
 }
 
