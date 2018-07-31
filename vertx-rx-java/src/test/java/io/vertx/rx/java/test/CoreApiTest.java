@@ -544,7 +544,7 @@ public class CoreApiTest extends VertxTestBase {
         client.request(HttpMethod.GET, 8080, "localhost", "/the_uri", resp -> {
           Buffer content = Buffer.buffer();
           Observable<Buffer> observable = resp.toObservable();
-          observable.forEach(content::appendBuffer, err -> fail(), () -> {
+          observable.forEach(content::appendBuffer, err -> fail(err.getMessage()), () -> {
             assertEquals("some_content", content.toString("UTF-8"));
             testComplete();
           });
@@ -569,7 +569,7 @@ public class CoreApiTest extends VertxTestBase {
       Buffer content = Buffer.buffer();
       obs.flatMap(HttpClientResponse::toObservable).forEach(
           content::appendBuffer,
-          err -> fail(), () -> {
+          err -> fail(err.getMessage()), () -> {
         server.close();
         assertEquals("some_content", content.toString("UTF-8"));
         testComplete();
@@ -666,7 +666,7 @@ public class CoreApiTest extends VertxTestBase {
           websocketStream(8080, "localhost", "/the_uri").
           toObservable().
           flatMap(WebSocket::toObservable).
-          forEach(content::appendBuffer, err -> fail(), () -> {
+          forEach(content::appendBuffer, err -> fail(err.getMessage()), () -> {
             server.close();
             assertEquals("some_content", content.toString("UTF-8"));
             testComplete();

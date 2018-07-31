@@ -1,6 +1,7 @@
 package io.vertx.rx.java.test;
 
 import io.vertx.core.Handler;
+import io.vertx.core.streams.ReadStream;
 import io.vertx.rx.java.test.stream.BufferReadStream;
 import io.vertx.rx.java.test.support.SimpleReadStream;
 import io.vertx.rx.java.test.support.SimpleSubscriber;
@@ -13,7 +14,7 @@ import rx.Observable;
 public class ReadStreamAdapterConvertingTest extends ReadStreamAdapterTestBase<Buffer, Observable<Buffer>> {
 
   @Override
-  protected Observable<Buffer> toObservable(SimpleReadStream<io.vertx.core.buffer.Buffer> stream) {
+  protected Observable<Buffer> toObservable(ReadStream<io.vertx.core.buffer.Buffer> stream) {
     return new io.vertx.rxjava.rx.java.test.stream.BufferReadStream(new BufferReadStream() {
       @Override
       public BufferReadStream exceptionHandler(Handler<Throwable> handler) {
@@ -28,6 +29,11 @@ public class ReadStreamAdapterConvertingTest extends ReadStreamAdapterTestBase<B
       @Override
       public BufferReadStream pause() {
         stream.pause();
+        return this;
+      }
+      @Override
+      public BufferReadStream fetch(long amount) {
+        stream.fetch(amount);
         return this;
       }
       @Override
