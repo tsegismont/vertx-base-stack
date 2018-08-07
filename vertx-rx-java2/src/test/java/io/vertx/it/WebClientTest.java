@@ -23,7 +23,6 @@ public class WebClientTest extends VertxTestBase {
   public void setUp() throws Exception {
     super.setUp();
     vertx = new Vertx(super.vertx);
-
   }
 
   @Test

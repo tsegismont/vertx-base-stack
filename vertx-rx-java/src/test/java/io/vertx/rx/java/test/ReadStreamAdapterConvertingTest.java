@@ -27,6 +27,11 @@ public class ReadStreamAdapterConvertingTest extends ReadStreamAdapterTestBase<B
         return this;
       }
       @Override
+      public BufferReadStream fetch(long amount) {
+        stream.fetch(amount);
+        return this;
+      }
+      @Override
       public BufferReadStream pause() {
         stream.pause();
         return this;

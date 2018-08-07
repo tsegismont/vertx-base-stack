@@ -1088,7 +1088,7 @@ suspend fun RedisClient.flushdbAwait() : String {
  * <p/>
  * NOTE: This function has been automatically generated from the [io.vertx.redis.RedisClient original] using Vert.x codegen.
  */
-suspend fun RedisClient.getAwait(key : String) : String {
+suspend fun RedisClient.getAwait(key : String) : String? {
   return awaitResult{
     this.get(key, it)
   }
@@ -1103,7 +1103,7 @@ suspend fun RedisClient.getAwait(key : String) : String {
  * <p/>
  * NOTE: This function has been automatically generated from the [io.vertx.redis.RedisClient original] using Vert.x codegen.
  */
-suspend fun RedisClient.getBinaryAwait(key : String) : Buffer {
+suspend fun RedisClient.getBinaryAwait(key : String) : Buffer? {
   return awaitResult{
     this.getBinary(key, it)
   }
