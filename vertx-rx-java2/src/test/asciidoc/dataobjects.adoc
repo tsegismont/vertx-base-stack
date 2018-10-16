@@ -7,7 +7,7 @@
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -21,7 +21,7 @@
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -46,7 +46,7 @@
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -71,7 +71,7 @@
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -96,7 +96,7 @@
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -121,7 +121,7 @@
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -137,7 +137,7 @@
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -151,7 +151,7 @@
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -166,7 +166,7 @@
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -197,7 +197,7 @@
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description

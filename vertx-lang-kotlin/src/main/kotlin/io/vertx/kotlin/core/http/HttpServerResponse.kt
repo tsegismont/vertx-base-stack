@@ -54,6 +54,40 @@ suspend fun HttpServerResponse.sendFileAwait(filename : String, offset : Long, l
 }
 
 /**
+ * Like [io.vertx.core.http.HttpServerResponse] with no headers.
+ *
+ * @param method 
+ * @param host 
+ * @param path 
+ * @param handler 
+ * @return *
+ * <p/>
+ * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpServerResponse original] using Vert.x codegen.
+ */
+suspend fun HttpServerResponse.pushAwait(method : HttpMethod, host : String, path : String) : HttpServerResponse {
+  return awaitResult{
+    this.push(method, host, path, it)
+  }
+}
+
+/**
+ * Like [io.vertx.core.http.HttpServerResponse] with the host copied from the current request.
+ *
+ * @param method 
+ * @param path 
+ * @param headers 
+ * @param handler 
+ * @return *
+ * <p/>
+ * NOTE: This function has been automatically generated from the [io.vertx.core.http.HttpServerResponse original] using Vert.x codegen.
+ */
+suspend fun HttpServerResponse.pushAwait(method : HttpMethod, path : String, headers : MultiMap) : HttpServerResponse {
+  return awaitResult{
+    this.push(method, path, headers, it)
+  }
+}
+
+/**
  * Like [io.vertx.core.http.HttpServerResponse] with the host copied from the current request.
  *
  * @param method 

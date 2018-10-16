@@ -517,3 +517,159 @@ suspend fun FileSystem.fsPropsAwait(path : String) : FileSystemProps {
   }
 }
 
+/**
+ * Creates a new directory in the default temporary-file directory, using the given
+ * prefix to generate its name, asynchronously.
+ *
+ * <p>
+ * As with the <code>File.createTempFile</code> methods, this method is only
+ * part of a temporary-file facility.A [java.lang.Runtime],
+ * or the [java.io.File] mechanism may be used to delete the directory automatically.
+ * </p>
+ *
+ * @param prefix the prefix string to be used in generating the directory's name; may be <code>null</code>
+ * @param handler the handler that will be called on completion
+ * @returna reference to this, so the API can be used fluently *
+ * <p/>
+ * NOTE: This function has been automatically generated from the [io.vertx.core.file.FileSystem original] using Vert.x codegen.
+ */
+suspend fun FileSystem.createTempDirectoryAwait(prefix : String) : String {
+  return awaitResult{
+    this.createTempDirectory(prefix, it)
+  }
+}
+
+/**
+ * Creates a new directory in the default temporary-file directory, using the given
+ * prefix to generate its name, asynchronously.
+ * <p>
+ * The new directory will be created with permissions as specified by <code>perms</code>.
+ * </p>
+ * The permission String takes the form rwxr-x--- as specified
+ * in <a href="http://download.oracle.com/javase/7/docs/api/java/nio/file/attribute/PosixFilePermissions.html">here</a>.
+ *
+ * <p>
+ * As with the <code>File.createTempFile</code> methods, this method is only
+ * part of a temporary-file facility.A [java.lang.Runtime],
+ * or the [java.io.File] mechanism may be used to delete the directory automatically.
+ * </p>
+ *
+ * @param prefix the prefix string to be used in generating the directory's name; may be <code>null</code>
+ * @param perms the permissions string
+ * @param handler the handler that will be called on completion
+ * @returna reference to this, so the API can be used fluently *
+ * <p/>
+ * NOTE: This function has been automatically generated from the [io.vertx.core.file.FileSystem original] using Vert.x codegen.
+ */
+suspend fun FileSystem.createTempDirectoryAwait(prefix : String, perms : String) : String {
+  return awaitResult{
+    this.createTempDirectory(prefix, perms, it)
+  }
+}
+
+/**
+ * Creates a new directory in the directory provided by the path <code>path</code>, using the given
+ * prefix to generate its name, asynchronously.
+ * <p>
+ * The new directory will be created with permissions as specified by <code>perms</code>.
+ * </p>
+ * The permission String takes the form rwxr-x--- as specified
+ * in <a href="http://download.oracle.com/javase/7/docs/api/java/nio/file/attribute/PosixFilePermissions.html">here</a>.
+ *
+ * <p>
+ * As with the <code>File.createTempFile</code> methods, this method is only
+ * part of a temporary-file facility.A [java.lang.Runtime],
+ * or the [java.io.File] mechanism may be used to delete the directory automatically.
+ * </p>
+ *
+ * @param dir the path to directory in which to create the directory
+ * @param prefix the prefix string to be used in generating the directory's name; may be <code>null</code>
+ * @param perms the permissions string
+ * @param handler the handler that will be called on completion
+ * @returna reference to this, so the API can be used fluently *
+ * <p/>
+ * NOTE: This function has been automatically generated from the [io.vertx.core.file.FileSystem original] using Vert.x codegen.
+ */
+suspend fun FileSystem.createTempDirectoryAwait(dir : String, prefix : String, perms : String) : String {
+  return awaitResult{
+    this.createTempDirectory(dir, prefix, perms, it)
+  }
+}
+
+/**
+ * Creates a new file in the default temporary-file directory, using the given
+ * prefix and suffix to generate its name, asynchronously.
+ *
+ * <p>
+ * As with the <code>File.createTempFile</code> methods, this method is only
+ * part of a temporary-file facility.A [java.lang.Runtime],
+ * or the [java.io.File] mechanism may be used to delete the directory automatically.
+ * </p>
+ *
+ * @param prefix the prefix string to be used in generating the directory's name; may be <code>null</code>
+ * @param suffix the suffix string to be used in generating the file's name; may be <code>null</code>, in which case "<code>.tmp</code>" is used
+ * @param handler the handler that will be called on completion
+ * @returna reference to this, so the API can be used fluently *
+ * <p/>
+ * NOTE: This function has been automatically generated from the [io.vertx.core.file.FileSystem original] using Vert.x codegen.
+ */
+suspend fun FileSystem.createTempFileAwait(prefix : String, suffix : String) : String {
+  return awaitResult{
+    this.createTempFile(prefix, suffix, it)
+  }
+}
+
+/**
+ * Creates a new file in the directory provided by the path <code>dir</code>, using the given
+ * prefix and suffix to generate its name, asynchronously.
+ *
+ * <p>
+ * As with the <code>File.createTempFile</code> methods, this method is only
+ * part of a temporary-file facility.A [java.lang.Runtime],
+ * or the [java.io.File] mechanism may be used to delete the directory automatically.
+ * </p>
+ *
+ * @param prefix the prefix string to be used in generating the directory's name; may be <code>null</code>
+ * @param suffix the suffix string to be used in generating the file's name; may be <code>null</code>, in which case "<code>.tmp</code>" is used
+ * @param perms 
+ * @param handler the handler that will be called on completion
+ * @returna reference to this, so the API can be used fluently *
+ * <p/>
+ * NOTE: This function has been automatically generated from the [io.vertx.core.file.FileSystem original] using Vert.x codegen.
+ */
+suspend fun FileSystem.createTempFileAwait(prefix : String, suffix : String, perms : String) : String {
+  return awaitResult{
+    this.createTempFile(prefix, suffix, perms, it)
+  }
+}
+
+/**
+ * Creates a new file in the directory provided by the path <code>dir</code>, using the given
+ * prefix and suffix to generate its name, asynchronously.
+ * <p>
+ * The new directory will be created with permissions as specified by <code>perms</code>.
+ * </p>
+ * The permission String takes the form rwxr-x--- as specified
+ * in <a href="http://download.oracle.com/javase/7/docs/api/java/nio/file/attribute/PosixFilePermissions.html">here</a>.
+ *
+ * <p>
+ * As with the <code>File.createTempFile</code> methods, this method is only
+ * part of a temporary-file facility.A [java.lang.Runtime],
+ * or the [java.io.File] mechanism may be used to delete the directory automatically.
+ * </p>
+ *
+ * @param dir the path to directory in which to create the directory
+ * @param prefix the prefix string to be used in generating the directory's name; may be <code>null</code>
+ * @param suffix the suffix string to be used in generating the file's name; may be <code>null</code>, in which case "<code>.tmp</code>" is used
+ * @param perms the permissions string
+ * @param handler the handler that will be called on completion
+ * @returna reference to this, so the API can be used fluently *
+ * <p/>
+ * NOTE: This function has been automatically generated from the [io.vertx.core.file.FileSystem original] using Vert.x codegen.
+ */
+suspend fun FileSystem.createTempFileAwait(dir : String, prefix : String, suffix : String, perms : String) : String {
+  return awaitResult{
+    this.createTempFile(dir, prefix, suffix, perms, it)
+  }
+}
+

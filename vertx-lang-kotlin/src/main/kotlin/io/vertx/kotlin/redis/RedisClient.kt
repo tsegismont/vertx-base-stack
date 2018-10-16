@@ -1152,7 +1152,7 @@ suspend fun RedisClient.getrangeAwait(key : String, start : Long, end : Long) : 
  * <p/>
  * NOTE: This function has been automatically generated from the [io.vertx.redis.RedisClient original] using Vert.x codegen.
  */
-suspend fun RedisClient.getsetAwait(key : String, value : String) : String {
+suspend fun RedisClient.getsetAwait(key : String, value : String) : String? {
   return awaitResult{
     this.getset(key, value, it)
   }
@@ -1216,7 +1216,7 @@ suspend fun RedisClient.hexistsAwait(key : String, field : String) : Long {
  * <p/>
  * NOTE: This function has been automatically generated from the [io.vertx.redis.RedisClient original] using Vert.x codegen.
  */
-suspend fun RedisClient.hgetAwait(key : String, field : String) : String {
+suspend fun RedisClient.hgetAwait(key : String, field : String) : String? {
   return awaitResult{
     this.hget(key, field, it)
   }
@@ -1545,7 +1545,7 @@ suspend fun RedisClient.llenAwait(key : String) : Long {
  * <p/>
  * NOTE: This function has been automatically generated from the [io.vertx.redis.RedisClient original] using Vert.x codegen.
  */
-suspend fun RedisClient.lpopAwait(key : String) : String {
+suspend fun RedisClient.lpopAwait(key : String) : String? {
   return awaitResult{
     this.lpop(key, it)
   }
@@ -2709,7 +2709,7 @@ suspend fun RedisClient.sortAwait(key : String, options : SortOptions) : JsonArr
  * <p/>
  * NOTE: This function has been automatically generated from the [io.vertx.redis.RedisClient original] using Vert.x codegen.
  */
-suspend fun RedisClient.spopAwait(key : String) : String {
+suspend fun RedisClient.spopAwait(key : String) : String? {
   return awaitResult{
     this.spop(key, it)
   }

@@ -8,7 +8,7 @@
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -35,7 +35,7 @@ Set type of token
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -107,7 +107,7 @@ Set the list of DNS server addresses, an address is the IP  of the dns server, f
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -256,7 +256,7 @@ Sets the value to use as the hostname field in the AMQP Open frame. Defaults to 
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -291,7 +291,7 @@ Sets whether or not the current link is required.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -301,7 +301,7 @@ Sets whether or not the current link is required.
 == BitFieldGetCommand
 
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -313,7 +313,7 @@ Sets whether or not the current link is required.
 == BitFieldIncrbyCommand
 
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -326,7 +326,7 @@ Sets whether or not the current link is required.
 == BitFieldOptions
 
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -339,7 +339,7 @@ Sets whether or not the current link is required.
 == BitFieldSetCommand
 
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -356,7 +356,7 @@ Sets whether or not the current link is required.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -378,7 +378,7 @@ Specifying a maximum duration for the blocking request. This is limited to 10 mi
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -398,7 +398,7 @@ Sets the list of outbound permitted options.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -420,7 +420,7 @@ Sets the list of outbound permitted options.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -441,7 +441,7 @@ Sets the list of outbound permitted options.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -470,7 +470,7 @@ Sets the upsert flag, used by update and replace operations
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -490,7 +490,7 @@ Set the write option
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -528,7 +528,7 @@ Set the status of check
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -548,7 +548,7 @@ Set list of checks
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -615,7 +615,7 @@ Set Time to Live of check.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -635,7 +635,7 @@ Set node name for sorting the list in ascending order based on the estimated rou
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -686,7 +686,7 @@ Sets the timeout in milliseconds. If an action is not completed before this time
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -805,7 +805,7 @@ Set whether Netty pooled buffers are enabled
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -824,7 +824,7 @@ Sets the previous configuration.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -844,7 +844,7 @@ Sets the previous configuration.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -871,7 +871,7 @@ Sets the configuration type
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -1134,7 +1134,7 @@ Set the websocket compression server no context option
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -1163,7 +1163,7 @@ Set vector
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -1183,7 +1183,7 @@ Set list of coordinates
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -1209,7 +1209,7 @@ Whether an existing file, empty directory, or link should be replaced. Defaults 
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -1258,7 +1258,7 @@ Set the value of traffic class
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -1281,7 +1281,7 @@ Set list of servers in datacenter
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -1293,6 +1293,12 @@ Add a message header.
  <p>
  Message headers can be sent with any message and will be accessible with link
  at the recipient.
++++
+|[[localOnly]]`@localOnly`|`Boolean`|+++
+Whether a message should be delivered to local consumers only. Defaults to <code>false</code>.
+
+ <p>
+ <strong>This option is effective in clustered mode only and does not apply to reply messages</strong>.
 +++
 |[[sendTimeout]]`@sendTimeout`|`Number (long)`|+++
 Set the send timeout.
@@ -1308,7 +1314,7 @@ Set the send timeout.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -1363,7 +1369,7 @@ Set the maximum number of worker threads to be used by the Vert.x instance.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -1392,7 +1398,7 @@ Set whether or not recursion is desired
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -1440,7 +1446,7 @@ Set the name used for registering the metrics in the Dropwizard shared registry.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -1478,7 +1484,7 @@ Set version
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -1625,7 +1631,7 @@ Set whether Netty pooled buffers are enabled
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -1645,7 +1651,7 @@ Set list of events
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -1665,7 +1671,7 @@ Set event name for filtering on events
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -1683,6 +1689,29 @@ Set regular expression to filter by tag
 +++
 |===
 
+[[FileSystemOptions]]
+== FileSystemOptions
+
+++++
+ Vert.x file system base configuration, this class can be extended by provider implementations to configure
+ those specific implementations.
+++++
+'''
+
+[cols=">25%,25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[classPathResolvingEnabled]]`@classPathResolvingEnabled`|`Boolean`|+++
+When vert.x cannot find the file on the filesystem it tries to resolve the
+ file from the class path when this is set to <code>true</code>.
++++
+|[[fileCachingEnabled]]`@fileCachingEnabled`|`Boolean`|+++
+Set to <code>true</code> to cache files on the real file system
+ when the filesystem performs class path resolving.
++++
+|===
+
 [[FindOptions]]
 == FindOptions
 
@@ -1691,7 +1720,7 @@ Set regular expression to filter by tag
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -1724,7 +1753,7 @@ Set the sort document
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -1756,7 +1785,7 @@ Sets the headers of the frames.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -1778,7 +1807,7 @@ Set the member name.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -1804,7 +1833,7 @@ Set the radius options to be hash based.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -1827,7 +1856,7 @@ Set the last stream id.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -1839,7 +1868,7 @@ Set the last stream id.
 == Http2PushMapping
 
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -1859,7 +1888,7 @@ Set the last stream id.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -1891,7 +1920,7 @@ Set the  HTTP/2 setting
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -2135,7 +2164,7 @@ Set the websocket compression server no context option
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -2165,7 +2194,7 @@ Sets whether or not the HTTP service is using <code>https</code>.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -2372,7 +2401,7 @@ Set the websocket subprotocols supported by the server.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -2603,7 +2632,7 @@ Set the websocket subprotocols supported by the server.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -2672,7 +2701,7 @@ Gets the weighting object for use with a text index
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -2707,7 +2736,7 @@ Set whether the JDBC client is shared or non shared.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -2727,7 +2756,7 @@ Set whether the JDBC client is shared or non shared.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -2749,7 +2778,7 @@ Set whether the JDBC client is shared or non shared.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -2773,7 +2802,7 @@ The permissions of this token.
 == JWTOptions
 
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -2801,7 +2830,7 @@ The permissions of this token.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -2833,7 +2862,7 @@ The permissions of this token.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -2856,7 +2885,7 @@ Set the key store as a buffer
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -2873,7 +2902,7 @@ Set the key store as a buffer
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -2908,7 +2937,7 @@ Set the value
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -2928,7 +2957,7 @@ Set list of key/value pairs
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -2955,7 +2984,7 @@ Set session ID for lock release operation.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -2980,7 +3009,7 @@ Set TYPE filter
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -2996,7 +3025,7 @@ Set TYPE filter
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -3032,7 +3061,7 @@ set the name
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -3122,7 +3151,7 @@ Set the username for the login.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -3172,7 +3201,7 @@ set list of to addresses
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -3195,7 +3224,7 @@ set list of to addresses
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -3220,7 +3249,7 @@ Set the reason message. If provided, its value should be a text string explainin
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -3249,7 +3278,7 @@ Set the matched value.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -3274,7 +3303,7 @@ Set the matched value.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -3294,7 +3323,7 @@ Set whether metrics will be enabled on the Vert.x instance.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -3339,7 +3368,7 @@ Set a name for the metrics registry, so that a new registry will be created and 
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -3355,7 +3384,7 @@ Set a name for the metrics registry, so that a new registry will be created and 
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -3402,7 +3431,7 @@ The property name to be used to set the name of the field, where the username is
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -3432,7 +3461,7 @@ An unmodifiable list of upsert data. Each entry has the index of the request tha
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -3449,7 +3478,7 @@ Get the number of removed documents
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -3472,7 +3501,7 @@ Get the document id that's upserted
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -3486,7 +3515,7 @@ Get the document id that's upserted
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -3656,7 +3685,7 @@ Set the topic on which the will message will be published
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -3785,7 +3814,7 @@ Set whether Netty pooled buffers are enabled
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -3805,7 +3834,7 @@ Set whether Netty pooled buffers are enabled
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -3934,7 +3963,7 @@ Set whether Netty pooled buffers are enabled
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -4053,7 +4082,7 @@ Set whether Netty pooled buffers are enabled
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -4086,7 +4115,7 @@ Set the value of traffic class
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -4112,7 +4141,7 @@ Set node wan address
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -4150,7 +4179,7 @@ Set the rack for this node
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -4170,7 +4199,7 @@ Set list of nodes
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -4190,7 +4219,7 @@ Set node name for sorting the list in ascending order based on the estimated rou
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -4488,7 +4517,7 @@ Set the websocket compression server no context option
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -4508,7 +4537,7 @@ Set the offset to commit
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -4528,7 +4557,7 @@ Set the timestamp
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -4575,7 +4604,7 @@ Set whether the file is to be opened for writing
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -4595,7 +4624,7 @@ Set whether session cache is enabled in open SSL session server context
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -4653,7 +4682,7 @@ Sets whether or not this option can receive a value.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -4743,7 +4772,7 @@ Set the topic name
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -4809,7 +4838,7 @@ Set all the keys as a list of buffer
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -4830,7 +4859,7 @@ Add a certificate value
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -4860,7 +4889,7 @@ Declare a specific authority that user must have in order to allow messages
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -4908,7 +4937,7 @@ Declare a specific authority that user must have in order to allow messages
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -4931,7 +4960,7 @@ Set the store as a buffer
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -4998,7 +5027,7 @@ Set the ACL token to use each time the query is executed. This allows queries to
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -5020,7 +5049,7 @@ Set node name for sorting the list in ascending order based on the estimated rou
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -5050,7 +5079,7 @@ Set the service name that the query was selecting.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -5081,7 +5110,7 @@ Set proxy username.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -5100,14 +5129,11 @@ Set proxy username.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
 |[[autoAck]]`@autoAck`|`Boolean`|+++
-
-+++
-|[[buffer]]`@buffer`|`Boolean`|+++
 
 +++
 |[[keepMostRecent]]`@keepMostRecent`|`Boolean`|+++
@@ -5126,7 +5152,7 @@ Set proxy username.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -5182,7 +5208,7 @@ Set the virtual host to use when connecting to the broker.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -5200,7 +5226,7 @@ Set the virtual host to use when connecting to the broker.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -5234,7 +5260,7 @@ Sets the type of service.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -5281,7 +5307,7 @@ Set the topic the record was appended to
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -5448,7 +5474,7 @@ Set whether Netty pooled buffers are enabled
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -5472,7 +5498,7 @@ Set the current reporter name.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -5489,7 +5515,7 @@ Replace the current list of reporters with a new one.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -5518,7 +5544,7 @@ Set the request relative URI
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -5563,7 +5589,7 @@ Get the rows - each row represented as a JsonObject where the keys are the colum
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -5588,7 +5614,7 @@ Get the rows - each row represented as a JsonObject where the keys are the colum
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -5625,7 +5651,7 @@ Set the port
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -5641,7 +5667,7 @@ Set the port
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -5657,7 +5683,7 @@ Set the port
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -5692,7 +5718,7 @@ Set list of service tags
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -5725,7 +5751,7 @@ Sets the usage address: the event bus address on which are sent the service usag
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -5748,7 +5774,7 @@ Set service
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -5768,7 +5794,7 @@ Set list of services
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -5788,7 +5814,7 @@ Set list of services
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -5820,7 +5846,7 @@ Set list of tags associated with service
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -5843,7 +5869,7 @@ Set tag for filtering request results
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -5875,7 +5901,7 @@ Set the ID of node
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -5895,7 +5921,7 @@ Set list of sessions
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -5936,7 +5962,7 @@ Set the TTL interval. When TTL interval expires without being renewed, the sessi
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -5954,7 +5980,7 @@ Set the TTL interval. When TTL interval expires without being renewed, the sessi
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -5978,7 +6004,7 @@ Set the shell welcome message, i.e the message displayed in the user console whe
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -6008,7 +6034,7 @@ Set the shell welcome message, i.e the message displayed in the user console whe
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -6028,7 +6054,7 @@ Set the Shiro auth options type.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -6047,7 +6073,7 @@ Set the Shiro auth options type.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -6067,7 +6093,7 @@ Set the Shiro auth options type.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -6091,7 +6117,7 @@ Sets whether or not the procedure attached to this status has failed (timeout, e
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -6261,7 +6287,7 @@ Sets the virtual host that will be used as "host" header value in the `CONNECT` 
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -6429,7 +6455,7 @@ Sets the websocket path. Only frames received on this path would be considered a
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -6531,7 +6557,7 @@ Set whether Netty pooled buffers are enabled
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -6678,7 +6704,7 @@ Set whether Netty pooled buffers are enabled
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -6701,7 +6727,7 @@ Configure the execution to use an event loop when there is no one existing.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -6724,7 +6750,7 @@ Configure the execution to use an event loop when there is no one existing.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -6744,7 +6770,7 @@ Set the topic name
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -6764,7 +6790,7 @@ Set error message about why that operation failed.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -6796,7 +6822,7 @@ Set the value
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -6813,7 +6839,7 @@ Returns the number of operations in this request
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -6836,7 +6862,7 @@ Returns the number of results in this response
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -6865,7 +6891,7 @@ Set the write option
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -6885,7 +6911,7 @@ Get the number of rows updated
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -6936,7 +6962,7 @@ Username used for authenticated connections
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -6959,7 +6985,7 @@ Push interval steps, in seconds. Default is 10 seconds.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -7006,7 +7032,12 @@ Sets the event bus configuration to configure the host, port, ssl...
 Set the number of event loop threads to be used by the Vert.x instance.
 +++
 |[[fileResolverCachingEnabled]]`@fileResolverCachingEnabled`|`Boolean`|+++
-Set wether the Vert.x file resolver uses caching for classpath resources.
+Set whether the Vert.x file resolver uses caching for classpath resources.
+
+ Deprecated. Use FileSystemOptions instead.
++++
+|[[fileSystemOptions]]`@fileSystemOptions`|`link:dataobjects.html#FileSystemOptions[FileSystemOptions]`|+++
+Set the file system options
 +++
 |[[haEnabled]]`@haEnabled`|`Boolean`|+++
 Set whether HA will be enabled on the Vert.x instance.
@@ -7062,7 +7093,7 @@ Set the maximum number of worker threads to be used by the Vert.x instance.
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description
@@ -7087,7 +7118,7 @@ When true, an embedded server will init to expose metrics with Prometheus format
 ++++
 '''
 
-[cols=">25%,75%"]
+[cols=">25%,25%,50%"]
 [frame="topbot"]
 |===
 ^|Name | Type ^| Description

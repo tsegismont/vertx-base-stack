@@ -8,7 +8,6 @@ import io.vertx.rabbitmq.QueueOptions
  * Aimed to specify queue consumer settings when calling [io.vertx.rabbitmq.RabbitMQClient]
  *
  * @param autoAck 
- * @param buffer 
  * @param keepMostRecent 
  * @param maxInternalQueueSize 
  *
@@ -17,15 +16,11 @@ import io.vertx.rabbitmq.QueueOptions
  */
 fun QueueOptions(
   autoAck: Boolean? = null,
-  buffer: Boolean? = null,
   keepMostRecent: Boolean? = null,
   maxInternalQueueSize: Int? = null): QueueOptions = io.vertx.rabbitmq.QueueOptions().apply {
 
   if (autoAck != null) {
     this.setAutoAck(autoAck)
-  }
-  if (buffer != null) {
-    this.setBuffer(buffer)
   }
   if (keepMostRecent != null) {
     this.setKeepMostRecent(keepMostRecent)

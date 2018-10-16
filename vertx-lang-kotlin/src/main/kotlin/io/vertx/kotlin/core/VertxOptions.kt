@@ -3,6 +3,7 @@ package io.vertx.kotlin.core
 import io.vertx.core.VertxOptions
 import io.vertx.core.dns.AddressResolverOptions
 import io.vertx.core.eventbus.EventBusOptions
+import io.vertx.core.file.FileSystemOptions
 import io.vertx.core.metrics.MetricsOptions
 import java.util.concurrent.TimeUnit
 
@@ -23,7 +24,8 @@ import java.util.concurrent.TimeUnit
  * @param clustered  Set whether or not the Vert.x instance will be clustered.
  * @param eventBusOptions  Sets the event bus configuration to configure the host, port, ssl...
  * @param eventLoopPoolSize  Set the number of event loop threads to be used by the Vert.x instance.
- * @param fileResolverCachingEnabled  Set wether the Vert.x file resolver uses caching for classpath resources.
+ * @param fileResolverCachingEnabled  Set whether the Vert.x file resolver uses caching for classpath resources. Deprecated. Use FileSystemOptions instead.
+ * @param fileSystemOptions  Set the file system options
  * @param haEnabled  Set whether HA will be enabled on the Vert.x instance.
  * @param haGroup  Set the HA group to be used when HA is enabled.
  * @param internalBlockingPoolSize  Set the value of internal blocking pool size
@@ -55,6 +57,7 @@ fun VertxOptions(
   eventBusOptions: io.vertx.core.eventbus.EventBusOptions? = null,
   eventLoopPoolSize: Int? = null,
   fileResolverCachingEnabled: Boolean? = null,
+  fileSystemOptions: io.vertx.core.file.FileSystemOptions? = null,
   haEnabled: Boolean? = null,
   haGroup: String? = null,
   internalBlockingPoolSize: Int? = null,
@@ -107,6 +110,9 @@ fun VertxOptions(
   }
   if (fileResolverCachingEnabled != null) {
     this.setFileResolverCachingEnabled(fileResolverCachingEnabled)
+  }
+  if (fileSystemOptions != null) {
+    this.setFileSystemOptions(fileSystemOptions)
   }
   if (haEnabled != null) {
     this.setHAEnabled(haEnabled)
