@@ -24,7 +24,7 @@ var Vertx = require("vertx-js/vertx");
 var console = require("vertx-js/util/console");
 
 var Router = require("vertx-web-js/router");
-var FreeMarkerTemplateEngine = require("vertx-web-js/free_marker_template_engine");
+var FreeMarkerTemplateEngine = require("vertx-web-templ-freemarker-js/free_marker_template_engine");
 var TemplateHandler = require("vertx-web-js/template_handler");
 
 function testTemplate() {
@@ -32,7 +32,7 @@ function testTemplate() {
   var server = vertx.createHttpServer();
   var router = Router.router(vertx);
 
-  var engine = FreeMarkerTemplateEngine.create();
+  var engine = FreeMarkerTemplateEngine.create(vertx);
   var handler = TemplateHandler.create(engine, "it/web", "text/plain");
 
   router.route().handler(function (context) {
